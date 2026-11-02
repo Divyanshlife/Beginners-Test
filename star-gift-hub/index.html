@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hind:wght@400;500;600&display=swap">
 <style>
-  /* Layout: festive bazaar colors. A pink-to-marigold hero sprinkled with stars, a parcel-label "visit us" card, then bright colored category tiles, photo slots and a rating band. */
+  /* Layout: festive bazaar colors. A sticky top bar with the shop name and tabs (Home, About Us, Contact Us, Product Gallery); each tab shows one page. */
   :root {
     --bg: #fff8f2;
     --surface: #ffffff;
@@ -26,6 +26,7 @@
     --on-color: #ffffff;
     --gold-soft: #fff1cc;
     --chip: #fde4ee;
+    --bar: #ffffff;
     --accent: var(--pink);
     --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
     --font-body: "Hind", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -34,17 +35,18 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #1a0f15; --surface: #261822; --fg: #f8ecf1; --muted: #c9b0bd; --line: #43293a;
-      --gold-soft: #3d2d0d; --chip: #3d1f2e; --accent: #ff5c93;
+      --gold-soft: #3d2d0d; --chip: #3d1f2e; --bar: #22141d; --accent: #ff5c93;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
     --bg: #1a0f15; --surface: #261822; --fg: #f8ecf1; --muted: #c9b0bd; --line: #43293a;
-    --gold-soft: #3d2d0d; --chip: #3d1f2e; --accent: #ff5c93;
+    --gold-soft: #3d2d0d; --chip: #3d1f2e; --bar: #22141d; --accent: #ff5c93;
     color-scheme: dark;
   }
 
   * { box-sizing: border-box; }
+  html { scroll-padding-top: 6rem; }
   body {
     margin: 0;
     background: var(--bg);
@@ -52,6 +54,10 @@
     font-family: var(--font-body);
     font-size: 1.0625rem;
     line-height: 1.6;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+    z-index: 10; background: var(--bar);
   }
   .wrap {
     max-width: 52rem;
@@ -61,18 +67,45 @@
   }
   a { color: var(--accent); }
   a:focus-visible, button:focus-visible { outline: 3px solid var(--marigold); outline-offset: 2px; }
-  h1, h2 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+  h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
   .label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 
   /* Festive bunting strip */
   .bunting {
-    height: 10px;
+    height: 8px;
     background: repeating-linear-gradient(90deg,
       var(--pink) 0 40px, var(--marigold) 40px 80px, var(--teal) 80px 120px,
       var(--violet) 120px 160px, var(--sky) 160px 200px, var(--orange) 200px 240px);
   }
 
-  /* Hero */
+  /* Sticky top bar with tabs */
+  .topbar {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+    background: var(--bar); border-bottom: 1px solid var(--line);
+  }
+  .topbar .wrap {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 0.5rem 1.5rem; padding-block: 0.6rem;
+  }
+  .brand {
+    font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; letter-spacing: -0.01em;
+    color: var(--fg); text-decoration: none; white-space: nowrap;
+  }
+  .brand .star { color: var(--marigold); }
+  .tabs {
+    display: flex; gap: 0.35rem; overflow-x: auto; max-width: 100%;
+    scrollbar-width: none; margin: 0; padding: 0.15rem; list-style: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: 0 0 auto; display: inline-block; text-decoration: none; white-space: nowrap;
+    font: 600 0.98rem var(--font-body); color: var(--fg);
+    padding: 0.4rem 0.9rem; border-radius: 999px; border: 2px solid transparent;
+  }
+  .tab:hover { border-color: var(--line); }
+  .tab[aria-current="page"] { background: var(--pink); color: var(--on-color); }
+
+  /* Page headers */
   .hero {
     color: var(--on-color);
     background:
@@ -93,6 +126,10 @@
   .hero h1 { font-size: clamp(2.7rem, 9vw, 4.8rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; text-shadow: 0 3px 0 rgba(0,0,0,0.12); }
   .hero h1 .star { color: #ffe066; }
   .hero p { margin: 0; font-size: 1.15rem; max-width: 34rem; }
+  .hero.small .wrap { padding-block: 2rem 1.75rem; }
+  .hero.small h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); }
+  .hero.teal { background: linear-gradient(120deg, var(--teal), var(--sky)); }
+  .hero.violet { background: linear-gradient(120deg, var(--violet), var(--pink)); }
   .facts { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem; }
   .fact {
     display: inline-flex; align-items: center; gap: 0.4rem;
@@ -101,10 +138,11 @@
   }
   .fact .stars { color: #ffe066; letter-spacing: 0.05em; }
 
-  main .wrap { padding-block: 2.25rem 3rem; display: grid; gap: 2.75rem; }
+  .page-body { padding-block: 2.25rem 3rem; display: grid; gap: 2.75rem; }
   section { display: grid; gap: 1rem; }
   section > h2 { font-size: 1.7rem; font-weight: 800; }
   section > h2 .dot { color: var(--marigold); }
+  .prose { margin: 0; max-width: 40rem; }
 
   /* Visit card styled like a parcel label */
   .parcel {
@@ -131,6 +169,7 @@
   .btn-teal { background: var(--teal); color: var(--on-color); }
   .btn-whatsapp { background: #1fa855; color: var(--on-color); }
   .btn-sky { background: var(--sky); color: var(--on-color); }
+  .btn-violet { background: var(--violet); color: var(--on-color); }
   .btn-ghost { background: transparent; color: var(--accent); border-color: var(--accent); }
   .btn-small { padding: 0.3rem 0.8rem; font-size: 0.9rem; }
   .note { font-size: 0.9rem; color: var(--muted); margin: 0; }
@@ -158,17 +197,34 @@
   }
   .confirm b { color: var(--accent); white-space: nowrap; }
 
-  /* Photo slots */
-  .photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
+  /* About: fact list */
+  .facts-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.85rem; }
+  .facts-list li {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1rem; display: grid; gap: 0.2rem; align-content: start; min-width: 0;
+  }
+  .facts-list .big { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
+
+  /* Gallery */
+  .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .filter {
+    font: 600 0.95rem var(--font-body); cursor: pointer;
+    padding: 0.4rem 0.95rem; border-radius: 999px;
+    background: var(--surface); color: var(--fg); border: 2px solid var(--line);
+  }
+  .filter[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+  .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
   .photo {
-    aspect-ratio: 4 / 3; max-width: 100%; border-radius: var(--radius);
+    aspect-ratio: 1 / 1; max-width: 100%; border-radius: var(--radius);
     display: grid; place-items: center; text-align: center; padding: 0.75rem;
     color: var(--on-color); font-weight: 600; font-size: 0.95rem;
   }
   .photo .big { display: block; font-size: 2rem; line-height: 1; margin-bottom: 0.3rem; }
-  .p1 { background: linear-gradient(135deg, var(--pink), var(--violet)); }
-  .p2 { background: linear-gradient(135deg, var(--marigold), var(--orange)); }
-  .p3 { background: linear-gradient(135deg, var(--teal), var(--sky)); }
+  .photo small { display: block; font-weight: 500; opacity: 0.85; }
+  .g-gifts { background: linear-gradient(135deg, var(--pink), var(--violet)); }
+  .g-toys { background: linear-gradient(135deg, var(--teal), var(--sky)); }
+  .g-decor { background: linear-gradient(135deg, var(--violet), var(--sky)); }
+  .g-occasions { background: linear-gradient(135deg, var(--marigold), var(--orange)); }
 
   /* Rating band */
   .rating {
@@ -184,13 +240,16 @@
   footer { background: var(--violet); color: var(--on-color); }
   footer .wrap { padding-block: 1.25rem 1.75rem; font-size: 0.92rem; }
 
-  @media (max-width: 560px) {
-    .photos { grid-template-columns: 1fr 1fr; }
-    .photos .photo:last-child { grid-column: 1 / -1; aspect-ratio: 8 / 3; }
+  @media (max-width: 640px) {
+    .facts-list { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 480px) {
     .cats { grid-template-columns: 1fr; }
     .actions .btn { flex: 1 1 auto; }
+    .topbar .wrap { justify-content: center; }
+    .tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; overflow: visible; }
+    .tab { text-align: center; padding-inline: 0.5rem; }
   }
   @media (prefers-reduced-motion: no-preference) {
     .btn, .cat { transition: transform 0.15s ease; }
@@ -201,23 +260,94 @@
 <body>
 
 <div class="bunting" aria-hidden="true"></div>
-<header class="hero">
+<nav class="topbar" aria-label="Main">
   <div class="wrap">
-    <span class="label">Gift shop · Rani Bagh, New Delhi</span>
-    <h1>STAR <span class="star">★</span><br>GIFT HUB</h1>
-    <p>Your neighbourhood gift shop in Main Bazar, Rani Bagh. Drop in to pick something for every occasion.</p>
-    <div class="facts">
-      <span class="fact"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google · 48 reviews</span>
-      <span class="fact">Closes 9 pm</span>
-    </div>
+    <a class="brand" href="#home" data-tab="home">STAR <span class="star">★</span> GIFT HUB</a>
+    <ul class="tabs">
+      <li><a class="tab" href="#home" data-tab="home" aria-current="page">Home</a></li>
+      <li><a class="tab" href="#about" data-tab="about">About Us</a></li>
+      <li><a class="tab" href="#contact" data-tab="contact">Contact Us</a></li>
+      <li><a class="tab" href="#gallery" data-tab="gallery">Product Gallery</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<main>
-  <div class="wrap">
+<!-- HOME -->
+<div class="page" id="home">
+  <header class="hero">
+    <div class="wrap">
+      <span class="label">Gift shop · Rani Bagh, New Delhi</span>
+      <h1>STAR <span class="star">★</span><br>GIFT HUB</h1>
+      <p>Your neighbourhood gift shop in Main Bazar, Rani Bagh. Drop in to pick something for every occasion.</p>
+      <div class="facts">
+        <span class="fact"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google · 48 reviews</span>
+        <span class="fact">Closes 9 pm</span>
+      </div>
+    </div>
+  </header>
+  <div class="wrap page-body">
+    <section aria-labelledby="shop-h">
+      <h2 id="shop-h">What you can find<span class="dot">.</span></h2>
+      <ul class="cats">
+        <li class="cat c1"><strong>Gifts</strong><span>Presents for family, friends and colleagues</span></li>
+        <li class="cat c2"><strong>Toys</strong><span>Toys and games for kids</span></li>
+        <li class="cat c3"><strong>Home decor</strong><span>Showpieces and decor items</span></li>
+        <li class="cat c4"><strong>Occasions</strong><span>Birthdays, anniversaries and festivals</span></li>
+      </ul>
+      <div class="confirm"><b>To confirm</b><span>These are general gift-shop categories. The shop will update the exact range of items soon.</span></div>
+      <div class="actions">
+        <a class="btn btn-violet" href="#gallery" data-tab="gallery">See product gallery</a>
+        <a class="btn btn-teal" href="#contact" data-tab="contact">Visit or call</a>
+      </div>
+    </section>
 
+    <section aria-labelledby="reviews-h">
+      <h2 id="reviews-h">Loved by customers<span class="dot">.</span></h2>
+      <div class="rating">
+        <span class="score">5.0</span>
+        <div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>From 48 reviews on Google Maps</p>
+        </div>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=STAR+GIFT+HUB+Rani+Bagh+New+Delhi" target="_blank" rel="noopener">Read all reviews</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ABOUT US -->
+<div class="page" id="about" hidden>
+  <header class="hero small violet">
+    <div class="wrap">
+      <span class="label">About Us</span>
+      <h1>A gift shop in the heart of Rani Bagh</h1>
+    </div>
+  </header>
+  <div class="wrap page-body">
+    <section aria-labelledby="about-h">
+      <h2 id="about-h">Who we are<span class="dot">.</span></h2>
+      <p class="prose">STAR GIFT HUB is a gift shop on Main Bazar, Rani Bagh, in Shakur Basti, New Delhi. Families in the area come here for gifts, toys, home decor and things for birthdays, anniversaries and festivals.</p>
+      <ul class="facts-list">
+        <li><span class="label">Google rating</span><span class="big">5.0 ★</span><span class="note">From 48 reviews</span></li>
+        <li><span class="label">Where</span><span class="big">Main Bazar</span><span class="note">Rani Bagh, Delhi 110034</span></li>
+        <li><span class="label">Open till</span><span class="big">9 pm</span><span class="note">Opening time to be confirmed</span></li>
+      </ul>
+      <div class="confirm"><b>To confirm</b><span>Our story, the year we started and the owner's name will be added here once the shop shares them.</span></div>
+    </section>
+  </div>
+</div>
+
+<!-- CONTACT US -->
+<div class="page" id="contact" hidden>
+  <header class="hero small teal">
+    <div class="wrap">
+      <span class="label">Contact Us</span>
+      <h1>Visit or call the shop</h1>
+    </div>
+  </header>
+  <div class="wrap page-body">
     <section aria-labelledby="visit-h">
-      <h2 id="visit-h">Visit or call<span class="dot">.</span></h2>
+      <h2 id="visit-h" class="label" style="font-family:var(--font-body)">Shop details</h2>
       <div class="parcel">
         <div class="row">
           <span class="label">Phone</span>
@@ -247,51 +377,85 @@
         </div>
       </div>
     </section>
+  </div>
+</div>
 
-    <section aria-labelledby="shop-h">
-      <h2 id="shop-h">What you can find<span class="dot">.</span></h2>
-      <ul class="cats">
-        <li class="cat c1"><strong>Gifts</strong><span>Presents for family, friends and colleagues</span></li>
-        <li class="cat c2"><strong>Toys</strong><span>Toys and games for kids</span></li>
-        <li class="cat c3"><strong>Home decor</strong><span>Showpieces and decor items</span></li>
-        <li class="cat c4"><strong>Occasions</strong><span>Birthdays, anniversaries and festivals</span></li>
-      </ul>
-      <div class="confirm"><b>To confirm</b><span>These are general gift-shop categories. The shop will update the exact range of items soon.</span></div>
-    </section>
-
-    <section aria-labelledby="photos-h">
-      <h2 id="photos-h">Inside the shop<span class="dot">.</span></h2>
-      <div class="photos">
-        <div class="photo p1"><span><span class="big" aria-hidden="true">★</span>Shop front photo</span></div>
-        <div class="photo p2"><span><span class="big" aria-hidden="true">★</span>Gift shelves photo</span></div>
-        <div class="photo p3"><span><span class="big" aria-hidden="true">★</span>Festive collection photo</span></div>
+<!-- PRODUCT GALLERY -->
+<div class="page" id="gallery" hidden>
+  <header class="hero small">
+    <div class="wrap">
+      <span class="label">Product Gallery</span>
+      <h1>Gifts for every occasion</h1>
+    </div>
+  </header>
+  <div class="wrap page-body">
+    <section aria-labelledby="gal-h">
+      <h2 id="gal-h" class="label" style="font-family:var(--font-body)">Browse by category</h2>
+      <div class="filters" role="group" aria-label="Filter by category">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="gifts" aria-pressed="false">Gifts</button>
+        <button class="filter" type="button" data-filter="toys" aria-pressed="false">Toys</button>
+        <button class="filter" type="button" data-filter="decor" aria-pressed="false">Home decor</button>
+        <button class="filter" type="button" data-filter="occasions" aria-pressed="false">Occasions</button>
       </div>
-      <div class="confirm"><b>Photos soon</b><span>The shop's own photos will go here. Till then, see the shop's photos on Google Maps.</span></div>
+      <div class="gallery" id="gallery-grid">
+        <div class="photo g-gifts" data-cat="gifts"><span><span class="big" aria-hidden="true">★</span>Gifts<small>Photo coming soon</small></span></div>
+        <div class="photo g-gifts" data-cat="gifts"><span><span class="big" aria-hidden="true">★</span>Gifts<small>Photo coming soon</small></span></div>
+        <div class="photo g-gifts" data-cat="gifts"><span><span class="big" aria-hidden="true">★</span>Gifts<small>Photo coming soon</small></span></div>
+        <div class="photo g-toys" data-cat="toys"><span><span class="big" aria-hidden="true">★</span>Toys<small>Photo coming soon</small></span></div>
+        <div class="photo g-toys" data-cat="toys"><span><span class="big" aria-hidden="true">★</span>Toys<small>Photo coming soon</small></span></div>
+        <div class="photo g-toys" data-cat="toys"><span><span class="big" aria-hidden="true">★</span>Toys<small>Photo coming soon</small></span></div>
+        <div class="photo g-decor" data-cat="decor"><span><span class="big" aria-hidden="true">★</span>Home decor<small>Photo coming soon</small></span></div>
+        <div class="photo g-decor" data-cat="decor"><span><span class="big" aria-hidden="true">★</span>Home decor<small>Photo coming soon</small></span></div>
+        <div class="photo g-decor" data-cat="decor"><span><span class="big" aria-hidden="true">★</span>Home decor<small>Photo coming soon</small></span></div>
+        <div class="photo g-occasions" data-cat="occasions"><span><span class="big" aria-hidden="true">★</span>Occasions<small>Photo coming soon</small></span></div>
+        <div class="photo g-occasions" data-cat="occasions"><span><span class="big" aria-hidden="true">★</span>Occasions<small>Photo coming soon</small></span></div>
+        <div class="photo g-occasions" data-cat="occasions"><span><span class="big" aria-hidden="true">★</span>Occasions<small>Photo coming soon</small></span></div>
+      </div>
+      <div class="confirm"><b>Photos soon</b><span>The shop's own product photos will go here. Till then, see the shop's photos on Google Maps.</span></div>
       <div class="actions">
         <a class="btn btn-sky" href="https://www.google.com/maps/search/?api=1&amp;query=STAR+GIFT+HUB+Rani+Bagh+New+Delhi" target="_blank" rel="noopener">See photos on Google Maps</a>
       </div>
     </section>
-
-    <section aria-labelledby="reviews-h">
-      <h2 id="reviews-h">Loved by customers<span class="dot">.</span></h2>
-      <div class="rating">
-        <span class="score">5.0</span>
-        <div>
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p>From 48 reviews on Google Maps</p>
-        </div>
-        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=STAR+GIFT+HUB+Rani+Bagh+New+Delhi" target="_blank" rel="noopener">Read all reviews</a>
-      </div>
-    </section>
-
   </div>
-</main>
+</div>
 
 <footer>
   <div class="wrap">STAR GIFT HUB · Wz-1287, Main Bazar, Rani Bagh, New Delhi 110034 · +91 99533 11287</div>
 </footer>
 
 <script>
+  // Tabs: show one page at a time, opening the one named in the link's #hash.
+  var pages = ['home', 'about', 'contact', 'gallery'];
+  function showPage(name, scroll) {
+    if (pages.indexOf(name) < 0) name = 'home';
+    pages.forEach(function (p) { document.getElementById(p).hidden = (p !== name); });
+    document.querySelectorAll('.tab').forEach(function (t) {
+      if (t.dataset.tab === name) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
+    });
+    if (scroll) window.scrollTo(0, 0);
+  }
+  document.querySelectorAll('[data-tab]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      showPage(link.dataset.tab, true);
+      try { history.replaceState(null, '', '#' + link.dataset.tab); } catch (err) {}
+    });
+  });
+  showPage((location.hash || '#home').slice(1), false);
+
+  // Gallery filter
+  document.querySelectorAll('.filter').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var f = btn.dataset.filter;
+      document.querySelectorAll('.filter').forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+      document.querySelectorAll('#gallery-grid .photo').forEach(function (ph) {
+        ph.hidden = !(f === 'all' || ph.dataset.cat === f);
+      });
+    });
+  });
+
+  // Copy phone number
   document.getElementById('copy-phone').addEventListener('click', function () {
     var btn = this, text = '+91 99533 11287';
     function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy number'; }, 1800); }
