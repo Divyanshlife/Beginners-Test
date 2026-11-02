@@ -1,115 +1,246 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Divyansh Arora | Contact</title>
-  <style>
-    :root {
-      --bg: #f5f3ef;
-      --card: #ffffff;
-      --text: #1d1d1f;
-      --muted: #6b6b70;
-      --accent: #2f5bea;
-      --border: #e4e1da;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Divyansh Arora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Layout: navy profile band on top, then a two-column sheet (About | Contact) that stacks on phones */
+  :root {
+    --bg: #f2f4f7;
+    --surface: #ffffff;
+    --fg: #14202e;
+    --muted: #5a6878;
+    --line: #dfe4ea;
+    --band: #0f2a47;
+    --band-fg: #f4f7fb;
+    --band-muted: #a9bcd2;
+    --accent: #1d6fd8;
+    --accent-soft: #e6effb;
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c131b; --surface: #141d27; --fg: #e6ecf2; --muted: #93a2b2;
+      --line: #243140; --band: #0a1e33; --band-fg: #eef3f8; --band-muted: #8fa7c2;
+      --accent: #6aa5ff; --accent-soft: #17283d;
+      color-scheme: dark;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #121214;
-        --card: #1c1c1f;
-        --text: #f2f2f3;
-        --muted: #a0a0a8;
-        --accent: #7b9bff;
-        --border: #2c2c31;
-      }
-    }
-    * { box-sizing: border-box; margin: 0; }
-    body {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px 16px;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    }
-    .card {
-      width: 100%;
-      max-width: 420px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 40px 32px;
-      text-align: center;
-    }
-    .avatar {
-      width: 88px;
-      height: 88px;
-      margin: 0 auto 20px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-size: 36px;
-      font-weight: 600;
-    }
-    h1 { font-size: 28px; font-weight: 650; }
-    .role { color: var(--muted); margin-top: 6px; }
-    ul { list-style: none; padding: 0; margin-top: 28px; text-align: left; }
-    li + li { margin-top: 10px; }
-    a.item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      color: var(--text);
-      text-decoration: none;
-      transition: border-color .15s, transform .15s;
-    }
-    a.item:hover { border-color: var(--accent); transform: translateY(-1px); }
-    .label { font-size: 12px; color: var(--muted); display: block; }
-    .value { font-size: 15px; word-break: break-all; }
-    .icon { font-size: 20px; width: 24px; text-align: center; }
-    footer { margin-top: 28px; font-size: 13px; color: var(--muted); }
-  </style>
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c131b; --surface: #141d27; --fg: #e6ecf2; --muted: #93a2b2;
+    --line: #243140; --band: #0a1e33; --band-fg: #eef3f8; --band-muted: #8fa7c2;
+    --accent: #6aa5ff; --accent-soft: #17283d;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+
+  /* Profile band */
+  .band { background: var(--band); color: var(--band-fg); }
+  .band .wrap { padding-block: 56px 88px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .initials {
+    flex: none;
+    width: 84px; height: 84px;
+    border-radius: 50%;
+    border: 2px solid var(--band-muted);
+    display: grid; place-items: center;
+    font-family: var(--display);
+    font-size: 30px; font-weight: 700;
+    letter-spacing: .02em;
+  }
+  .eyebrow {
+    margin: 0 0 6px;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--band-muted);
+  }
+  h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(32px, 6vw, 46px);
+    font-weight: 700;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+  .tagline { margin: 10px 0 0; color: var(--band-muted); font-size: 16px; }
+
+  /* Sheet overlapping the band */
+  .sheet {
+    margin-top: -48px;
+    margin-bottom: 40px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+  }
+  .sheet > section { padding: 32px; min-width: 0; }
+  .sheet > section + section { border-left: 1px solid var(--line); }
+  @media (max-width: 720px) {
+    .sheet { grid-template-columns: 1fr; }
+    .sheet > section { padding: 24px 20px; }
+    .sheet > section + section { border-left: 0; border-top: 1px solid var(--line); }
+  }
+  h2 {
+    margin: 0 0 14px;
+    font-family: var(--display);
+    font-size: 20px; font-weight: 600;
+  }
+  .about p { margin: 0 0 14px; max-width: 62ch; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding: 0; list-style: none; }
+  .tags li {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 13px; font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+
+  /* Contact list */
+  .contact ul { list-style: none; margin: 0; padding: 0; display: grid; }
+  .contact li {
+    display: grid;
+    grid-template-columns: 20px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .contact li:first-child { padding-top: 0; }
+  .contact li:last-child { border-bottom: 0; }
+  .contact svg { width: 18px; height: 18px; stroke: var(--muted); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .text { min-width: 0; }
+  .label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+  .value { display: block; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+  .action {
+    font: 500 13px var(--body);
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 5px 11px;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .action:hover { background: var(--accent-soft); border-color: var(--accent-soft); }
+  .action:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .cta {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    padding: 11px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  .cta:hover { filter: brightness(1.08); }
+  .cta:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+
+  footer { padding-block: 0 32px; font-size: 13px; color: var(--muted); }
+</style>
 </head>
 <body>
-  <main class="card">
-    <div class="avatar">DA</div>
-    <h1>Divyansh Arora</h1>
-    <p class="role">Sales · Zoxima</p>
 
-    <ul>
-      <li>
-        <a class="item" href="mailto:Div.arora@zoxima.com">
-          <span class="icon">✉️</span>
-          <span><span class="label">Email</span><span class="value">Div.arora@zoxima.com</span></span>
-        </a>
-      </li>
-      <li>
-        <a class="item" href="tel:+918799714396">
-          <span class="icon">📞</span>
-          <span><span class="label">Phone</span><span class="value">+91 87997 14396</span></span>
-        </a>
-      </li>
-      <li>
-        <a class="item" href="https://wa.me/918799714396" target="_blank" rel="noopener">
-          <span class="icon">💬</span>
-          <span><span class="label">WhatsApp</span><span class="value">Chat on WhatsApp</span></span>
-        </a>
-      </li>
-      <li>
-        <a class="item" href="https://www.linkedin.com/in/divyansh-a-052a8b26b/" target="_blank" rel="noopener">
-          <span class="icon">🔗</span>
-          <span><span class="label">LinkedIn</span><span class="value">linkedin.com/in/divyansh-a-052a8b26b</span></span>
-        </a>
-      </li>
-    </ul>
+<header class="band">
+  <div class="wrap">
+    <div class="initials" aria-hidden="true">DA</div>
+    <div>
+      <p class="eyebrow">Sales · Zoxima</p>
+      <h1>Divyansh Arora</h1>
+      <p class="tagline">Helping businesses grow revenue and protect margin.</p>
+    </div>
+  </div>
+</header>
 
-    <footer>© 2026 Divyansh Arora</footer>
-  </main>
+<main class="wrap">
+  <div class="sheet">
+    <section class="about" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <p>I work in sales at Zoxima, an apps, automations and AI company based in Fremont, California, with offices in Delhi NCR.</p>
+      <p>I help mid-sized companies sell more and keep healthy margins. Most businesses already have the answers spread across their ERP, CRM, documents and team chats. Our product, Salezx, brings that knowledge together so sales teams know which customers to call, what to offer and at what price.</p>
+      <p>If you are looking to grow sales without adding more tools for your team to learn, I would be glad to talk.</p>
+      <ul class="tags">
+        <li>B2B Sales</li>
+        <li>Revenue Growth</li>
+        <li>Margin Protection</li>
+        <li>Salezx</li>
+      </ul>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <span class="text"><span class="label">Email</span><span class="value">Div.arora@zoxima.com</span></span>
+          <button class="action" id="copy-email" data-copy="Div.arora@zoxima.com">Copy</button>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          <span class="text"><span class="label">Phone</span><span class="value">+91 87997 14396</span></span>
+          <button class="action" id="copy-phone" data-copy="+918799714396">Copy</button>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.1-4.6A9 9 0 1 1 21 12Z"/></svg>
+          <span class="text"><span class="label">WhatsApp</span><span class="value">+91 87997 14396</span></span>
+          <a class="action" href="https://wa.me/918799714396" target="_blank" rel="noopener">Chat</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+          <span class="text"><span class="label">LinkedIn</span><span class="value">divyansh-a-052a8b26b</span></span>
+          <a class="action" href="https://www.linkedin.com/in/divyansh-a-052a8b26b/" target="_blank" rel="noopener">Open</a>
+        </li>
+      </ul>
+      <a class="cta" href="https://www.linkedin.com/in/divyansh-a-052a8b26b/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </section>
+  </div>
+  <footer>© 2026 Divyansh Arora</footer>
+</main>
+
+<script>
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.dataset.copy;
+      var done = function () {
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = "Copy"; }, 1500);
+      };
+      var fallback = function () {
+        var range = document.createRange();
+        range.selectNodeContents(btn.parentElement.querySelector(".value"));
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        btn.textContent = "Press Ctrl+C";
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else {
+        fallback();
+      }
+    });
+  });
+</script>
 </body>
 </html>
