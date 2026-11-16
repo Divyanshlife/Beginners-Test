@@ -1,0 +1,1782 @@
+{
+    "version":  "0.4",
+    "title":  "Divyansh Pro - Home",
+    "type":  "page",
+    "page_settings":  {
+                          "template":  "elementor_header_footer",
+                          "hide_title":  "yes"
+                      },
+    "content":  [
+                    {
+                        "id":  "5494efc",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-hero",
+                                         "gap":  "default",
+                                         "content_width":  {
+                                                               "unit":  "px",
+                                                               "size":  1160
+                                                           }
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "2d85946",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  50,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "9b24e68",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Sales \u0026middot; Apps \u0026middot; Automations \u0026middot; AI",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "1e01e48",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Sell more. \u003cem\u003eProtect every margin point.\u003c/em\u003e",
+                                                                                   "header_size":  "h1",
+                                                                                   "_css_classes":  "dp-h1"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "7d0c6dc",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eI am Divyansh Arora. I help mid-market companies grow revenue and keep their margins healthy, using the apps, automations and AI we build at Zoxima. You see it working on your own data in about a week.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-lead"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "caa6505",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "d753ee3",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  100,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-btn-row"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "103970b",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "button",
+                                                                                                            "settings":  {
+                                                                                                                             "text":  "Book a 15-min call",
+                                                                                                                             "link":  {
+                                                                                                                                          "url":  "/contact/",
+                                                                                                                                          "is_external":  "",
+                                                                                                                                          "nofollow":  ""
+                                                                                                                                      },
+                                                                                                                             "_css_classes":  "dp-btn",
+                                                                                                                             "_element_width":  "auto"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "928a117",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "button",
+                                                                                                            "settings":  {
+                                                                                                                             "text":  "See how I work",
+                                                                                                                             "link":  {
+                                                                                                                                          "url":  "#how",
+                                                                                                                                          "is_external":  "",
+                                                                                                                                          "nofollow":  ""
+                                                                                                                                      },
+                                                                                                                             "_css_classes":  "dp-btn-ghost",
+                                                                                                                             "_element_width":  "auto"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              },
+                                                              {
+                                                                  "id":  "cecdc0d",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eFor companies with 50 to 500 employees and a sales team on an ERP or CRM.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-small"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         },
+                                         {
+                                             "id":  "75ed2b8",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  50,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  "dp-panel"
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "d6c4073",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Your week-one snapshot",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "42adf92",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "What we find in your own data",
+                                                                                   "header_size":  "h3",
+                                                                                   "_css_classes":  "dp-h3"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "3ef3f2e",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "icon-list",
+                                                                  "settings":  {
+                                                                                   "icon_list":  [
+                                                                                                     {
+                                                                                                         "_id":  "249c09e",
+                                                                                                         "text":  "Customers most likely to buy more this quarter",
+                                                                                                         "selected_icon":  {
+                                                                                                                               "value":  "fas fa-check",
+                                                                                                                               "library":  "fa-solid"
+                                                                                                                           }
+                                                                                                     },
+                                                                                                     {
+                                                                                                         "_id":  "a58b0e5",
+                                                                                                         "text":  "Products each account buys elsewhere today",
+                                                                                                         "selected_icon":  {
+                                                                                                                               "value":  "fas fa-check",
+                                                                                                                               "library":  "fa-solid"
+                                                                                                                           }
+                                                                                                     },
+                                                                                                     {
+                                                                                                         "_id":  "b40a043",
+                                                                                                         "text":  "Deals where discounts are eating margin",
+                                                                                                         "selected_icon":  {
+                                                                                                                               "value":  "fas fa-check",
+                                                                                                                               "library":  "fa-solid"
+                                                                                                                           }
+                                                                                                     },
+                                                                                                     {
+                                                                                                         "_id":  "6447676",
+                                                                                                         "text":  "One next step for each sales rep, every morning",
+                                                                                                         "selected_icon":  {
+                                                                                                                               "value":  "fas fa-check",
+                                                                                                                               "library":  "fa-solid"
+                                                                                                                           }
+                                                                                                     }
+                                                                                                 ],
+                                                                                   "_css_classes":  "dp-list"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "929b134",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eYour ERP, CRM, price lists and conversations, read together in one place. Nothing is replaced.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-small"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    },
+                    {
+                        "id":  "20e72eb",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-sec-sm dp-alt",
+                                         "gap":  "default",
+                                         "content_width":  {
+                                                               "unit":  "px",
+                                                               "size":  1160
+                                                           }
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "00038c3",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  25,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  "dp-stat"
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "52f7d3e",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "~1 week",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-num"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "e9bfff0",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eto see results on your own data\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-small"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         },
+                                         {
+                                             "id":  "aa0b2e3",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  25,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  "dp-stat"
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "0fcd81d",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "50-500",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-num"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "147f91c",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eemployee companies I work with\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-small"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         },
+                                         {
+                                             "id":  "74c1c03",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  25,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  "dp-stat"
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "262ec13",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "100s",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-num"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "9fd452d",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eof customers served by Zoxima in India\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-small"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         },
+                                         {
+                                             "id":  "f6d1042",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  25,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  "dp-stat"
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "c7640ea",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "0",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-num"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "50d9d13",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003esystems you have to replace\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-small"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    },
+                    {
+                        "id":  "0880886",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-sec",
+                                         "gap":  "default",
+                                         "content_width":  {
+                                                               "unit":  "px",
+                                                               "size":  1160
+                                                           },
+                                         "_element_id":  "how"
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "c74f15d",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  100,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "910b920",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "How we work together",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "22100cb",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Four steps from first call to a sales team that sells more.",
+                                                                                   "header_size":  "h2",
+                                                                                   "_css_classes":  "dp-h2"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "5416498",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eEach step has a clear result, so you decide whether to go further based on what you have already seen.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-lead"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "0c18644",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "8b05382",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  50,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "6f272f5",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "STEP 01",
+                                                                                                                             "header_size":  "div",
+                                                                                                                             "_css_classes":  "dp-step"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "d126842",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Discovery call",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "3601ccb",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003e15 minutes. We talk about your goals, your systems and where revenue or margin feels harder than it should.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "c606891",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  50,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "35faec9",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "STEP 02",
+                                                                                                                             "header_size":  "div",
+                                                                                                                             "_css_classes":  "dp-step"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "ebf5d3e",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Snapshot",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "d8b2cfa",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eIn about a week, you see on your own data which customers can buy more and which deals need a price check.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              },
+                                                              {
+                                                                  "id":  "2081d11",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "f7d9913",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  50,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "4d97306",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "STEP 03",
+                                                                                                                             "header_size":  "div",
+                                                                                                                             "_css_classes":  "dp-step"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "6ee8926",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Activate",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "871cc66",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eYour sales team goes live in about two days, with clear next steps inside the tools they already use.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "2eb2b11",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  50,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "3990d31",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "STEP 04",
+                                                                                                                             "header_size":  "div",
+                                                                                                                             "_css_classes":  "dp-step"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "23699cf",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Expand",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "26bd480",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eWe add more solutions only where the numbers show they will pay back.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    },
+                    {
+                        "id":  "af033f0",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-sec dp-alt",
+                                         "gap":  "default",
+                                         "content_width":  {
+                                                               "unit":  "px",
+                                                               "size":  1160
+                                                           }
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "776c89b",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  100,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "68d6390",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Who I help",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "81fd805",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Built for teams that already know how to sell.",
+                                                                                   "header_size":  "h2",
+                                                                                   "_css_classes":  "dp-h2"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "d9d532b",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "5f96189",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "e4db3e1",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Manufacturing",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "ea735dc",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003ePlants and OEMs with big product catalogues, dealer networks and price lists that change often.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "0ea519b",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "2f7fe45",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Building materials",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "25304fc",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eCement, steel, tiles and fittings sold through distributors, where small price slips add up fast.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "6bf1aa5",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "2ef6900",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "FMCG and food",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "fe5959f",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eBrands with thousands of outlets, where the next order and the right scheme decide the month.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              },
+                                                              {
+                                                                  "id":  "e4bc25b",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "9bb0eee",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "4d7720c",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Distribution and wholesale",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "fb602ed",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eTeams juggling many SKUs and customers, who need to know who to call and what to offer.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "fb17c42",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "d92394f",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Tech and digital-first firms",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "3ccac14",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eFast-growing companies whose CRM, billing and support data sit in different tools.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "9a3789f",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "48a69de",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Local and regional businesses",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "5126508",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eOwner-led companies that want enterprise-grade sales tools without an enterprise project.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              },
+                                                              {
+                                                                  "id":  "e38107a",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "99d655f",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  100,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  ""
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "d2300bb",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "button",
+                                                                                                            "settings":  {
+                                                                                                                             "text":  "See all industries",
+                                                                                                                             "link":  {
+                                                                                                                                          "url":  "/industries/",
+                                                                                                                                          "is_external":  "",
+                                                                                                                                          "nofollow":  ""
+                                                                                                                                      },
+                                                                                                                             "_css_classes":  "dp-btn-ghost",
+                                                                                                                             "_element_width":  "auto"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    },
+                    {
+                        "id":  "23d895f",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-sec",
+                                         "gap":  "default",
+                                         "content_width":  {
+                                                               "unit":  "px",
+                                                               "size":  1160
+                                                           }
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "e73a387",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  100,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "49c2cf3",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Fit check",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "be0c852",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Good fit, or not yet?",
+                                                                                   "header_size":  "h2",
+                                                                                   "_css_classes":  "dp-h2"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "5410897",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eI would rather tell you early than waste your time.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-lead"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "e012794",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "0213a3e",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  50,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "9d2164f",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "A good fit if...",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "90e1386",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon-list",
+                                                                                                            "settings":  {
+                                                                                                                             "icon_list":  [
+                                                                                                                                               {
+                                                                                                                                                   "_id":  "c21108b",
+                                                                                                                                                   "text":  "You have 50 to 500 employees",
+                                                                                                                                                   "selected_icon":  {
+                                                                                                                                                                         "value":  "fas fa-check",
+                                                                                                                                                                         "library":  "fa-solid"
+                                                                                                                                                                     }
+                                                                                                                                               },
+                                                                                                                                               {
+                                                                                                                                                   "_id":  "f9050f1",
+                                                                                                                                                   "text":  "Your sales team works from an ERP, CRM or spreadsheets",
+                                                                                                                                                   "selected_icon":  {
+                                                                                                                                                                         "value":  "fas fa-check",
+                                                                                                                                                                         "library":  "fa-solid"
+                                                                                                                                                                     }
+                                                                                                                                               },
+                                                                                                                                               {
+                                                                                                                                                   "_id":  "1320df2",
+                                                                                                                                                   "text":  "Revenue growth and margin both matter to leadership",
+                                                                                                                                                   "selected_icon":  {
+                                                                                                                                                                         "value":  "fas fa-check",
+                                                                                                                                                                         "library":  "fa-solid"
+                                                                                                                                                                     }
+                                                                                                                                               },
+                                                                                                                                               {
+                                                                                                                                                   "_id":  "a6a4885",
+                                                                                                                                                   "text":  "You want to act in weeks, not quarters",
+                                                                                                                                                   "selected_icon":  {
+                                                                                                                                                                         "value":  "fas fa-check",
+                                                                                                                                                                         "library":  "fa-solid"
+                                                                                                                                                                     }
+                                                                                                                                               }
+                                                                                                                                           ],
+                                                                                                                             "_css_classes":  "dp-list"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "0b37de8",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  50,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "fa3664c",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Not a fit if...",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "3fc0d69",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon-list",
+                                                                                                            "settings":  {
+                                                                                                                             "icon_list":  [
+                                                                                                                                               {
+                                                                                                                                                   "_id":  "5f5d2ac",
+                                                                                                                                                   "text":  "You want a bought lead list or bulk email blasts",
+                                                                                                                                                   "selected_icon":  {
+                                                                                                                                                                         "value":  "fas fa-times",
+                                                                                                                                                                         "library":  "fa-solid"
+                                                                                                                                                                     }
+                                                                                                                                               },
+                                                                                                                                               {
+                                                                                                                                                   "_id":  "795fba8",
+                                                                                                                                                   "text":  "There is no sales team to act on the insights",
+                                                                                                                                                   "selected_icon":  {
+                                                                                                                                                                         "value":  "fas fa-times",
+                                                                                                                                                                         "library":  "fa-solid"
+                                                                                                                                                                     }
+                                                                                                                                               },
+                                                                                                                                               {
+                                                                                                                                                   "_id":  "982b1d4",
+                                                                                                                                                   "text":  "You want to replace every system at once",
+                                                                                                                                                   "selected_icon":  {
+                                                                                                                                                                         "value":  "fas fa-times",
+                                                                                                                                                                         "library":  "fa-solid"
+                                                                                                                                                                     }
+                                                                                                                                               }
+                                                                                                                                           ],
+                                                                                                                             "_css_classes":  "dp-list dp-list-no"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    },
+                    {
+                        "id":  "8e8f6f0",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-sec dp-alt",
+                                         "gap":  "default",
+                                         "content_width":  {
+                                                               "unit":  "px",
+                                                               "size":  1160
+                                                           }
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "21222e7",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  100,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "63e5f02",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Proof",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "a920acf",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Trusted from mid-market teams to large enterprises.",
+                                                                                   "header_size":  "h2",
+                                                                                   "_css_classes":  "dp-h2"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "223209a",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eZoxima works with hundreds of customers. Names are shared only under NDA, so here they are by size and sector.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-lead"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "2cb891e",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "389610e",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "1adc8f0",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "A $10B building-materials company",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "03143cb",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eLarge dealer network, many price lists and a sales team spread across regions.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "ab71a98",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "b94c1b2",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "A $3B FMCG group",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "2928b19",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eThousands of outlets, frequent schemes and fast-moving stock.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "d2f80bc",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "383b529",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Large tech and digital-first firms",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "cce2255",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eData spread across CRM, billing and support tools, brought into one view.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    },
+                    {
+                        "id":  "96d3d42",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-sec",
+                                         "gap":  "default",
+                                         "content_width":  {
+                                                               "unit":  "px",
+                                                               "size":  1160
+                                                           }
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "06f63c3",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  100,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "377fcb0",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "About me",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "0c2bc34",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Hi, I am Divyansh.",
+                                                                                   "header_size":  "h2",
+                                                                                   "_css_classes":  "dp-h2"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "666efd5",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eI work in sales at Zoxima, a Fremont, California based apps, automations and AI company with offices in Delhi NCR. My job is simple: understand how your team sells today, then show you where more revenue and better margin are hiding in data you already own.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-lead"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "c02a220",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "4365118",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  100,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  ""
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "dadb589",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "button",
+                                                                                                            "settings":  {
+                                                                                                                             "text":  "More about me",
+                                                                                                                             "link":  {
+                                                                                                                                          "url":  "/about/",
+                                                                                                                                          "is_external":  "",
+                                                                                                                                          "nofollow":  ""
+                                                                                                                                      },
+                                                                                                                             "_css_classes":  "dp-btn-ghost",
+                                                                                                                             "_element_width":  "auto"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    },
+                    {
+                        "id":  "2199a0e",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-sec dp-alt",
+                                         "gap":  "default",
+                                         "content_width":  {
+                                                               "unit":  "px",
+                                                               "size":  1160
+                                                           }
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "1db7d23",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  100,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "02cb95d",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "FAQ",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "7481245",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Questions people usually ask.",
+                                                                                   "header_size":  "h2",
+                                                                                   "_css_classes":  "dp-h2"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "7068c45",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "accordion",
+                                                                  "settings":  {
+                                                                                   "tabs":  [
+                                                                                                {
+                                                                                                    "_id":  "5c55ffe",
+                                                                                                    "tab_title":  "Do we have to change our ERP or CRM?",
+                                                                                                    "tab_content":  "\u003cp\u003eNo. Everything sits on top of what you already use. Nothing is ripped out.\u003c/p\u003e"
+                                                                                                },
+                                                                                                {
+                                                                                                    "_id":  "a15c1fb",
+                                                                                                    "tab_title":  "How fast will we see something real?",
+                                                                                                    "tab_content":  "\u003cp\u003eThe Snapshot shows results on your own data in about a week.\u003c/p\u003e"
+                                                                                                },
+                                                                                                {
+                                                                                                    "_id":  "0a683d1",
+                                                                                                    "tab_title":  "Is our data safe?",
+                                                                                                    "tab_content":  "\u003cp\u003eIt runs inside your own environment, and your data stays with you.\u003c/p\u003e"
+                                                                                                },
+                                                                                                {
+                                                                                                    "_id":  "b8e8a1f",
+                                                                                                    "tab_title":  "What does it cost?",
+                                                                                                    "tab_content":  "\u003cp\u003eIt depends on team size and the solutions you pick. After a short call I will share an indicative range, and a formal quote comes from our sales team.\u003c/p\u003e"
+                                                                                                },
+                                                                                                {
+                                                                                                    "_id":  "6f8be64",
+                                                                                                    "tab_title":  "Do you only work in India?",
+                                                                                                    "tab_content":  "\u003cp\u003eNo. Zoxima works with companies in India and the USA.\u003c/p\u003e"
+                                                                                                }
+                                                                                            ],
+                                                                                   "_css_classes":  "dp-faq",
+                                                                                   "selected_icon":  {
+                                                                                                         "value":  "fas fa-plus",
+                                                                                                         "library":  "fa-solid"
+                                                                                                     },
+                                                                                   "selected_active_icon":  {
+                                                                                                                "value":  "fas fa-minus",
+                                                                                                                "library":  "fa-solid"
+                                                                                                            }
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    },
+                    {
+                        "id":  "c12eb64",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-sec dp-dark",
+                                         "gap":  "default",
+                                         "content_width":  {
+                                                               "unit":  "px",
+                                                               "size":  1160
+                                                           }
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "77c2efb",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  100,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "c66639c",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Next step",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow dp-center"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "4c766dc",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Let us look at your sales numbers together.",
+                                                                                   "header_size":  "h2",
+                                                                                   "_css_classes":  "dp-h2 dp-center"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "25674c2",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eA 15-minute call, no obligation. If I cannot help, I will say so.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-lead dp-center"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "d962925",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "7995b82",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  100,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-btn-row"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "00076d4",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "button",
+                                                                                                            "settings":  {
+                                                                                                                             "text":  "Book a 15-min call",
+                                                                                                                             "link":  {
+                                                                                                                                          "url":  "/contact/",
+                                                                                                                                          "is_external":  "",
+                                                                                                                                          "nofollow":  ""
+                                                                                                                                      },
+                                                                                                                             "_css_classes":  "dp-btn",
+                                                                                                                             "_element_width":  "auto"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "136f0eb",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "button",
+                                                                                                            "settings":  {
+                                                                                                                             "text":  "WhatsApp me",
+                                                                                                                             "link":  {
+                                                                                                                                          "url":  "https://wa.me/918799714396",
+                                                                                                                                          "is_external":  "",
+                                                                                                                                          "nofollow":  ""
+                                                                                                                                      },
+                                                                                                                             "_css_classes":  "dp-btn-ghost",
+                                                                                                                             "_element_width":  "auto"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    }
+                ]
+}

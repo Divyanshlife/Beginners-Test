@@ -1,0 +1,240 @@
+/*
+Theme Name: Divyansh Pro
+Theme URI: https://github.com/Divyanshlife/Beginners-Test
+Author: Divyansh Arora
+Description: Clean, professional consulting theme made for Elementor. Light background, elegant serif headings, dark pill buttons, card sections. Colors, header button and footer contact details can be changed from Appearance > Customize > Divyansh Pro Settings.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: divyansh-pro
+Tags: one-column, custom-menu, custom-logo, full-width-template, translation-ready
+*/
+
+/* ---------- Design tokens (Customizer can override --dp-accent, --dp-ink, --dp-bg) ---------- */
+:root {
+  --dp-bg: #f4f6f5;
+  --dp-surface: #ffffff;
+  --dp-ink: #0e1a1f;
+  --dp-muted: #56656a;
+  --dp-line: #dbe3e1;
+  --dp-accent: #0f6e64;
+  --dp-accent-soft: #e2efec;
+  --dp-on-dark: #eef4f2;
+  --dp-on-dark-muted: #9fb3b0;
+  --dp-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --dp-body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --dp-radius: 16px;
+  --dp-max: 1160px;
+}
+
+/* Make Elementor's own global colors and fonts follow the theme */
+body[class*="elementor-kit-"] {
+  --e-global-color-primary: var(--dp-ink);
+  --e-global-color-secondary: var(--dp-muted);
+  --e-global-color-text: var(--dp-muted);
+  --e-global-color-accent: var(--dp-accent);
+  --e-global-typography-primary-font-family: "Fraunces";
+  --e-global-typography-secondary-font-family: "Fraunces";
+  --e-global-typography-text-font-family: "Manrope";
+  --e-global-typography-accent-font-family: "Manrope";
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--dp-bg);
+  color: var(--dp-ink);
+  font-family: var(--dp-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; }
+a { color: var(--dp-accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--dp-accent); outline-offset: 3px; }
+h1, h2, h3, h4 { font-family: var(--dp-display); font-weight: 500; line-height: 1.12; text-wrap: balance; color: var(--dp-ink); }
+
+.dp-container {
+  max-width: var(--dp-max);
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.screen-reader-text { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px); }
+.skip-link:focus { position: fixed; top: 8px; left: 8px; z-index: 999; width: auto; height: auto; clip: auto; background: #fff; padding: 8px 12px; }
+
+/* ---------- Header ---------- */
+.dp-header {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--dp-bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s;
+}
+.admin-bar .dp-header { top: 32px; }
+.dp-header.is-scrolled { border-bottom-color: var(--dp-line); }
+.dp-header__row { display: flex; align-items: center; gap: 24px; min-height: 72px; }
+.dp-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dp-ink); margin-right: auto; }
+.dp-brand img { max-height: 40px; width: auto; }
+.dp-brand__mark {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: var(--dp-ink); color: var(--dp-bg);
+  display: grid; place-items: center;
+  font: 600 15px/1 var(--dp-display);
+}
+.dp-brand__name { font: 600 19px/1.1 var(--dp-display); letter-spacing: -.01em; }
+.dp-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 28px; }
+.dp-nav a { color: var(--dp-muted); text-decoration: none; font-size: 15px; font-weight: 500; }
+.dp-nav a:hover, .dp-nav .current-menu-item > a { color: var(--dp-ink); }
+.dp-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--dp-ink); color: #fff !important;
+  border-radius: 999px; padding: 11px 20px;
+  font: 600 14px/1 var(--dp-body); text-decoration: none; white-space: nowrap;
+}
+.dp-pill:hover { background: var(--dp-accent); }
+.dp-menu-toggle { display: none; background: none; border: 1px solid var(--dp-line); border-radius: 10px; padding: 8px 12px; font: 600 14px var(--dp-body); color: var(--dp-ink); cursor: pointer; }
+
+@media (max-width: 900px) {
+  .dp-menu-toggle { display: inline-block; }
+  .dp-header .dp-pill { display: none; }
+  .dp-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--dp-bg); border-bottom: 1px solid var(--dp-line); }
+  .dp-nav.is-open { display: block; }
+  .dp-nav ul { flex-direction: column; gap: 0; padding: 8px max(20px, env(safe-area-inset-left, 0px)) 16px; }
+  .dp-nav a { display: block; padding: 12px 0; font-size: 17px; }
+}
+@media (max-width: 782px) { .admin-bar .dp-header { top: 46px; } }
+
+/* ---------- Footer ---------- */
+.dp-footer { background: var(--dp-ink); color: var(--dp-on-dark-muted); padding-block: 72px 32px; font-size: 15px; }
+.dp-footer a { color: var(--dp-on-dark); text-decoration: none; }
+.dp-footer a:hover { text-decoration: underline; }
+.dp-footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+.dp-footer__title { color: var(--dp-on-dark); font: 500 22px/1.2 var(--dp-display); margin: 0 0 12px; }
+.dp-footer h4 { color: var(--dp-on-dark); font: 600 12px/1 var(--dp-body); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 16px; }
+.dp-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.dp-footer__bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-size: 13px; }
+@media (max-width: 760px) { .dp-footer__grid { grid-template-columns: 1fr; } }
+
+/* ---------- Plain (non-Elementor) pages ---------- */
+.dp-plain { padding-block: 72px 96px; }
+.dp-plain .entry-title { font-size: clamp(34px, 5vw, 52px); margin: 0 0 24px; }
+.dp-plain .entry-content { max-width: 720px; color: var(--dp-muted); }
+.dp-plain .entry-content h2, .dp-plain .entry-content h3 { color: var(--dp-ink); }
+
+/* =====================================================================
+   Elementor helpers. Add these names in Elementor > Advanced > CSS Classes
+   ===================================================================== */
+
+/* Sections */
+body .elementor-section.dp-sec { padding: 104px 0; }
+body .elementor-section.dp-sec-sm { padding: 64px 0; }
+body .elementor-section.dp-alt { background: var(--dp-surface); border-top: 1px solid var(--dp-line); border-bottom: 1px solid var(--dp-line); }
+body .elementor-section.dp-dark { background: var(--dp-ink); }
+body .elementor-section.dp-hero {
+  padding: 88px 0 96px;
+  background:
+    radial-gradient(60% 70% at 92% 0%, color-mix(in srgb, var(--dp-accent) 16%, transparent) 0%, transparent 70%),
+    radial-gradient(40% 50% at 0% 100%, color-mix(in srgb, var(--dp-accent) 8%, transparent) 0%, transparent 70%);
+}
+body .elementor-section.dp-inner { margin-top: 32px; }
+@media (max-width: 767px) {
+  body .elementor-section.dp-sec { padding: 72px 0; }
+  body .elementor-section.dp-hero { padding: 48px 0 64px; }
+}
+
+/* Headings */
+body .dp-eyebrow .elementor-heading-title {
+  font: 700 12px/1.2 var(--dp-body); letter-spacing: .16em; text-transform: uppercase; color: var(--dp-accent);
+  display: inline-flex; align-items: center; gap: 10px;
+}
+body .dp-eyebrow .elementor-heading-title::before { content: ""; width: 22px; height: 1px; background: currentColor; }
+body .dp-h1 .elementor-heading-title {
+  font-family: var(--dp-display); font-weight: 500; font-size: clamp(40px, 5.6vw, 68px);
+  line-height: 1.04; letter-spacing: -.025em; color: var(--dp-ink); text-wrap: balance;
+}
+body .dp-h1 .elementor-heading-title em, body .dp-h2 .elementor-heading-title em { font-style: italic; color: var(--dp-accent); }
+body .dp-h2 .elementor-heading-title {
+  font-family: var(--dp-display); font-weight: 500; font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1; letter-spacing: -.02em; color: var(--dp-ink); text-wrap: balance;
+}
+body .dp-h3 .elementor-heading-title {
+  font-family: var(--dp-display); font-weight: 600; font-size: 22px; line-height: 1.25; color: var(--dp-ink);
+}
+body .dp-num .elementor-heading-title {
+  font-family: var(--dp-display); font-weight: 500; font-size: clamp(36px, 4vw, 48px); line-height: 1; color: var(--dp-ink);
+  font-variant-numeric: tabular-nums; letter-spacing: -.02em;
+}
+body .dp-step .elementor-heading-title { font: 700 13px/1 var(--dp-body); letter-spacing: .1em; color: var(--dp-accent); }
+
+/* Body text */
+body .dp-lead, body .dp-lead p { font-size: 19px; line-height: 1.6; color: var(--dp-muted); max-width: 60ch; }
+body .dp-text, body .dp-text p { font-size: 16px; line-height: 1.65; color: var(--dp-muted); }
+body .dp-small, body .dp-small p { font-size: 13px; color: var(--dp-muted); letter-spacing: .01em; }
+body .dp-center .elementor-heading-title, body .dp-center.elementor-widget-text-editor { text-align: center; margin-left: auto; margin-right: auto; }
+body .dp-center.dp-lead p { margin-left: auto; margin-right: auto; }
+.elementor-widget-text-editor p:last-child { margin-bottom: 0; }
+
+/* Buttons */
+body .dp-btn .elementor-button, body .dp-btn-ghost .elementor-button {
+  border-radius: 999px; padding: 15px 26px; font: 600 15px/1 var(--dp-body); letter-spacing: 0;
+  transition: background .2s, color .2s, border-color .2s;
+}
+body .dp-btn .elementor-button { background: var(--dp-ink); color: #fff; border: 1px solid var(--dp-ink); }
+body .dp-btn .elementor-button:hover { background: var(--dp-accent); border-color: var(--dp-accent); }
+body .dp-btn-ghost .elementor-button { background: transparent; color: var(--dp-ink); border: 1px solid color-mix(in srgb, var(--dp-ink) 25%, transparent); }
+body .dp-btn-ghost .elementor-button:hover { border-color: var(--dp-ink); }
+body .dp-btn.elementor-widget, body .dp-btn-ghost.elementor-widget { margin-right: 10px; }
+
+/* Cards (put class on a COLUMN) */
+body .dp-card > .elementor-element-populated {
+  background: var(--dp-surface); border: 1px solid var(--dp-line); border-radius: var(--dp-radius);
+  padding: 30px !important; margin: 8px; transition: border-color .2s, transform .2s;
+}
+body .dp-alt .dp-card > .elementor-element-populated { background: var(--dp-bg); }
+body .dp-card:hover > .elementor-element-populated { border-color: color-mix(in srgb, var(--dp-accent) 45%, var(--dp-line)); }
+body .dp-card .elementor-widget:not(:last-child) { margin-bottom: 12px; }
+
+/* Hero side panel (column) */
+body .dp-panel > .elementor-element-populated {
+  background: var(--dp-surface); border: 1px solid var(--dp-line); border-radius: 22px;
+  padding: 32px !important; box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--dp-ink) 30%, transparent);
+}
+body .dp-panel .elementor-widget:not(:last-child) { margin-bottom: 14px; }
+
+/* Stat strip */
+body .dp-stat > .elementor-element-populated { padding: 8px 24px !important; border-left: 1px solid var(--dp-line); }
+body .dp-stat .elementor-widget:not(:last-child) { margin-bottom: 8px; }
+@media (max-width: 767px) { body .dp-stat > .elementor-element-populated { border-left: 0; border-top: 1px solid var(--dp-line); padding: 20px 0 !important; } }
+
+/* Icon lists */
+body .dp-list .elementor-icon-list-item { align-items: flex-start; }
+body .dp-list .elementor-icon-list-items .elementor-icon-list-item:not(:last-child) { padding-bottom: 10px; }
+body .dp-list .elementor-icon-list-icon i { color: var(--dp-accent); font-size: 14px; }
+body .dp-list .elementor-icon-list-icon svg { fill: var(--dp-accent); width: 14px; }
+body .dp-list .elementor-icon-list-icon { margin-top: 5px; }
+body .dp-list .elementor-icon-list-text { color: var(--dp-ink); font-size: 15.5px; line-height: 1.55; }
+body .dp-list-no .elementor-icon-list-icon i { color: #a2483c; }
+body .dp-list-no .elementor-icon-list-icon svg { fill: #a2483c; }
+
+/* FAQ accordion */
+body .dp-faq .elementor-accordion-item { border: 0 !important; border-bottom: 1px solid var(--dp-line) !important; }
+body .dp-faq .elementor-tab-title { padding: 22px 0 !important; font: 600 18px/1.4 var(--dp-body) !important; color: var(--dp-ink) !important; }
+body .dp-faq .elementor-tab-title a { color: var(--dp-ink) !important; }
+body .dp-faq .elementor-tab-content { padding: 0 0 22px !important; border: 0 !important; color: var(--dp-muted); font-size: 16px; }
+body .dp-faq .elementor-accordion-icon { color: var(--dp-accent); }
+
+/* Dark band text */
+body .dp-dark .elementor-heading-title { color: var(--dp-on-dark) !important; }
+body .dp-dark .dp-eyebrow .elementor-heading-title { color: var(--dp-on-dark-muted) !important; }
+body .dp-dark .dp-lead, body .dp-dark .dp-lead p, body .dp-dark .dp-text p, body .dp-dark .dp-small p { color: var(--dp-on-dark-muted); }
+body .dp-dark .dp-btn .elementor-button { background: var(--dp-on-dark); color: var(--dp-ink); border-color: var(--dp-on-dark); }
+body .dp-dark .dp-btn .elementor-button:hover { background: #fff; }
+body .dp-dark .dp-btn-ghost .elementor-button { color: var(--dp-on-dark); border-color: rgba(255,255,255,.3); }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }

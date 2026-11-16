@@ -1,0 +1,284 @@
+<title>Divyansh Pro Preview</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: sticky header, glow hero with side panel, stat strip, banded sections, dark CTA, footer. Single light look on purpose: it mirrors the WordPress theme. */
+:root {
+  color-scheme: light;
+  --bg: #f4f6f5; --surface: #ffffff; --ink: #0e1a1f; --muted: #56656a; --line: #dbe3e1;
+  --accent: #0f6e64; --on-dark: #eef4f2; --on-dark-muted: #9fb3b0; --no: #a2483c;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "Manrope", "Segoe UI", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 var(--body); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.note { background: var(--ink); color: var(--on-dark-muted); font-size: 13px; text-align: center; }
+.note .wrap { padding-block: 8px; }
+.note b { color: var(--on-dark); font-weight: 600; }
+
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.hrow { display: flex; align-items: center; gap: 24px; min-height: 72px; }
+.brand { display: flex; align-items: center; gap: 10px; margin-right: auto; text-decoration: none; }
+.mark { width: 34px; height: 34px; border-radius: 10px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font: 600 15px/1 var(--display); }
+.bname { font: 600 19px/1.1 var(--display); }
+nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+nav a { text-decoration: none; color: var(--muted); font-size: 15px; font-weight: 500; }
+nav a[aria-current] , nav a:hover { color: var(--ink); }
+.pill, .btn { display: inline-flex; align-items: center; border-radius: 999px; text-decoration: none; font: 600 15px/1 var(--body); padding: 15px 26px; border: 1px solid var(--ink); background: var(--ink); color: #fff; transition: background .2s, border-color .2s; }
+.pill { padding: 11px 20px; font-size: 14px; }
+.pill:hover, .btn:hover { background: var(--accent); border-color: var(--accent); }
+.ghost { background: transparent; color: var(--ink); border-color: color-mix(in srgb, var(--ink) 25%, transparent); }
+.ghost:hover { background: transparent; border-color: var(--ink); }
+@media (max-width: 900px) { nav, header .pill { display: none; } }
+
+.eyebrow { font: 700 12px/1.2 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; }
+.h1 { font-size: clamp(40px, 5.6vw, 68px); line-height: 1.04; letter-spacing: -.025em; }
+.h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -.02em; }
+.h1 em, .h2 em { color: var(--accent); }
+.h3 { font-size: 22px; font-weight: 600; line-height: 1.25; }
+.lead { font-size: 19px; color: var(--muted); max-width: 60ch; }
+.small { font-size: 13px; color: var(--muted); }
+.text { color: var(--muted); }
+
+section { padding-block: 104px; }
+.alt { background: var(--surface); border-block: 1px solid var(--line); }
+.stack { display: grid; gap: 18px; }
+.head { display: grid; gap: 16px; margin-bottom: 40px; }
+
+.hero { padding-block: 88px 96px; background: radial-gradient(60% 70% at 92% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%), radial-gradient(40% 50% at 0% 100%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+.hero-grid > * { min-width: 0; }
+.btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 32px; display: grid; gap: 14px; box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--ink) 30%, transparent); }
+
+ul.check { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+ul.check li { display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 15.5px; line-height: 1.55; }
+ul.check li::before { content: ""; width: 14px; height: 14px; margin-top: 5px; background: var(--accent); -webkit-mask: var(--tick) center/contain no-repeat; mask: var(--tick) center/contain no-repeat; }
+ul.check { --tick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 8.5l4 4 8-9' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+ul.no li::before { background: var(--no); --tick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 3.5l9 9M12.5 3.5l-9 9' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E"); }
+
+.stats { padding-block: 56px; }
+.stat-row { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { padding: 8px 24px; border-left: 1px solid var(--line); display: grid; gap: 8px; }
+.stat:first-child { border-left: 0; padding-left: 0; }
+.num { font: 500 clamp(36px, 4vw, 48px)/1 var(--display); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+
+.grid { display: grid; gap: 16px; }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 30px; display: grid; gap: 12px; align-content: start; transition: border-color .2s; }
+.alt .card { background: var(--bg); }
+.card:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.step { font: 700 13px/1 var(--body); letter-spacing: .1em; color: var(--accent); }
+.more { margin-top: 32px; }
+
+details { border-bottom: 1px solid var(--line); }
+summary { list-style: none; cursor: pointer; padding: 22px 0; font: 600 18px/1.4 var(--body); display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--accent); font-size: 22px; line-height: 1; }
+details[open] summary::after { content: "\2212"; }
+details p { padding-bottom: 22px; color: var(--muted); max-width: 70ch; }
+
+.dark { background: var(--ink); text-align: center; }
+.dark .stack { justify-items: center; }
+.dark .eyebrow { color: var(--on-dark-muted); }
+.dark h2 { color: var(--on-dark); }
+.dark .lead { color: var(--on-dark-muted); }
+.dark .btn { background: var(--on-dark); color: var(--ink); border-color: var(--on-dark); }
+.dark .btn:hover { background: #fff; }
+.dark .ghost { background: transparent; color: var(--on-dark); border-color: rgba(255,255,255,.3); }
+
+footer { background: var(--ink); color: var(--on-dark-muted); padding-block: 72px 32px; font-size: 15px; border-top: 1px solid rgba(255,255,255,.08); }
+.fgrid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+.ftitle { color: var(--on-dark); font: 500 22px/1.2 var(--display); margin-bottom: 12px; }
+footer h4 { color: var(--on-dark); font: 600 12px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 16px; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+footer a { color: var(--on-dark); text-decoration: none; }
+.fbottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .g3 { grid-template-columns: 1fr 1fr; }
+  .stat-row { grid-template-columns: 1fr 1fr; row-gap: 24px; }
+  .stat:nth-child(3) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 640px) {
+  section { padding-block: 72px; }
+  .hero { padding-block: 48px 64px; }
+  .g2, .g3, .fgrid { grid-template-columns: 1fr; }
+  .stat-row { grid-template-columns: 1fr; }
+  .stat { border-left: 0; padding: 18px 0; border-top: 1px solid var(--line); }
+  .stat:first-child { border-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="note"><div class="wrap">Design preview of the <b>Divyansh Pro</b> WordPress theme, Home page. Every text, button and color here is editable in Elementor.</div></div>
+
+<header>
+  <div class="wrap hrow">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">D</span><span class="bname">Divyansh Arora</span></a>
+    <nav aria-label="Main menu"><ul>
+      <li><a href="#top" aria-current="page">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#how">Solutions</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <a class="pill" href="#contact">Book a 15-min call</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="stack">
+        <span class="eyebrow">Sales &middot; Apps &middot; Automations &middot; AI</span>
+        <h1 class="h1">Sell more. <em>Protect every margin point.</em></h1>
+        <p class="lead">I am Divyansh Arora. I help mid-market companies grow revenue and keep their margins healthy, using the apps, automations and AI we build at Zoxima. You see it working on your own data in about a week.</p>
+        <div class="btns"><a class="btn" href="#contact">Book a 15-min call</a><a class="btn ghost" href="#how">See how I work</a></div>
+        <p class="small">For companies with 50 to 500 employees and a sales team on an ERP or CRM.</p>
+      </div>
+      <div class="panel">
+        <span class="eyebrow">Your week-one snapshot</span>
+        <h3 class="h3">What we find in your own data</h3>
+        <ul class="check">
+          <li>Customers most likely to buy more this quarter</li>
+          <li>Products each account buys elsewhere today</li>
+          <li>Deals where discounts are eating margin</li>
+          <li>One next step for each sales rep, every morning</li>
+        </ul>
+        <p class="small">Your ERP, CRM, price lists and conversations, read together in one place. Nothing is replaced.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats alt">
+    <div class="wrap stat-row">
+      <div class="stat"><div class="num">~1 week</div><p class="small">to see results on your own data</p></div>
+      <div class="stat"><div class="num">50-500</div><p class="small">employee companies I work with</p></div>
+      <div class="stat"><div class="num">100s</div><p class="small">of customers served by Zoxima in India</p></div>
+      <div class="stat"><div class="num">0</div><p class="small">systems you have to replace</p></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">How we work together</span>
+        <h2 class="h2">Four steps from first call to a sales team that sells more.</h2>
+        <p class="lead">Each step has a clear result, so you decide whether to go further based on what you have already seen.</p>
+      </div>
+      <div class="grid g2">
+        <div class="card"><span class="step">STEP 01</span><h3 class="h3">Discovery call</h3><p class="text">15 minutes. We talk about your goals, your systems and where revenue or margin feels harder than it should.</p></div>
+        <div class="card"><span class="step">STEP 02</span><h3 class="h3">Snapshot</h3><p class="text">In about a week, you see on your own data which customers can buy more and which deals need a price check.</p></div>
+        <div class="card"><span class="step">STEP 03</span><h3 class="h3">Activate</h3><p class="text">Your sales team goes live in about two days, with clear next steps inside the tools they already use.</p></div>
+        <div class="card"><span class="step">STEP 04</span><h3 class="h3">Expand</h3><p class="text">We add more solutions only where the numbers show they will pay back.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="industries">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Who I help</span>
+        <h2 class="h2">Built for teams that already know how to sell.</h2>
+      </div>
+      <div class="grid g3">
+        <div class="card"><h3 class="h3">Manufacturing</h3><p class="text">Plants and OEMs with big product catalogues, dealer networks and price lists that change often.</p></div>
+        <div class="card"><h3 class="h3">Building materials</h3><p class="text">Cement, steel, tiles and fittings sold through distributors, where small price slips add up fast.</p></div>
+        <div class="card"><h3 class="h3">FMCG and food</h3><p class="text">Brands with thousands of outlets, where the next order and the right scheme decide the month.</p></div>
+        <div class="card"><h3 class="h3">Distribution and wholesale</h3><p class="text">Teams juggling many SKUs and customers, who need to know who to call and what to offer.</p></div>
+        <div class="card"><h3 class="h3">Tech and digital-first firms</h3><p class="text">Fast-growing companies whose CRM, billing and support data sit in different tools.</p></div>
+        <div class="card"><h3 class="h3">Local and regional businesses</h3><p class="text">Owner-led companies that want enterprise-grade sales tools without an enterprise project.</p></div>
+      </div>
+      <div class="more"><a class="btn ghost" href="#industries">See all industries</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Fit check</span>
+        <h2 class="h2">Good fit, or not yet?</h2>
+        <p class="lead">I would rather tell you early than waste your time.</p>
+      </div>
+      <div class="grid g2">
+        <div class="card"><h3 class="h3">A good fit if...</h3><ul class="check">
+          <li>You have 50 to 500 employees</li>
+          <li>Your sales team works from an ERP, CRM or spreadsheets</li>
+          <li>Revenue growth and margin both matter to leadership</li>
+          <li>You want to act in weeks, not quarters</li></ul></div>
+        <div class="card"><h3 class="h3">Not a fit if...</h3><ul class="check no">
+          <li>You want a bought lead list or bulk email blasts</li>
+          <li>There is no sales team to act on the insights</li>
+          <li>You want to replace every system at once</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Proof</span>
+        <h2 class="h2">Trusted from mid-market teams to large enterprises.</h2>
+        <p class="lead">Zoxima works with hundreds of customers. Names are shared only under NDA, so here they are by size and sector.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card"><h3 class="h3">A $10B building-materials company</h3><p class="text">Large dealer network, many price lists and a sales team spread across regions.</p></div>
+        <div class="card"><h3 class="h3">A $3B FMCG group</h3><p class="text">Thousands of outlets, frequent schemes and fast-moving stock.</p></div>
+        <div class="card"><h3 class="h3">Large tech and digital-first firms</h3><p class="text">Data spread across CRM, billing and support tools, brought into one view.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap stack">
+      <span class="eyebrow">About me</span>
+      <h2 class="h2">Hi, I am Divyansh.</h2>
+      <p class="lead">I work in sales at Zoxima, a Fremont, California based apps, automations and AI company with offices in Delhi NCR. My job is simple: understand how your team sells today, then show you where more revenue and better margin are hiding in data you already own.</p>
+      <div class="btns"><a class="btn ghost" href="#about">More about me</a></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="h2">Questions people usually ask.</h2>
+      </div>
+      <details><summary>Do we have to change our ERP or CRM?</summary><p>No. Everything sits on top of what you already use. Nothing is ripped out.</p></details>
+      <details><summary>How fast will we see something real?</summary><p>The Snapshot shows results on your own data in about a week.</p></details>
+      <details><summary>Is our data safe?</summary><p>It runs inside your own environment, and your data stays with you.</p></details>
+      <details><summary>What does it cost?</summary><p>It depends on team size and the solutions you pick. After a short call I will share an indicative range, and a formal quote comes from our sales team.</p></details>
+      <details><summary>Do you only work in India?</summary><p>No. Zoxima works with companies in India and the USA.</p></details>
+    </div>
+  </section>
+
+  <section class="dark" id="contact">
+    <div class="wrap stack">
+      <span class="eyebrow">Next step</span>
+      <h2 class="h2">Let us look at your sales numbers together.</h2>
+      <p class="lead">A 15-minute call, no obligation. If I cannot help, I will say so.</p>
+      <div class="btns"><a class="btn" href="https://wa.me/918799714396" target="_blank" rel="noopener">WhatsApp me</a><span class="btn ghost">Div.arora@zoxima.com</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><p class="ftitle">Divyansh Arora</p><p>I help mid-market companies sell more and protect margin with apps, automations and AI.</p></div>
+      <div><h4>Pages</h4><ul><li><a href="#top">Home</a></li><li><a href="#about">About</a></li><li><a href="#how">Solutions</a></li><li><a href="#industries">Industries</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Div.arora@zoxima.com</li><li>+91 87997 14396</li><li>Delhi NCR, India</li></ul></div>
+    </div>
+    <div class="fbottom"><span>&copy; 2026 Divyansh Arora</span><span>Built with WordPress and Elementor</span></div>
+  </div>
+</footer>
