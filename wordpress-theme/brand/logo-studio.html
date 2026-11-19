@@ -1,0 +1,430 @@
+<title>Kadvia Logo Studio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&family=Montserrat:wght@400;600;700;800&family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Fraunces:ital,wght@0,500;0,600;0,700;1,600&family=Cinzel:wght@500;600;700&family=Bebas+Neue&family=Josefin+Sans:wght@400;600;700&family=Raleway:wght@400;600;700;800&family=DM+Serif+Display&family=Archivo+Black&display=swap">
+<style>
+/* Layout: controls panel on the left, sticky live preview with export on the right; stacks on phones. */
+:root {
+  --bg: #f3f5fb; --panel: #ffffff; --fg: #141a33; --muted: #5d6585; --line: #dfe3f0;
+  --accent: #2447d6; --accent-ink: #ffffff; --pink: #e5307f; --chip: #eef1fb;
+  --ui: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --head: "Outfit", "Manrope", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0d1122; --panel: #151a30; --fg: #e8ebf7; --muted: #9aa3c4; --line: #262d4a;
+  --accent: #5b7bff; --accent-ink: #0d1122; --pink: #ff5fa0; --chip: #1d2340; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0d1122; --panel: #151a30; --fg: #e8ebf7; --muted: #9aa3c4; --line: #262d4a;
+  --accent: #5b7bff; --accent-ink: #0d1122; --pink: #ff5fa0; --chip: #1d2340; color-scheme: dark; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.5 var(--ui); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 48px; }
+header.top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 18px; }
+h1 { font: 700 26px/1.1 var(--head); margin: 0; letter-spacing: -.01em; }
+.sub { color: var(--muted); margin: 0; }
+.grid { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .stage { order: -1; position: static !important; } }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; }
+.controls { display: grid; }
+details.sec { border-bottom: 1px solid var(--line); }
+details.sec:last-child { border-bottom: 0; }
+details.sec > summary { cursor: pointer; list-style: none; padding: 14px 18px; font: 700 14px var(--head); display: flex; justify-content: space-between; align-items: center; }
+details.sec > summary::-webkit-details-marker { display: none; }
+details.sec > summary::after { content: "+"; color: var(--muted); font-size: 18px; }
+details.sec[open] > summary::after { content: "\2212"; }
+.body { padding: 0 18px 16px; display: grid; gap: 12px; }
+.row { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 10px; align-items: center; }
+.row > label, .lbl { color: var(--muted); font-size: 12.5px; font-weight: 600; }
+.hint { color: var(--muted); font-size: 12px; margin: 0; }
+input[type="text"], select { width: 100%; min-width: 0; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); color: var(--fg); font: 500 14px var(--ui); }
+input[type="range"] { width: 100%; accent-color: var(--accent); }
+.rng { display: grid; grid-template-columns: minmax(0, 1fr) 40px; gap: 8px; align-items: center; }
+.rng output { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 12px; text-align: right; }
+input[type="color"] { width: 44px; height: 32px; padding: 2px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); cursor: pointer; }
+.colors { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.seg button, .chipbtn { border: 1px solid var(--line); background: var(--chip); color: var(--fg); border-radius: 999px; padding: 6px 12px; font: 600 12.5px var(--ui); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.check { display: flex; gap: 8px; align-items: center; font-weight: 600; color: var(--fg); }
+button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.stage { position: sticky; top: max(12px, env(safe-area-inset-top, 0px)); display: grid; gap: 12px; }
+.canvasbox { border-radius: 16px; border: 1px solid var(--line); min-height: 300px; display: grid; place-items: center; padding: 28px; overflow: hidden; }
+.canvasbox.bg-checker { background-color: #fff; background-image: linear-gradient(45deg, #eceef5 25%, transparent 25%), linear-gradient(-45deg, #eceef5 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #eceef5 75%), linear-gradient(-45deg, transparent 75%, #eceef5 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0; }
+#preview { max-width: 100%; height: auto; display: block; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; }
+.swatches { display: flex; gap: 6px; align-items: center; }
+.sw { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--line); cursor: pointer; padding: 0; }
+.sw[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 2px var(--panel), 0 0 0 4px var(--accent); }
+.export { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { border: 0; border-radius: 10px; padding: 10px 16px; font: 700 13.5px var(--ui); cursor: pointer; background: var(--accent); color: var(--accent-ink); }
+.btn.ghost { background: var(--chip); color: var(--fg); border: 1px solid var(--line); }
+.status { color: var(--muted); font-size: 12.5px; min-height: 18px; margin: 0; }
+.fallback { display: grid; gap: 8px; padding: 14px; }
+.fallback img { max-width: 100%; border: 1px dashed var(--line); border-radius: 10px; background: #fff; }
+.presets { padding: 14px 18px; display: grid; gap: 10px; border-bottom: 1px solid var(--line); }
+.presets .seg button { background: var(--panel); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>Kadvia Logo Studio</h1>
+    <p class="sub">Apna logo khud banao: icon, naam, tagline, font aur colors badlo, phir PNG save karo.</p>
+  </header>
+
+  <div class="grid">
+    <div class="panel controls">
+      <div class="presets">
+        <span class="lbl">Shuruaat ke liye ek style chuno</span>
+        <div class="seg" id="presets"></div>
+      </div>
+
+      <details class="sec" open>
+        <summary>1. Icon (monogram)</summary>
+        <div class="body">
+          <div class="row"><label>Style</label>
+            <div class="seg" data-key="iconStyle">
+              <button data-v="kd">KD merge</button><button data-v="letters">Letters</button><button data-v="overlap">Overlap</button><button data-v="none">No icon</button>
+            </div></div>
+          <div class="row" data-show="letters,overlap"><label for="letters">Letters</label><input type="text" id="letters" data-key="letters" maxlength="3"></div>
+          <div class="row" data-show="letters,overlap"><label for="iconFont">Font</label><select id="iconFont" data-key="iconFont"></select></div>
+          <div class="row" data-show="letters,overlap"><label for="iconWeight">Mota-patla</label><select id="iconWeight" data-key="iconWeight"><option value="400">Regular</option><option value="600">Semi bold</option><option value="700">Bold</option><option value="800">Extra bold</option></select></div>
+          <div class="row" data-show="kd,letters,overlap"><label for="slant">Tircha (italic)</label><div class="rng"><input type="range" id="slant" data-key="slant" min="0" max="20" step="1"><output></output></div></div>
+          <div class="row" data-show="letters,overlap"><label for="overlap">Letters paas</label><div class="rng"><input type="range" id="overlap" data-key="overlap" min="-10" max="60" step="1"><output></output></div></div>
+          <div class="row" data-show="kd,letters,overlap"><label>Colors</label>
+            <div class="colors"><input type="color" id="main" data-key="main" aria-label="Main color"><input type="color" id="accent" data-key="accent" aria-label="Second color"><span class="hint">Main / doosra</span></div></div>
+          <div class="row" data-show="kd,letters,overlap"><label>Background shape</label>
+            <div class="seg" data-key="container"><button data-v="none">Kuch nahi</button><button data-v="rounded">Rounded box</button><button data-v="circle">Circle</button></div></div>
+          <div class="row" data-show-cont="1"><label>Box color</label>
+            <div class="colors"><input type="color" id="contFill" data-key="contFill" aria-label="Box color"><input type="color" id="contFill2" data-key="contFill2" aria-label="Box gradient color"><label class="check"><input type="checkbox" id="contGradient" data-key="contGradient"> Gradient</label></div></div>
+          <div class="row" data-show="kd,letters,overlap"><label for="iconSize">Icon size</label><div class="rng"><input type="range" id="iconSize" data-key="iconSize" min="60" max="220" step="1"><output></output></div></div>
+        </div>
+      </details>
+
+      <details class="sec" open>
+        <summary>2. Naam (wordmark)</summary>
+        <div class="body">
+          <div class="row"><label for="word">Text</label><input type="text" id="word" data-key="word" maxlength="24"></div>
+          <div class="row"><label for="wordFont">Font</label><select id="wordFont" data-key="wordFont"></select></div>
+          <div class="row"><label for="wordWeight">Mota-patla</label><select id="wordWeight" data-key="wordWeight"><option value="400">Regular</option><option value="500">Medium</option><option value="600">Semi bold</option><option value="700">Bold</option><option value="800">Extra bold</option></select></div>
+          <div class="row"><label for="wordSize">Size</label><div class="rng"><input type="range" id="wordSize" data-key="wordSize" min="40" max="180" step="1"><output></output></div></div>
+          <div class="row"><label for="wordSpacing">Letter gap</label><div class="rng"><input type="range" id="wordSpacing" data-key="wordSpacing" min="-6" max="40" step="1"><output></output></div></div>
+          <div class="row"><label>Color</label><div class="colors"><input type="color" id="wordColor" data-key="wordColor" aria-label="Name color"><label class="check"><input type="checkbox" id="wordItalic" data-key="wordItalic"> Italic</label></div></div>
+        </div>
+      </details>
+
+      <details class="sec">
+        <summary>3. Tagline</summary>
+        <div class="body">
+          <label class="check"><input type="checkbox" id="showTag" data-key="showTag"> Tagline dikhao</label>
+          <div class="row"><label for="tag">Text</label><input type="text" id="tag" data-key="tag" maxlength="48"></div>
+          <div class="row"><label for="tagFont">Font</label><select id="tagFont" data-key="tagFont"></select></div>
+          <div class="row"><label for="tagSize">Size</label><div class="rng"><input type="range" id="tagSize" data-key="tagSize" min="10" max="40" step="1"><output></output></div></div>
+          <div class="row"><label for="tagSpacing">Letter gap</label><div class="rng"><input type="range" id="tagSpacing" data-key="tagSpacing" min="0" max="50" step="1"><output></output></div></div>
+          <div class="row"><label>Color</label><div class="colors"><input type="color" id="tagColor" data-key="tagColor" aria-label="Tagline color"></div></div>
+        </div>
+      </details>
+
+      <details class="sec">
+        <summary>4. Layout</summary>
+        <div class="body">
+          <div class="row"><label>Arrangement</label>
+            <div class="seg" data-key="layout"><button data-v="horizontal">Side by side</button><button data-v="stacked">Upar-neeche</button><button data-v="icon">Sirf icon</button></div></div>
+          <div class="row"><label for="gap">Icon aur naam ka gap</label><div class="rng"><input type="range" id="gap" data-key="gap" min="0" max="80" step="1"><output></output></div></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="stage">
+      <div class="panel" style="padding:14px; display:grid; gap:12px">
+        <div class="canvasbox bg-checker" id="box"><canvas id="preview" aria-label="Logo preview"></canvas></div>
+        <div class="toolbar">
+          <div class="swatches" role="group" aria-label="Preview background">
+            <span class="lbl">Background:</span>
+            <button class="sw" data-bg="checker" title="Transparent" style="background:linear-gradient(45deg,#ddd 50%,#fff 50%)"></button>
+            <button class="sw" data-bg="#ffffff" title="White" style="background:#ffffff"></button>
+            <button class="sw" data-bg="#f3f6ff" title="Light blue" style="background:#f3f6ff"></button>
+            <button class="sw" data-bg="#0f1c72" title="Royal dark" style="background:#0f1c72"></button>
+            <button class="sw" data-bg="#0f1638" title="Navy" style="background:#0f1638"></button>
+          </div>
+          <label class="check"><input type="checkbox" id="bgInExport"> Background bhi PNG mein</label>
+        </div>
+        <div class="export">
+          <button class="btn" id="saveLogo">Logo PNG save karo</button>
+          <button class="btn ghost" id="saveIcon">Site icon PNG (512)</button>
+          <button class="btn ghost" id="reset">Kadvia default wapas</button>
+        </div>
+        <p class="status" id="status" role="status"></p>
+        <div class="fallback" id="fallback" hidden>
+          <p class="hint">Is view mein seedha save nahi ho raha. Neeche image par right-click karo aur <b>"Save image as"</b> chuno.</p>
+          <img id="fallbackImg" alt="Exported logo">
+        </div>
+      </div>
+      <p class="hint">Tip: website header ke liye "Side by side" bina tagline, aur browser tab ke liye "Site icon PNG" use karo (WordPress: Appearance &rarr; Customize &rarr; Site Identity).</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FONTS = ["Outfit", "Manrope", "Poppins", "Montserrat", "Sora", "Space Grotesk", "Raleway", "Josefin Sans", "Archivo Black", "Bebas Neue", "Playfair Display", "Fraunces", "DM Serif Display", "Cinzel"];
+  var DEFAULTS = {
+    iconStyle: "kd", letters: "KD", iconFont: "Outfit", iconWeight: "700", slant: 12, overlap: 22,
+    main: "#2447d6", accent: "#e5307f", container: "none", contFill: "#2f55ec", contFill2: "#1a2fa6", contGradient: true, iconSize: 135,
+    word: "KADVIA", wordFont: "Outfit", wordWeight: "600", wordSize: 100, wordSpacing: 7, wordColor: "#0f1638", wordItalic: false,
+    showTag: true, tag: "YOUR WAY TO BOOKED MEETINGS", tagFont: "Manrope", tagSize: 18, tagSpacing: 24, tagColor: "#5b6386",
+    layout: "horizontal", gap: 30
+  };
+  var PRESETS = {
+    "Kadvia (abhi wala)": {},
+    "Blue box icon": { container: "rounded", main: "#ffffff", accent: "#ff4f9a", iconSize: 130 },
+    "Elegant serif": { iconStyle: "letters", letters: "KD", iconFont: "Playfair Display", iconWeight: "700", slant: 8, overlap: 18, main: "#0f1c72", accent: "#e5307f", wordFont: "Cinzel", wordWeight: "600", wordSpacing: 14, wordColor: "#0f1c72", tagFont: "Manrope" },
+    "Overlap": { iconStyle: "overlap", letters: "KD", iconFont: "Poppins", iconWeight: "800", slant: 0, overlap: 34 },
+    "Circle badge": { iconStyle: "letters", letters: "K", iconFont: "Sora", iconWeight: "700", slant: 0, container: "circle", main: "#ffffff", accent: "#ffffff", contFill: "#2447d6", contFill2: "#e5307f", wordFont: "Sora", wordWeight: "700", wordSpacing: 2 },
+    "Minimal": { iconStyle: "none", word: "kadvia", wordFont: "Sora", wordWeight: "700", wordSpacing: -2, wordSize: 120, tagSpacing: 18 }
+  };
+  var KEY = "kadvia-logo-studio-v1";
+  var state = Object.assign({}, DEFAULTS);
+  try { var saved = JSON.parse(localStorage.getItem(KEY) || "null"); if (saved) state = Object.assign({}, DEFAULTS, saved); } catch (e) {}
+  var previewBg = "checker";
+
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  // ---------- controls ----------
+  ["iconFont", "wordFont", "tagFont"].forEach(function (id) {
+    var sel = document.getElementById(id);
+    FONTS.forEach(function (f) { var o = document.createElement("option"); o.value = f; o.textContent = f; o.style.fontFamily = f; sel.appendChild(o); });
+  });
+  var presetBox = $("#presets");
+  Object.keys(PRESETS).forEach(function (name) {
+    var b = document.createElement("button"); b.type = "button"; b.textContent = name;
+    b.addEventListener("click", function () { state = Object.assign({}, DEFAULTS, PRESETS[name]); syncControls(); render(); });
+    presetBox.appendChild(b);
+  });
+
+  function syncControls() {
+    $$("[data-key]").forEach(function (el) {
+      var k = el.getAttribute("data-key"), v = state[k];
+      if (el.classList.contains("seg")) { $$("button", el).forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-v") === v)); }); return; }
+      if (el.type === "checkbox") el.checked = !!v; else el.value = v;
+      var out = el.parentNode.querySelector("output"); if (out) out.textContent = v;
+    });
+    $$("[data-show]").forEach(function (row) { row.hidden = row.getAttribute("data-show").split(",").indexOf(state.iconStyle) < 0; });
+    $$("[data-show-cont]").forEach(function (row) { row.hidden = state.iconStyle === "none" || state.container === "none"; });
+  }
+  $$("[data-key]").forEach(function (el) {
+    var k = el.getAttribute("data-key");
+    if (el.classList.contains("seg")) {
+      $$("button", el).forEach(function (b) { b.type = "button"; b.addEventListener("click", function () { state[k] = b.getAttribute("data-v"); syncControls(); render(); }); });
+      return;
+    }
+    el.addEventListener("input", function () {
+      if (el.type === "checkbox") state[k] = el.checked;
+      else if (el.type === "range") state[k] = Number(el.value);
+      else state[k] = el.value;
+      var out = el.parentNode.querySelector("output"); if (out) out.textContent = el.value;
+      syncControls(); render();
+    });
+  });
+  $$(".sw").forEach(function (b) {
+    b.addEventListener("click", function () { previewBg = b.getAttribute("data-bg"); paintBg(); });
+  });
+  function paintBg() {
+    var box = $("#box");
+    box.classList.toggle("bg-checker", previewBg === "checker");
+    box.style.background = previewBg === "checker" ? "" : previewBg;
+    $$(".sw").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-bg") === previewBg)); });
+  }
+  $("#reset").addEventListener("click", function () { state = Object.assign({}, DEFAULTS); syncControls(); render(); });
+
+  // ---------- drawing ----------
+  function rr(ctx, x, y, w, h, r) {
+    ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+  }
+  function font(weight, size, fam, italic) { return (italic ? "italic " : "") + weight + " " + size + "px \"" + fam + "\", sans-serif"; }
+  function spacedWidth(ctx, text, sp) {
+    var w = 0; for (var i = 0; i < text.length; i++) w += ctx.measureText(text[i]).width + (i < text.length - 1 ? sp : 0); return w;
+  }
+  function drawSpaced(ctx, text, x, y, sp) {
+    for (var i = 0; i < text.length; i++) { ctx.fillText(text[i], x, y); x += ctx.measureText(text[i]).width + sp; }
+  }
+
+  // KD merge monogram, drawn in a 100x100 box
+  function drawKD(ctx, s) {
+    var t = Math.tan(s.slant * Math.PI / 180);
+    ctx.transform(1, 0, -t, 1, t * 50, 0);
+    ctx.fillStyle = s.main; rr(ctx, 14, 12, 15, 76, 2); ctx.fill();
+    ctx.strokeStyle = s.main; ctx.lineWidth = 15; ctx.lineCap = "butt";
+    ctx.stroke(new Path2D("M21.5 19.5 H52 A30.5 30.5 0 0 1 52 80.5 H21.5"));
+    ctx.save(); ctx.clip(new Path2D("M29 27 H52 A23 23 0 0 1 52 73 H29 Z"));
+    ctx.strokeStyle = s.accent; ctx.lineWidth = 11; ctx.lineJoin = "miter"; ctx.miterLimit = 10;
+    ctx.stroke(new Path2D("M80 10 L31 50 L80 90")); ctx.restore();
+  }
+  // Letter monogram (letters or overlap), drawn in a 100x100 box
+  function drawLetters(ctx, s, overlapMode) {
+    var txt = (s.letters || "K").slice(0, 3); if (!txt.trim()) return;
+    var size = 100; ctx.font = font(s.iconWeight, size, s.iconFont);
+    var pull = s.overlap / 100 * size * 0.5;
+    var widths = [], total = 0, asc = 0, desc = 0;
+    for (var i = 0; i < txt.length; i++) { var m = ctx.measureText(txt[i]); widths.push(m.width); total += m.width - (i ? pull : 0); asc = Math.max(asc, m.actualBoundingBoxAscent); desc = Math.max(desc, m.actualBoundingBoxDescent); }
+    var h = asc + desc, scale = Math.min(84 / total, 76 / h);
+    var t = Math.tan(s.slant * Math.PI / 180);
+    ctx.translate(50, 50); ctx.transform(1, 0, -t, 1, 0, 0); ctx.scale(scale, scale);
+    var x = -total / 2, y = (asc - desc) / 2;
+    for (var j = 0; j < txt.length; j++) {
+      ctx.globalCompositeOperation = overlapMode && j > 0 ? "multiply" : "source-over";
+      ctx.fillStyle = j % 2 ? s.accent : s.main;
+      ctx.fillText(txt[j], x, y);
+      x += widths[j] - pull;
+    }
+    ctx.globalCompositeOperation = "source-over";
+  }
+  function drawIcon(ctx, s, x, y, S) {
+    ctx.save(); ctx.translate(x, y);
+    var inner = S, ox = 0, oy = 0;
+    if (s.container !== "none") {
+      var g = s.contGradient ? ctx.createLinearGradient(0, 0, S, S) : null;
+      if (g) { g.addColorStop(0, s.contFill); g.addColorStop(1, s.contFill2); }
+      ctx.fillStyle = g || s.contFill;
+      if (s.container === "circle") { ctx.beginPath(); ctx.arc(S / 2, S / 2, S / 2, 0, Math.PI * 2); ctx.fill(); }
+      else { rr(ctx, 0, 0, S, S, S * 0.22); ctx.fill(); }
+      inner = S * (s.container === "circle" ? 0.6 : 0.66); ox = oy = (S - inner) / 2;
+    }
+    ctx.translate(ox, oy); ctx.scale(inner / 100, inner / 100);
+    if (s.iconStyle === "kd") drawKD(ctx, s); else drawLetters(ctx, s, s.iconStyle === "overlap");
+    ctx.restore();
+  }
+
+  function measure(ctx, s) {
+    var hasIcon = s.iconStyle !== "none", S = hasIcon ? s.iconSize : 0;
+    var word = s.layout === "icon" ? "" : s.word;
+    ctx.font = font(s.wordWeight, s.wordSize, s.wordFont, s.wordItalic);
+    var wsp = s.wordSpacing / 100 * s.wordSize;
+    var wordW = word ? spacedWidth(ctx, word, wsp) : 0;
+    var wm = ctx.measureText(word || "H"), wordAsc = word ? Math.max(wm.actualBoundingBoxAscent, 1) : 0, wordDesc = word ? wm.actualBoundingBoxDescent : 0;
+    var tagOn = s.showTag && s.tag && s.layout !== "icon";
+    ctx.font = font(700, s.tagSize, s.tagFont);
+    var tsp = s.tagSpacing / 100 * s.tagSize;
+    var tagW = tagOn ? spacedWidth(ctx, s.tag, tsp) : 0, tm = ctx.measureText(s.tag || "H");
+    var tagAsc = tagOn ? tm.actualBoundingBoxAscent : 0, tagDesc = tagOn ? tm.actualBoundingBoxDescent : 0;
+    var tagGap = tagOn ? s.wordSize * 0.3 : 0;
+    var textH = (word ? wordAsc + wordDesc : 0) + (tagOn ? tagGap + tagAsc + tagDesc : 0);
+    var textW = Math.max(wordW, tagW);
+    var L = { S: S, word: word, wsp: wsp, tsp: tsp, wordW: wordW, tagW: tagW, wordAsc: wordAsc, wordDesc: wordDesc, tagAsc: tagAsc, tagOn: tagOn, tagGap: tagGap };
+    if (s.layout === "icon" || !word && !tagOn) { L.W = S || 10; L.H = S || 10; L.ix = 0; L.iy = 0; return L; }
+    if (s.layout === "stacked") {
+      L.W = Math.max(S, textW); L.H = S + (S ? s.gap : 0) + textH;
+      L.ix = (L.W - S) / 2; L.iy = 0; L.tx = null; L.ty = S + (S ? s.gap : 0); L.center = true;
+    } else {
+      L.W = S + (S ? s.gap : 0) + textW; L.H = Math.max(S, textH);
+      L.ix = 0; L.iy = (L.H - S) / 2; L.tx = S + (S ? s.gap : 0); L.ty = (L.H - textH) / 2; L.center = false;
+    }
+    return L;
+  }
+
+  function drawLogo(canvas, s, scale, bg) {
+    var ctx = canvas.getContext("2d");
+    var L = measure(ctx, s);
+    var pad = Math.max(L.S, s.wordSize) * 0.14;
+    var W = L.W + pad * 2, H = L.H + pad * 2;
+    canvas.width = Math.ceil(W * scale); canvas.height = Math.ceil(H * scale);
+    ctx = canvas.getContext("2d");
+    ctx.setTransform(scale, 0, 0, scale, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    if (bg) { ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H); }
+    ctx.translate(pad, pad);
+    if (L.S) drawIcon(ctx, s, L.ix, L.iy, L.S);
+    if (L.tx === undefined) return { W: W, H: H };
+    ctx.textBaseline = "alphabetic";
+    var y = L.ty;
+    if (L.word) {
+      ctx.font = font(s.wordWeight, s.wordSize, s.wordFont, s.wordItalic); ctx.fillStyle = s.wordColor;
+      y += L.wordAsc;
+      var wx = L.center ? (L.W - L.wordW) / 2 : L.tx;
+      drawSpaced(ctx, L.word, wx, y, L.wsp);
+      y += L.wordDesc;
+    }
+    if (L.tagOn) {
+      ctx.font = font(700, s.tagSize, s.tagFont); ctx.fillStyle = s.tagColor;
+      y += L.tagGap + L.tagAsc;
+      var tx = L.center ? (L.W - L.tagW) / 2 : L.tx + Math.max(0, s.wordSize * 0.03);
+      drawSpaced(ctx, s.tag, tx, y, L.tsp);
+    }
+    return { W: W, H: H };
+  }
+
+  var renderSeq = 0;
+  function loadFonts(s) {
+    if (!document.fonts || !document.fonts.load) return Promise.resolve();
+    return Promise.all([
+      document.fonts.load(font(s.wordWeight, 40, s.wordFont, s.wordItalic), s.word || "A"),
+      document.fonts.load(font(700, 20, s.tagFont), s.tag || "A"),
+      document.fonts.load(font(s.iconWeight, 40, s.iconFont), s.letters || "K")
+    ]).catch(function () {});
+  }
+  function render() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    var seq = ++renderSeq, s = Object.assign({}, state);
+    var canvas = $("#preview");
+    drawLogo(canvas, s, 2, null);
+    fitPreview(canvas);
+    loadFonts(s).then(function () { if (seq !== renderSeq) return; drawLogo(canvas, s, 2, null); fitPreview(canvas); });
+  }
+  function fitPreview(canvas) { canvas.style.width = Math.min(canvas.width / 2, 900) + "px"; }
+
+  // ---------- export ----------
+  var status = $("#status");
+  var downloads = null;
+  if (window.claude && window.claude.use) {
+    window.claude.use("downloads").then(function (d) { downloads = d; }).catch(function () {});
+  }
+  function exportBg() { return $("#bgInExport").checked && previewBg !== "checker" ? previewBg : null; }
+  function fileName(suffix) { return ((state.word || "logo").trim().toLowerCase().replace(/[^a-z0-9]+/g, "-") || "logo") + suffix + ".png"; }
+  function offer(canvas, name) {
+    status.textContent = "File taiyaar ho rahi hai...";
+    canvas.toBlob(function (blob) {
+      if (!blob) { status.textContent = "Image nahi ban paayi. Dobara try karo."; return; }
+      if (downloads) {
+        downloads.save({ filename: name, data: blob }).then(function () {
+          status.textContent = name + " save ho gayi.";
+          $("#fallback").hidden = true;
+        }).catch(function (err) {
+          var code = err && err.code;
+          if (code === "declined") status.textContent = "Save cancel kar diya.";
+          else if (code === "rate_limited") status.textContent = "Ek save pehle se khula hai. Use poora karo, phir dobara dabao.";
+          else showFallback(blob, name);
+        });
+      } else showFallback(blob, name);
+    }, "image/png");
+  }
+  function showFallback(blob, name) {
+    var img = $("#fallbackImg");
+    try { if (img.dataset.url) URL.revokeObjectURL(img.dataset.url); } catch (e) {}
+    var url = URL.createObjectURL(blob); img.src = url; img.dataset.url = url;
+    $("#fallback").hidden = false;
+    status.textContent = name + " neeche dikh rahi hai.";
+  }
+  $("#saveLogo").addEventListener("click", function () {
+    var s = Object.assign({}, state), c = document.createElement("canvas");
+    loadFonts(s).then(function () { drawLogo(c, s, 4, exportBg()); offer(c, fileName("-logo")); });
+  });
+  $("#saveIcon").addEventListener("click", function () {
+    var s = Object.assign({}, state);
+    if (s.iconStyle === "none") { status.textContent = "Site icon ke liye pehle koi icon style chuno."; return; }
+    loadFonts(s).then(function () {
+      var c = document.createElement("canvas"); c.width = 512; c.height = 512;
+      var ctx = c.getContext("2d"), bg = exportBg();
+      if (bg) { ctx.fillStyle = bg; ctx.fillRect(0, 0, 512, 512); }
+      var S = s.container === "none" ? 440 : 512;
+      drawIcon(ctx, s, (512 - S) / 2, (512 - S) / 2, S);
+      offer(c, fileName("-icon-512"));
+    });
+  });
+
+  syncControls(); paintBg(); render();
+  window.addEventListener("resize", function () { fitPreview($("#preview")); });
+})();
+</script>

@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DP_VERSION', '2.0.0' );
+define( 'DP_VERSION', '2.3.0' );
 
 /* ---------- Theme supports and menus ---------- */
 function dp_setup() {
@@ -158,3 +158,16 @@ function dp_link( $url ) {
 
 /* ---------- One-click page setup (creates the 5 Elementor pages) ---------- */
 require_once get_template_directory() . '/inc/auto-setup.php';
+
+/* ---------- Browser tab icon: Kadvia icon until a Site Icon is set in Customize ---------- */
+function dp_default_favicon() {
+	if ( has_site_icon() ) {
+		return;
+	}
+	$dir = get_template_directory_uri() . '/assets/';
+	echo '<link rel="icon" type="image/png" sizes="32x32" href="' . esc_url( $dir . 'kadvia-icon-32.png' ) . '">' . "\n";
+	echo '<link rel="icon" type="image/png" sizes="512x512" href="' . esc_url( $dir . 'kadvia-icon-512.png' ) . '">' . "\n";
+	echo '<link rel="apple-touch-icon" href="' . esc_url( $dir . 'kadvia-icon-180.png' ) . '">' . "\n";
+}
+add_action( 'wp_head', 'dp_default_favicon', 5 );
+add_action( 'admin_head', 'dp_default_favicon', 5 );

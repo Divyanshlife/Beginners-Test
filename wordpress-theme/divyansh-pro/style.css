@@ -3,7 +3,7 @@ Theme Name: Kadvia
 Theme URI: https://github.com/Divyanshlife/Beginners-Test
 Author: Divyansh Arora
 Description: Kadvia theme for Elementor. Royal blue and pink, serif headings, pill buttons and card sections. Colors, header button, blessing line and contact details are in Appearance > Customize > Kadvia Settings.
-Version: 2.0.0
+Version: 2.3.0
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
@@ -352,3 +352,13 @@ body .dp-h1 .elementor-heading-title em, body .dp-h2 .elementor-heading-title em
 .dp-brand__mark { background: linear-gradient(135deg, var(--dp-accent) 0%, var(--dp-accent) 55%, var(--dp-pink) 100%); }
 .dp-footer { background: var(--dp-royal-deep); }
 .dp-blessing--top { background: linear-gradient(90deg, var(--dp-royal-deep), var(--dp-accent) 70%, #6a3ccf 88%, var(--dp-pink)); }
+
+/* Kadvia logo mark in the header, and size for an uploaded custom logo */
+.dp-brand__logo { width: 42px; height: 42px; flex: none; display: block; }
+.custom-logo-link { margin-right: auto; display: flex; align-items: center; }
+.custom-logo-link img { max-height: 52px; width: auto; }
+.dp-brand__wordmark { height: 40px; width: auto; display: block; }
+@media (max-width: 480px) { .dp-brand__wordmark { height: 32px; } }
+/* Final Kadvia logo (navy K in D ring + ADVIA) */
+.dp-brand__wordmark { height: 48px; }
+@media (max-width: 480px) { .dp-brand__wordmark { height: 38px; } }

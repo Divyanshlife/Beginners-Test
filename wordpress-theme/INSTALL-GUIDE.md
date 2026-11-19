@@ -87,3 +87,18 @@ Purani site par nayi theme upload karo (**Replace active with uploaded**), phir 
 - 5 pages mein naya Kadvia design daal degi (purana text badal jayega)
 
 **"Blessings always Guruji"** line har page ke header (sabse upar) aur footer (beech mein) aati hai. Text badalna ya hatana ho: **Appearance → Customize → Kadvia Settings → Blessing line**.
+
+## Logo aur browser icon (version 2.3: navy K-in-D logo)
+`brand/` folder mein:
+| File | Kahan use karein |
+|---|---|
+| `kadvia-logo.png` | Visiting card, email signature, documents (white background) |
+| `kadvia-logo-white.png` | Dark ya blue background par |
+| `kadvia-logo-black.png` | Print aur documents ke liye |
+| `kadvia-icon-512.png` | WordPress Site Icon (browser tab) |
+| `kadvia-profile-1080.png` | WhatsApp / LinkedIn profile photo |
+| `kadvia-wordmark.png` | Website header |
+| `kadvia-mark.svg` / `kadvia-wordmark.svg` | Sharp vector (printing) |
+| `logo-studio.html` | Logo editor (browser mein kholo) |
+
+Theme 2.1 mein header aur browser tab mein Kadvia icon apne aap aata hai. Alag icon chahiye to: **Appearance → Customize → Site Identity → Site Icon**.
