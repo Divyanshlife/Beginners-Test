@@ -1,9 +1,9 @@
 /*
-Theme Name: Divyansh Pro
+Theme Name: Kadvia
 Theme URI: https://github.com/Divyanshlife/Beginners-Test
 Author: Divyansh Arora
-Description: Clean, professional consulting theme made for Elementor. Light background, elegant serif headings, dark pill buttons, card sections. Colors, header button and footer contact details can be changed from Appearance > Customize > Divyansh Pro Settings.
-Version: 1.0.0
+Description: Kadvia theme for Elementor. Royal blue and pink, serif headings, pill buttons and card sections. Colors, header button, blessing line and contact details are in Appearance > Customize > Kadvia Settings.
+Version: 2.0.0
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
@@ -15,15 +15,17 @@ Tags: one-column, custom-menu, custom-logo, full-width-template, translation-rea
 
 /* ---------- Design tokens (Customizer can override --dp-accent, --dp-ink, --dp-bg) ---------- */
 :root {
-  --dp-bg: #f4f6f5;
+  --dp-bg: #f6f7fd;
   --dp-surface: #ffffff;
-  --dp-ink: #0e1a1f;
-  --dp-muted: #56656a;
-  --dp-line: #dbe3e1;
-  --dp-accent: #0f6e64;
-  --dp-accent-soft: #e2efec;
-  --dp-on-dark: #eef4f2;
-  --dp-on-dark-muted: #9fb3b0;
+  --dp-ink: #0f1638;
+  --dp-muted: #535a78;
+  --dp-line: #dfe3f3;
+  --dp-accent: #2447d6;      /* royal blue */
+  --dp-pink: #e5307f;        /* pink */
+  --dp-accent-soft: #e8edff;
+  --dp-pink-soft: #fde8f2;
+  --dp-on-dark: #f3f5ff;
+  --dp-on-dark-muted: #c3cbf2;
   --dp-display: "Fraunces", Georgia, "Times New Roman", serif;
   --dp-body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
   --dp-radius: 16px;
@@ -185,10 +187,15 @@ body .dp-btn .elementor-button, body .dp-btn-ghost .elementor-button {
   border-radius: 999px; padding: 15px 26px; font: 600 15px/1 var(--dp-body); letter-spacing: 0;
   transition: background .2s, color .2s, border-color .2s;
 }
-body .dp-btn .elementor-button { background: var(--dp-ink); color: #fff; border: 1px solid var(--dp-ink); }
-body .dp-btn .elementor-button:hover { background: var(--dp-accent); border-color: var(--dp-accent); }
-body .dp-btn-ghost .elementor-button { background: transparent; color: var(--dp-ink); border: 1px solid color-mix(in srgb, var(--dp-ink) 25%, transparent); }
-body .dp-btn-ghost .elementor-button:hover { border-color: var(--dp-ink); }
+/* !important so Elementor's default (accent colored) button style cannot override these */
+body .dp-btn .elementor-button { background: var(--dp-ink) !important; color: #fff !important; border: 1px solid var(--dp-ink) !important; }
+body .dp-btn .elementor-button:hover { background: var(--dp-accent) !important; border-color: var(--dp-accent) !important; }
+body .dp-btn-ghost .elementor-button { background: transparent !important; color: var(--dp-ink) !important; border: 1px solid color-mix(in srgb, var(--dp-ink) 25%, transparent) !important; }
+body .dp-btn-ghost .elementor-button:hover { border-color: var(--dp-ink) !important; }
+body .dp-btn .elementor-button-text, body .dp-btn-ghost .elementor-button-text { color: inherit !important; }
+
+/* Hero: keep the side panel only as tall as its content, centred next to the text */
+body .elementor-section.dp-hero > .elementor-container { align-items: center; }
 body .dp-btn.elementor-widget, body .dp-btn-ghost.elementor-widget { margin-right: 10px; }
 
 /* Cards (put class on a COLUMN) */
@@ -233,8 +240,115 @@ body .dp-faq .elementor-accordion-icon { color: var(--dp-accent); }
 body .dp-dark .elementor-heading-title { color: var(--dp-on-dark) !important; }
 body .dp-dark .dp-eyebrow .elementor-heading-title { color: var(--dp-on-dark-muted) !important; }
 body .dp-dark .dp-lead, body .dp-dark .dp-lead p, body .dp-dark .dp-text p, body .dp-dark .dp-small p { color: var(--dp-on-dark-muted); }
-body .dp-dark .dp-btn .elementor-button { background: var(--dp-on-dark); color: var(--dp-ink); border-color: var(--dp-on-dark); }
-body .dp-dark .dp-btn .elementor-button:hover { background: #fff; }
-body .dp-dark .dp-btn-ghost .elementor-button { color: var(--dp-on-dark); border-color: rgba(255,255,255,.3); }
+body .dp-dark .dp-btn .elementor-button { background: var(--dp-on-dark) !important; color: var(--dp-ink) !important; border-color: var(--dp-on-dark) !important; }
+body .dp-dark .dp-btn .elementor-button:hover { background: #fff !important; }
+body .dp-dark .dp-btn-ghost .elementor-button { color: var(--dp-on-dark) !important; border-color: rgba(255,255,255,.3) !important; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* =====================================================================
+   Colour layer: royal blue + pink
+   ===================================================================== */
+.dp-brand__mark { background: linear-gradient(135deg, var(--dp-accent), var(--dp-pink)); color: #fff; }
+.dp-pill { background: var(--dp-accent); }
+.dp-pill:hover { background: var(--dp-pink); }
+.dp-nav a:hover, .dp-nav .current-menu-item > a { color: var(--dp-accent); }
+.dp-footer { background: #0b1240; }
+
+body .elementor-section.dp-hero {
+  background:
+    radial-gradient(55% 70% at 95% 0%, color-mix(in srgb, var(--dp-pink) 22%, transparent) 0%, transparent 70%),
+    radial-gradient(50% 60% at 0% 100%, color-mix(in srgb, var(--dp-accent) 18%, transparent) 0%, transparent 70%);
+}
+body .elementor-section.dp-alt { background: #ffffff; }
+body .elementor-section.dp-dark { background: linear-gradient(120deg, #1a2fb0 0%, var(--dp-accent) 45%, #a52a8f 80%, var(--dp-pink) 100%); }
+
+body .dp-eyebrow .elementor-heading-title { color: var(--dp-pink); }
+body .dp-h1 .elementor-heading-title em, body .dp-h2 .elementor-heading-title em {
+  background: linear-gradient(90deg, var(--dp-accent), var(--dp-pink));
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+  padding-right: .06em;
+}
+body .dp-step .elementor-heading-title { color: var(--dp-pink); }
+body .dp-num .elementor-heading-title { color: var(--dp-accent); }
+
+body .dp-btn .elementor-button { background: var(--dp-accent) !important; border-color: var(--dp-accent) !important; box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--dp-accent) 70%, transparent); }
+body .dp-btn .elementor-button:hover { background: var(--dp-pink) !important; border-color: var(--dp-pink) !important; }
+body .dp-btn-ghost .elementor-button { color: var(--dp-accent) !important; border-color: color-mix(in srgb, var(--dp-accent) 40%, transparent) !important; }
+body .dp-btn-ghost .elementor-button:hover { color: var(--dp-pink) !important; border-color: var(--dp-pink) !important; }
+
+body .dp-card > .elementor-element-populated { position: relative; overflow: hidden; }
+body .dp-card > .elementor-element-populated::before {
+  content: ""; position: absolute; inset: 0 0 auto; height: 3px;
+  background: linear-gradient(90deg, var(--dp-accent), var(--dp-pink)); opacity: 0; transition: opacity .2s;
+}
+body .dp-card:hover > .elementor-element-populated::before { opacity: 1; }
+body .dp-card:hover > .elementor-element-populated { border-color: color-mix(in srgb, var(--dp-pink) 35%, var(--dp-line)); }
+body .dp-panel > .elementor-element-populated { border-top: 4px solid var(--dp-pink); box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--dp-accent) 45%, transparent); }
+
+body .dp-list .elementor-icon-list-icon i { color: var(--dp-accent); }
+body .dp-list .elementor-icon-list-icon svg { fill: var(--dp-accent); }
+body .dp-faq .elementor-accordion-icon { color: var(--dp-pink); }
+
+body .dp-dark .dp-eyebrow .elementor-heading-title { color: #ffd1e6 !important; }
+body .dp-dark .dp-lead, body .dp-dark .dp-lead p { color: #e6eaff; }
+body .dp-dark .dp-btn .elementor-button { background: #fff !important; color: var(--dp-accent) !important; border-color: #fff !important; box-shadow: none; }
+body .dp-dark .dp-btn .elementor-button:hover { color: var(--dp-pink) !important; background: #fff !important; }
+body .dp-dark .dp-btn-ghost .elementor-button { color: #fff !important; border-color: rgba(255,255,255,.55) !important; }
+
+/* =====================================================================
+   Kadvia: brand tagline + blessing line (header top and footer middle)
+   ===================================================================== */
+.dp-brand__text { display: flex; flex-direction: column; gap: 3px; }
+.dp-brand__tag { font: 600 11px/1.1 var(--dp-body); letter-spacing: .08em; text-transform: uppercase; color: var(--dp-pink); }
+@media (max-width: 480px) { .dp-brand__tag { display: none; } }
+
+.dp-blessing {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  font-family: var(--dp-display); font-style: italic; font-weight: 500; text-align: center;
+}
+.dp-blessing--top {
+  background: linear-gradient(90deg, #1a2fb0, var(--dp-accent) 40%, #a52a8f 75%, var(--dp-pink));
+  color: #fff; font-size: 14.5px; letter-spacing: .02em;
+  padding: 7px max(20px, env(safe-area-inset-right, 0px)) 7px max(20px, env(safe-area-inset-left, 0px));
+}
+.dp-blessing--top .dp-blessing__orn { color: #ffd1e6; font-style: normal; font-size: 11px; }
+.dp-blessing--footer {
+  margin-top: 56px; color: var(--dp-on-dark); font-size: 20px;
+}
+.dp-blessing--footer::before, .dp-blessing--footer::after {
+  content: ""; flex: 0 1 140px; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.35));
+}
+.dp-blessing--footer::after { background: linear-gradient(90deg, rgba(255,255,255,.35), transparent); }
+.dp-blessing--footer .dp-blessing__orn { color: var(--dp-pink); font-style: normal; font-size: 14px; }
+.dp-blessing--footer + .dp-footer__bottom { margin-top: 28px; }
+
+/* =====================================================================
+   Balance: about 70% royal blue, 30% pink
+   Blue = backgrounds, buttons, labels, icons, numbers, bands.
+   Pink = small highlights only (step tags, hover, ornaments, gradient ends).
+   ===================================================================== */
+:root { --dp-bg: #f3f6ff; --dp-line: #d9e0fa; --dp-royal-deep: #0f1c72; }
+.dp-header { background: color-mix(in srgb, #ffffff 82%, transparent); }
+body .elementor-section.dp-hero {
+  background:
+    radial-gradient(60% 75% at 95% 0%, color-mix(in srgb, var(--dp-accent) 26%, transparent) 0%, transparent 70%),
+    radial-gradient(30% 40% at 70% 100%, color-mix(in srgb, var(--dp-pink) 12%, transparent) 0%, transparent 70%),
+    radial-gradient(45% 55% at 0% 100%, color-mix(in srgb, var(--dp-accent) 14%, transparent) 0%, transparent 70%);
+}
+body .elementor-section.dp-alt { background: #e9eeff; border-color: #d4dcfb; }
+body .dp-alt .dp-card > .elementor-element-populated { background: #ffffff; }
+body .elementor-section.dp-dark {
+  background:
+    radial-gradient(40% 80% at 100% 100%, color-mix(in srgb, var(--dp-pink) 55%, transparent) 0%, transparent 70%),
+    linear-gradient(120deg, var(--dp-royal-deep) 0%, #1a33b8 45%, var(--dp-accent) 100%);
+}
+body .dp-eyebrow .elementor-heading-title { color: var(--dp-accent); }
+body .dp-dark .dp-eyebrow .elementor-heading-title { color: #c9d4ff !important; }
+body .dp-panel > .elementor-element-populated { border-top-color: var(--dp-accent); }
+body .dp-card > .elementor-element-populated::before { background: linear-gradient(90deg, var(--dp-accent) 0%, var(--dp-accent) 60%, var(--dp-pink) 100%); }
+body .dp-card:hover > .elementor-element-populated { border-color: color-mix(in srgb, var(--dp-accent) 45%, var(--dp-line)); }
+body .dp-h1 .elementor-heading-title em, body .dp-h2 .elementor-heading-title em { background: linear-gradient(90deg, var(--dp-accent) 0%, #3a4fe0 55%, var(--dp-pink) 100%); -webkit-background-clip: text; background-clip: text; }
+.dp-brand__mark { background: linear-gradient(135deg, var(--dp-accent) 0%, var(--dp-accent) 55%, var(--dp-pink) 100%); }
+.dp-footer { background: var(--dp-royal-deep); }
+.dp-blessing--top { background: linear-gradient(90deg, var(--dp-royal-deep), var(--dp-accent) 70%, #6a3ccf 88%, var(--dp-pink)); }

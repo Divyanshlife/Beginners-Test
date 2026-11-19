@@ -1,6 +1,6 @@
 {
     "version":  "0.4",
-    "title":  "Divyansh Pro - About",
+    "title":  "Kadvia - About",
     "type":  "page",
     "page_settings":  {
                           "template":  "elementor_header_footer",
@@ -8,19 +8,15 @@
                       },
     "content":  [
                     {
-                        "id":  "8c5e6ab",
+                        "id":  "b1df903",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-hero",
-                                         "gap":  "default",
-                                         "content_width":  {
-                                                               "unit":  "px",
-                                                               "size":  1160
-                                                           }
+                                         "gap":  "default"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "53a4d10",
+                                             "id":  "1e8f9c3",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -29,11 +25,11 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "d998d15",
+                                                                  "id":  "9493490",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "About",
+                                                                                   "title":  "About Kadvia",
                                                                                    "header_size":  "div",
                                                                                    "_css_classes":  "dp-eyebrow"
                                                                                },
@@ -42,11 +38,11 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "aa9700d",
+                                                                  "id":  "1f02eb5",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "Hi, I am Divyansh Arora.",
+                                                                                   "title":  "We do the hardest part of selling: \u003cem\u003ethe first meeting.\u003c/em\u003e",
                                                                                    "header_size":  "h1",
                                                                                    "_css_classes":  "dp-h1"
                                                                                },
@@ -55,11 +51,11 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "04e134d",
+                                                                  "id":  "ee36090",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "text-editor",
                                                                   "settings":  {
-                                                                                   "editor":  "\u003cp\u003eI help sales leaders and business owners grow revenue and protect margin, using the apps, automations and AI we build at Zoxima.\u003c/p\u003e",
+                                                                                   "editor":  "\u003cp\u003eKadvia is an outbound and appointment-setting company from Delhi NCR, India. We help B2B teams reach the right decision-makers and turn cold contacts into booked meetings.\u003c/p\u003e",
                                                                                    "_css_classes":  "dp-lead"
                                                                                },
                                                                   "elements":  [
@@ -73,19 +69,15 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "615f7ea",
+                        "id":  "f4acdbb",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec",
-                                         "gap":  "default",
-                                         "content_width":  {
-                                                               "unit":  "px",
-                                                               "size":  1160
-                                                           }
+                                         "gap":  "default"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "094f564",
+                                             "id":  "f8c20be",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -94,7 +86,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "e0f3048",
+                                                                  "id":  "79ceaef",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "",
@@ -102,7 +94,7 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "4faae77",
+                                                                                       "id":  "cfca82e",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  50,
@@ -111,11 +103,11 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "2ec1043",
+                                                                                                            "id":  "2333c64",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "My story",
+                                                                                                                             "title":  "Our story",
                                                                                                                              "header_size":  "div",
                                                                                                                              "_css_classes":  "dp-eyebrow"
                                                                                                                          },
@@ -124,11 +116,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "9ca7c99",
+                                                                                                            "id":  "074e241",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "I start with how your team sells, not with technology.",
+                                                                                                                             "title":  "Why Kadvia exists.",
                                                                                                                              "header_size":  "h2",
                                                                                                                              "_css_classes":  "dp-h2"
                                                                                                                          },
@@ -140,7 +132,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "02e09a4",
+                                                                                       "id":  "9c35e38",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  50,
@@ -149,11 +141,11 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "f50eb04",
+                                                                                                            "id":  "6bf1042",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eMost companies already have the answers they need. They are just split across the ERP, the CRM, price lists, emails and WhatsApp chats, and none of these talk to each other.\u003c/p\u003e\u003cp\u003eMy work is to sit with your team, understand how you sell today, and show you, on your own data, which customers can buy more and where margin is slipping away. Then we fix it step by step.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eGood sales teams lose most of their week to research, follow-ups and messages that never get a reply. The part where their skill matters most, the actual sales conversation, gets the least time.\u003c/p\u003e\u003cp\u003eKadvia flips that. We take over prospecting from the first touch to the booked meeting, so your people spend their time where they are best: in front of buyers.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-lead"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -173,19 +165,15 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "ca269a3",
+                        "id":  "d0c5d47",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec dp-alt",
-                                         "gap":  "default",
-                                         "content_width":  {
-                                                               "unit":  "px",
-                                                               "size":  1160
-                                                           }
+                                         "gap":  "default"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "99e2aa6",
+                                             "id":  "be89ef6",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -194,11 +182,11 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "dbbe51b",
+                                                                  "id":  "8195bef",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "What I believe",
+                                                                                   "title":  "What we believe",
                                                                                    "header_size":  "div",
                                                                                    "_css_classes":  "dp-eyebrow"
                                                                                },
@@ -207,11 +195,11 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "5a0d728",
+                                                                  "id":  "131f3da",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "Three rules I work by.",
+                                                                                   "title":  "Three rules we work by.",
                                                                                    "header_size":  "h2",
                                                                                    "_css_classes":  "dp-h2"
                                                                                },
@@ -220,7 +208,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "8b9679e",
+                                                                  "id":  "4cb83f1",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "dp-inner",
@@ -228,7 +216,7 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "3d55e65",
+                                                                                       "id":  "8ff3b95",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -240,11 +228,11 @@
 
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "86e58df",
+                                                                                                            "id":  "ca5e927",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "Outcome first",
+                                                                                                                             "title":  "Quality over volume",
                                                                                                                              "header_size":  "h3",
                                                                                                                              "_css_classes":  "dp-h3"
                                                                                                                          },
@@ -253,11 +241,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "9957587",
+                                                                                                            "id":  "477c76c",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eMore revenue and healthier margin are the goal. AI is only the way we get there.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eWe contact fewer, better-fit people. A short list of the right buyers beats a long list of strangers.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -268,7 +256,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "c650fd7",
+                                                                                       "id":  "071a777",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -280,11 +268,11 @@
 
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "80ef142",
+                                                                                                            "id":  "c1feb36",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "Keep your systems",
+                                                                                                                             "title":  "People, not bots",
                                                                                                                              "header_size":  "h3",
                                                                                                                              "_css_classes":  "dp-h3"
                                                                                                                          },
@@ -293,11 +281,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "1c63561",
+                                                                                                            "id":  "b1bca22",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eWe build on top of the tools you already have. Nothing gets ripped out.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eA real person writes, reads and answers every conversation. Buyers can tell the difference.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -308,7 +296,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "8b07e8c",
+                                                                                       "id":  "af69126",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -320,11 +308,11 @@
 
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "8e17ef8",
+                                                                                                            "id":  "b926d38",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "People close deals",
+                                                                                                                             "title":  "Clear numbers",
                                                                                                                              "header_size":  "h3",
                                                                                                                              "_css_classes":  "dp-h3"
                                                                                                                          },
@@ -333,11 +321,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "013e79f",
+                                                                                                            "id":  "e094d47",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eTechnology finds the opportunity. Your sales team builds the relationship and wins it.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eA weekly report shows exactly who we reached, who replied and what was booked. Nothing hidden.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -357,19 +345,15 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "b3b312f",
+                        "id":  "1305eaa",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec",
-                                         "gap":  "default",
-                                         "content_width":  {
-                                                               "unit":  "px",
-                                                               "size":  1160
-                                                           }
+                                         "gap":  "default"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "89ba2df",
+                                             "id":  "f884a7f",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -378,7 +362,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "4f18971",
+                                                                  "id":  "d5242c4",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "",
@@ -386,7 +370,7 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "8d8570e",
+                                                                                       "id":  "eb30ebc",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  50,
@@ -395,11 +379,11 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "44a9ed4",
+                                                                                                            "id":  "8da84ff",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "Where I work",
+                                                                                                                             "title":  "Founder",
                                                                                                                              "header_size":  "div",
                                                                                                                              "_css_classes":  "dp-eyebrow"
                                                                                                                          },
@@ -408,11 +392,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "0e0b4b9",
+                                                                                                            "id":  "c2e97df",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "Zoxima",
+                                                                                                                             "title":  "Divyansh Arora",
                                                                                                                              "header_size":  "h2",
                                                                                                                              "_css_classes":  "dp-h2"
                                                                                                                          },
@@ -421,11 +405,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "71aba13",
+                                                                                                            "id":  "98d236a",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eZoxima is a Fremont, California based apps, automations and AI company with offices in Delhi NCR. Our product Salezx is an AI Sales Brain that helps companies sell more and protect margin.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eA B2B sales professional who knows the front line of selling, from the first cold call to the signed deal. Divyansh started Kadvia to give growing companies a reliable way to reach the people who decide.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-lead"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -436,7 +420,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "56c93e5",
+                                                                                       "id":  "428fc0e",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  50,
@@ -445,7 +429,7 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "8d57836",
+                                                                                                            "id":  "312b8dd",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -458,13 +442,13 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "985c946",
+                                                                                                            "id":  "52260c1",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon-list",
                                                                                                             "settings":  {
                                                                                                                              "icon_list":  [
                                                                                                                                                {
-                                                                                                                                                   "_id":  "7db42ad",
+                                                                                                                                                   "_id":  "abe2f98",
                                                                                                                                                    "text":  "Based in Delhi NCR, India",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
@@ -472,24 +456,24 @@
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "0d200a2",
-                                                                                                                                                   "text":  "Working with companies in India and the USA",
+                                                                                                                                                   "_id":  "983d7a4",
+                                                                                                                                                   "text":  "Working with clients in India and abroad",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
                                                                                                                                                                          "library":  "fa-solid"
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "a2ddb61",
-                                                                                                                                                   "text":  "Focus: mid-market companies with 50 to 500 employees",
+                                                                                                                                                   "_id":  "96dacdc",
+                                                                                                                                                   "text":  "Channels: email, LinkedIn and phone",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
                                                                                                                                                                          "library":  "fa-solid"
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "4bcd46b",
-                                                                                                                                                   "text":  "Industries: manufacturing, building materials, FMCG, distribution, tech",
+                                                                                                                                                   "_id":  "2246f7d",
+                                                                                                                                                   "text":  "Email: Divyansharora73@gmail.com",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
                                                                                                                                                                          "library":  "fa-solid"
@@ -515,19 +499,15 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "1bb6f77",
+                        "id":  "1986178",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec dp-dark",
-                                         "gap":  "default",
-                                         "content_width":  {
-                                                               "unit":  "px",
-                                                               "size":  1160
-                                                           }
+                                         "gap":  "default"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "b5f95bd",
+                                             "id":  "5e9baa8",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -536,7 +516,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "313e220",
+                                                                  "id":  "09f2201",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -549,11 +529,11 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "bb038f8",
+                                                                  "id":  "3b70761",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "Want to see what your data is saying?",
+                                                                                   "title":  "Want more meetings with the right people?",
                                                                                    "header_size":  "h2",
                                                                                    "_css_classes":  "dp-h2 dp-center"
                                                                                },
@@ -562,11 +542,11 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "b2b8fb0",
+                                                                  "id":  "54b6459",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "text-editor",
                                                                   "settings":  {
-                                                                                   "editor":  "\u003cp\u003eBook a short call. I will listen first, then show you what is possible.\u003c/p\u003e",
+                                                                                   "editor":  "\u003cp\u003eBook a short call. We will listen first, then show you how Kadvia would reach your buyers.\u003c/p\u003e",
                                                                                    "_css_classes":  "dp-lead dp-center"
                                                                                },
                                                                   "elements":  [
@@ -574,15 +554,15 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "8895cb2",
+                                                                  "id":  "c1252a0",
                                                                   "elType":  "section",
                                                                   "settings":  {
-                                                                                   "css_classes":  "dp-inner",
+                                                                                   "css_classes":  "",
                                                                                    "gap":  "default"
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "ee30ebd",
+                                                                                       "id":  "e97e580",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  100,
@@ -591,11 +571,11 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "cf4c0c6",
+                                                                                                            "id":  "abd6572",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "button",
                                                                                                             "settings":  {
-                                                                                                                             "text":  "Book a 15-min call",
+                                                                                                                             "text":  "Book a strategy call",
                                                                                                                              "link":  {
                                                                                                                                           "url":  "/contact/",
                                                                                                                                           "is_external":  "",
@@ -609,11 +589,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "999371b",
+                                                                                                            "id":  "f6698e4",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "button",
                                                                                                             "settings":  {
-                                                                                                                             "text":  "WhatsApp me",
+                                                                                                                             "text":  "WhatsApp us",
                                                                                                                              "link":  {
                                                                                                                                           "url":  "https://wa.me/918799714396",
                                                                                                                                           "is_external":  "",

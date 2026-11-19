@@ -51,6 +51,9 @@ $dp_li    = dp_opt( 'dp_linkedin' );
 				</ul>
 			</div>
 		</div>
+		<?php if ( dp_opt( 'dp_blessing' ) ) : ?>
+			<div class="dp-blessing dp-blessing--footer"><span class="dp-blessing__orn" aria-hidden="true">&#10022;</span> <?php echo esc_html( dp_opt( 'dp_blessing' ) ); ?> <span class="dp-blessing__orn" aria-hidden="true">&#10022;</span></div>
+		<?php endif; ?>
 		<div class="dp-footer__bottom">
 			<span>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></span>
 			<span><?php esc_html_e( 'Built with WordPress and Elementor', 'divyansh-pro' ); ?></span>

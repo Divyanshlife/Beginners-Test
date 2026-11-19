@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DP_VERSION', '1.0.0' );
+define( 'DP_VERSION', '2.0.0' );
 
 /* ---------- Theme supports and menus ---------- */
 function dp_setup() {
@@ -50,17 +50,19 @@ add_action( 'wp_enqueue_scripts', 'dp_assets', 20 );
 /* ---------- Customizer: colors, header button, contact details ---------- */
 function dp_defaults() {
 	return array(
-		'dp_accent'     => '#0f6e64',
-		'dp_ink'        => '#0e1a1f',
-		'dp_bg'         => '#f4f6f5',
-		'dp_cta_text'   => 'Book a 15-min call',
+		'dp_accent'     => '#2447d6',
+		'dp_pink'       => '#e5307f',
+		'dp_ink'        => '#0f1638',
+		'dp_bg'         => '#f3f6ff',
+		'dp_cta_text'   => 'Book a strategy call',
 		'dp_cta_url'    => '/contact/',
-		'dp_tagline'    => 'I help mid-market companies sell more and protect margin with apps, automations and AI.',
-		'dp_email'      => 'Div.arora@zoxima.com',
+		'dp_tagline'    => 'Kadvia books qualified sales meetings with the decision-makers you want to reach. You show up and close.',
+		'dp_email'      => 'Divyansharora73@gmail.com',
 		'dp_phone'      => '+91 87997 14396',
 		'dp_whatsapp'   => '918799714396',
 		'dp_location'   => 'Delhi NCR, India',
 		'dp_linkedin'   => '',
+		'dp_blessing'   => 'Blessings always Guruji',
 	);
 }
 
@@ -75,14 +77,15 @@ function dp_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'dp_settings',
 		array(
-			'title'    => __( 'Divyansh Pro Settings', 'divyansh-pro' ),
+			'title'    => __( 'Kadvia Settings', 'divyansh-pro' ),
 			'priority' => 30,
 		)
 	);
 
 	$colors = array(
-		'dp_accent' => __( 'Accent color (links, small labels, icons)', 'divyansh-pro' ),
-		'dp_ink'    => __( 'Dark color (text, buttons, footer)', 'divyansh-pro' ),
+		'dp_accent' => __( 'Main color: royal blue (buttons, links, icons)', 'divyansh-pro' ),
+		'dp_pink'   => __( 'Second color: pink (labels, highlights, hover)', 'divyansh-pro' ),
+		'dp_ink'    => __( 'Text color', 'divyansh-pro' ),
 		'dp_bg'     => __( 'Page background', 'divyansh-pro' ),
 	);
 	foreach ( $colors as $key => $label ) {
@@ -99,6 +102,7 @@ function dp_customize_register( $wp_customize ) {
 		'dp_whatsapp' => __( 'WhatsApp number (digits only, with country code)', 'divyansh-pro' ),
 		'dp_location' => __( 'Location', 'divyansh-pro' ),
 		'dp_linkedin' => __( 'LinkedIn profile URL (optional)', 'divyansh-pro' ),
+		'dp_blessing' => __( 'Blessing line (top of header and footer). Leave empty to hide.', 'divyansh-pro' ),
 	);
 	foreach ( $texts as $key => $label ) {
 		$wp_customize->add_setting( $key, array( 'default' => $d[ $key ], 'sanitize_callback' => 'sanitize_text_field' ) );
@@ -115,6 +119,10 @@ function dp_customizer_css() {
 	if ( $accent ) {
 		$css .= '--dp-accent:' . $accent . ';--dp-accent-soft:color-mix(in srgb,' . $accent . ' 12%,#fff);';
 	}
+	$pink = sanitize_hex_color( dp_opt( 'dp_pink' ) );
+	if ( $pink ) {
+		$css .= '--dp-pink:' . $pink . ';';
+	}
 	if ( $ink ) {
 		$css .= '--dp-ink:' . $ink . ';';
 	}
@@ -129,7 +137,7 @@ function dp_menu_fallback() {
 	$links = array(
 		'/'            => __( 'Home', 'divyansh-pro' ),
 		'/about/'      => __( 'About', 'divyansh-pro' ),
-		'/solutions/'  => __( 'Solutions', 'divyansh-pro' ),
+		'/services/'   => __( 'Services', 'divyansh-pro' ),
 		'/industries/' => __( 'Industries', 'divyansh-pro' ),
 		'/contact/'    => __( 'Contact', 'divyansh-pro' ),
 	);
@@ -147,3 +155,6 @@ function dp_link( $url ) {
 	}
 	return $url;
 }
+
+/* ---------- One-click page setup (creates the 5 Elementor pages) ---------- */
+require_once get_template_directory() . '/inc/auto-setup.php';

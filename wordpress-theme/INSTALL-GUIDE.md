@@ -1,11 +1,11 @@
-# Divyansh Pro: WordPress + Elementor setup guide
+# Kadvia: WordPress + Elementor setup guide
 
 Is folder mein kya hai:
 
 | File | Kya hai |
 |---|---|
 | `divyansh-pro.zip` | WordPress theme (header, footer, colors, fonts) |
-| `elementor-templates.zip` | 5 ready pages ka design: Home, About, Solutions, Industries, Contact |
+| `elementor-templates.zip` | 5 ready pages ka design: Home, About, Services, Industries, Contact |
 | `preview/home-preview.html` | Home page ka preview (browser mein kholke dekho) |
 | `divyansh-pro/`, `elementor-templates/` | Upar wali zip files ke andar ka saman (edit karne ke liye) |
 
@@ -24,17 +24,17 @@ Is folder mein kya hai:
 1. **Templates → Saved Templates** (ya **Elementor → Templates**) kholo.
 2. Upar **Import Templates** button dabao.
 3. `elementor-templates.zip` choose karo → **Import Now**.
-4. Ab list mein 5 templates dikhenge: "Divyansh Pro - Home", "- About" etc.
+4. Ab list mein 5 templates dikhenge: "Kadvia - Home", "- About" etc.
 
 ## Step 4: 5 pages banao
-Har page ke liye yeh karo (Home, About, Solutions, Industries, Contact):
+Har page ke liye yeh karo (Home, About, Services, Industries, Contact):
 1. **Pages → Add New Page**. Title likho (jaise `About`). Page ka link `/about/` banna chahiye.
 2. **Edit with Elementor** dabao.
 3. Neeche folder wala icon (**Add Template**) dabao → **My Templates** tab → us page ka template → **Insert**.
 4. Left side mein gear icon (**Page Settings**) → **Page Layout** = **Elementor Full Width**.
 5. **Publish** dabao.
 
-Page links aise rakho: `/about/`, `/solutions/`, `/industries/`, `/contact/`. Buttons inhi links par jaate hain.
+Page links aise rakho: `/about/`, `/services/`, `/industries/`, `/contact/`. Buttons inhi links par jaate hain.
 
 ## Step 5: Home page set karo
 **Settings → Reading → Your homepage displays → A static page** → Homepage = **Home** → **Save**.
@@ -51,7 +51,7 @@ Apna menu banana ho to: **Appearance → Menus** → naya menu → pages add kar
 
 **Naya card ya section:** kisi card par right-click → **Duplicate**. Phir text badal do. Design apne aap same rahega.
 
-**Colors aur contact details (poori site par):** **Appearance → Customize → Divyansh Pro Settings**:
+**Colors aur contact details (poori site par):** **Appearance → Customize → Kadvia Settings**:
 - Accent color, dark color, background color
 - Header button ka text aur link
 - Footer ka intro, email, phone, WhatsApp, location, LinkedIn
@@ -67,15 +67,23 @@ Har section/card par design CSS classes se aata hai (Elementor → element selec
 |---|---|---|
 | `dp-sec` | Section | Upar-neeche badi spacing |
 | `dp-alt` | Section | White band (alag background) |
-| `dp-dark` | Section | Dark band (CTA ke liye) |
-| `dp-hero` | Section | Hero ka halka green glow |
+| `dp-dark` | Section | Blue-pink gradient band (CTA ke liye) |
+| `dp-hero` | Section | Hero ka blue-pink glow |
 | `dp-card` | Column | White card with border |
-| `dp-eyebrow` | Heading | Chhota green label |
+| `dp-eyebrow` | Heading | Chhota pink label |
 | `dp-h1` / `dp-h2` / `dp-h3` | Heading | Bada / medium / card title |
 | `dp-lead` / `dp-text` / `dp-small` | Text Editor | Bada / normal / chhota text |
-| `dp-btn` / `dp-btn-ghost` | Button | Dark pill / outline pill button |
-| `dp-list` | Icon List | Green tick list |
+| `dp-btn` / `dp-btn-ghost` | Button | Blue pill / outline pill button |
+| `dp-list` | Icon List | Blue tick list |
 | `dp-faq` | Accordion | FAQ style |
 
 ## Zaroori baat
 Yeh design Zillion Systems jaisi feel (clean, professional, serif headings, cards) par bana hai, lekin unka naam, logo, text ya photos use nahi kiye. Saara content aapka apna hai.
+
+## Kadvia update (version 2.0)
+Purani site par nayi theme upload karo (**Replace active with uploaded**), phir **Dashboard** kholo. Theme apne aap:
+- Site ka naam **Kadvia** aur tagline **Your way to booked meetings** kar degi
+- Solutions page ko **Services** bana degi
+- 5 pages mein naya Kadvia design daal degi (purana text badal jayega)
+
+**"Blessings always Guruji"** line har page ke header (sabse upar) aur footer (beech mein) aati hai. Text badalna ya hatana ho: **Appearance → Customize → Kadvia Settings → Blessing line**.

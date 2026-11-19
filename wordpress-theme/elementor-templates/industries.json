@@ -1,6 +1,6 @@
 {
     "version":  "0.4",
-    "title":  "Divyansh Pro - Industries",
+    "title":  "Kadvia - Industries",
     "type":  "page",
     "page_settings":  {
                           "template":  "elementor_header_footer",
@@ -8,19 +8,15 @@
                       },
     "content":  [
                     {
-                        "id":  "359415e",
+                        "id":  "291511c",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-hero",
-                                         "gap":  "default",
-                                         "content_width":  {
-                                                               "unit":  "px",
-                                                               "size":  1160
-                                                           }
+                                         "gap":  "default"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "d60833f",
+                                             "id":  "10df0b2",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -29,11 +25,11 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "5338c60",
+                                                                  "id":  "3ffe4d5",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "Industries",
+                                                                                   "title":  "Who we help",
                                                                                    "header_size":  "div",
                                                                                    "_css_classes":  "dp-eyebrow"
                                                                                },
@@ -42,11 +38,11 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "dfe9053",
+                                                                  "id":  "dff77c5",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "Teams with many customers, many products and margins that matter.",
+                                                                                   "title":  "B2B teams with a strong offer and \u003cem\u003ebuyers worth meeting.\u003c/em\u003e",
                                                                                    "header_size":  "h1",
                                                                                    "_css_classes":  "dp-h1"
                                                                                },
@@ -55,11 +51,11 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "5468bb7",
+                                                                  "id":  "2770f52",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "text-editor",
                                                                   "settings":  {
-                                                                                   "editor":  "\u003cp\u003eIf your buyers are known and your sales team is busy, there is usually more revenue to find in the data you already have.\u003c/p\u003e",
+                                                                                   "editor":  "\u003cp\u003eIf your buyers are businesses and one good meeting can turn into a real deal, Kadvia can help you get more of them.\u003c/p\u003e",
                                                                                    "_css_classes":  "dp-lead"
                                                                                },
                                                                   "elements":  [
@@ -73,19 +69,15 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "db51a80",
+                        "id":  "daf3869",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec",
-                                         "gap":  "default",
-                                         "content_width":  {
-                                                               "unit":  "px",
-                                                               "size":  1160
-                                                           }
+                                         "gap":  "default"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "894d59d",
+                                             "id":  "71288ed",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -94,11 +86,11 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "c85ef5c",
+                                                                  "id":  "9acb128",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "Where I work most",
+                                                                                   "title":  "Industries",
                                                                                    "header_size":  "div",
                                                                                    "_css_classes":  "dp-eyebrow"
                                                                                },
@@ -107,11 +99,11 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "5d16817",
+                                                                  "id":  "e211c84",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "Six kinds of businesses I know well.",
+                                                                                   "title":  "Where we work most.",
                                                                                    "header_size":  "h2",
                                                                                    "_css_classes":  "dp-h2"
                                                                                },
@@ -120,7 +112,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "d458e66",
+                                                                  "id":  "8a3ef2f",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "dp-inner",
@@ -128,7 +120,7 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "bd1a35d",
+                                                                                       "id":  "6fc0cdf",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -140,11 +132,11 @@
 
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "83f83c8",
+                                                                                                            "id":  "01d0434",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "Manufacturing",
+                                                                                                                             "title":  "SaaS and technology",
                                                                                                                              "header_size":  "h3",
                                                                                                                              "_css_classes":  "dp-h3"
                                                                                                                          },
@@ -153,11 +145,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "69975cb",
+                                                                                                            "id":  "5569170",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003ePlants and OEMs with big product catalogues, dealer networks and price lists that change often.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eSoftware companies that need demos with the right buyers, not just more sign-ups.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -168,7 +160,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "c77dc08",
+                                                                                       "id":  "ac69c2e",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -180,11 +172,11 @@
 
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "ce4da92",
+                                                                                                            "id":  "190d241",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "Building materials",
+                                                                                                                             "title":  "IT services",
                                                                                                                              "header_size":  "h3",
                                                                                                                              "_css_classes":  "dp-h3"
                                                                                                                          },
@@ -193,11 +185,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "09eac45",
+                                                                                                            "id":  "64d2fae",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eCement, steel, tiles and fittings sold through distributors, where small price slips add up fast.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eDevelopment, cloud and support firms selling long-term contracts to growing companies.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -208,7 +200,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "e8cf6db",
+                                                                                       "id":  "d9bc12b",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -220,11 +212,11 @@
 
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "ae0a8d0",
+                                                                                                            "id":  "ca8b5f6",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "FMCG and food",
+                                                                                                                             "title":  "Staffing and recruitment",
                                                                                                                              "header_size":  "h3",
                                                                                                                              "_css_classes":  "dp-h3"
                                                                                                                          },
@@ -233,11 +225,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "ae52d33",
+                                                                                                            "id":  "5c05b41",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eBrands with thousands of outlets, where the next order and the right scheme decide the month.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eAgencies that want steady conversations with hiring managers and HR heads.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -251,7 +243,7 @@
                                                                   "isInner":  true
                                                               },
                                                               {
-                                                                  "id":  "be474ce",
+                                                                  "id":  "e8c7b67",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "dp-inner",
@@ -259,7 +251,7 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "6d89b61",
+                                                                                       "id":  "33f4b5d",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -271,11 +263,11 @@
 
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "b18fa8d",
+                                                                                                            "id":  "c10cc2b",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "Distribution and wholesale",
+                                                                                                                             "title":  "Consulting and agencies",
                                                                                                                              "header_size":  "h3",
                                                                                                                              "_css_classes":  "dp-h3"
                                                                                                                          },
@@ -284,11 +276,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "2c54861",
+                                                                                                            "id":  "24cd310",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eTeams juggling many SKUs and customers, who need to know who to call and what to offer.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eMarketing, design and advisory firms whose best clients come from the first meeting.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -299,7 +291,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "5f6ddef",
+                                                                                       "id":  "1a00ee2",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -311,11 +303,11 @@
 
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "348a27a",
+                                                                                                            "id":  "ca8fba7",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "Tech and digital-first firms",
+                                                                                                                             "title":  "Manufacturing and exports",
                                                                                                                              "header_size":  "h3",
                                                                                                                              "_css_classes":  "dp-h3"
                                                                                                                          },
@@ -324,11 +316,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "598f506",
+                                                                                                            "id":  "13995b0",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eFast-growing companies whose CRM, billing and support data sit in different tools.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eMakers and exporters looking for distributors, dealers and bulk buyers.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -339,7 +331,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "538d0df",
+                                                                                       "id":  "12d2583",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -351,11 +343,11 @@
 
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "e7ee4ad",
+                                                                                                            "id":  "760eb36",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
-                                                                                                                             "title":  "Local and regional businesses",
+                                                                                                                             "title":  "Financial and professional services",
                                                                                                                              "header_size":  "h3",
                                                                                                                              "_css_classes":  "dp-h3"
                                                                                                                          },
@@ -364,11 +356,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "680cb1e",
+                                                                                                            "id":  "1935824",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eOwner-led companies that want enterprise-grade sales tools without an enterprise project.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eCA firms, insurance, legal and finance teams selling to business owners.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -388,19 +380,15 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "b66c4c1",
+                        "id":  "c275c3d",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec dp-alt",
-                                         "gap":  "default",
-                                         "content_width":  {
-                                                               "unit":  "px",
-                                                               "size":  1160
-                                                           }
+                                         "gap":  "default"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "56c7968",
+                                             "id":  "ee97a39",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -409,7 +397,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "d3d1711",
+                                                                  "id":  "2b37903",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -422,7 +410,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "14f15ce",
+                                                                  "id":  "7ee6570",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -435,7 +423,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "8eb16e5",
+                                                                  "id":  "37e23bd",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "dp-inner",
@@ -443,7 +431,7 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "d043df9",
+                                                                                       "id":  "1b36bcf",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  50,
@@ -452,7 +440,7 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "aaa0604",
+                                                                                                            "id":  "0923321",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -465,38 +453,38 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "c441dbc",
+                                                                                                            "id":  "8f84cb7",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon-list",
                                                                                                             "settings":  {
                                                                                                                              "icon_list":  [
                                                                                                                                                {
-                                                                                                                                                   "_id":  "eeb4ed7",
-                                                                                                                                                   "text":  "You have 50 to 500 employees",
+                                                                                                                                                   "_id":  "89cb9e6",
+                                                                                                                                                   "text":  "You sell to businesses, and a deal is worth a meeting",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
                                                                                                                                                                          "library":  "fa-solid"
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "3fb266f",
-                                                                                                                                                   "text":  "You sell to known customers, dealers or distributors",
+                                                                                                                                                   "_id":  "c83f6b9",
+                                                                                                                                                   "text":  "You know your ideal buyer, or want help defining one",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
                                                                                                                                                                          "library":  "fa-solid"
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "9c50a8c",
-                                                                                                                                                   "text":  "Your data sits in an ERP, CRM or spreadsheets",
+                                                                                                                                                   "_id":  "c64c0cd",
+                                                                                                                                                   "text":  "Someone on your team can take calls and close",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
                                                                                                                                                                          "library":  "fa-solid"
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "58d9e88",
-                                                                                                                                                   "text":  "Leadership wants growth and healthy margin",
+                                                                                                                                                   "_id":  "7e61bc0",
+                                                                                                                                                   "text":  "You want a steady flow of meetings, not a one-time spike",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
                                                                                                                                                                          "library":  "fa-solid"
@@ -513,7 +501,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "eacb8e3",
+                                                                                       "id":  "78762cb",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  50,
@@ -522,7 +510,7 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "73e4903",
+                                                                                                            "id":  "fe18350",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -535,30 +523,30 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "6ac30f0",
+                                                                                                            "id":  "9eecab7",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon-list",
                                                                                                             "settings":  {
                                                                                                                              "icon_list":  [
                                                                                                                                                {
-                                                                                                                                                   "_id":  "a7390d8",
-                                                                                                                                                   "text":  "You are pre-revenue or still testing your offer",
+                                                                                                                                                   "_id":  "677ae96",
+                                                                                                                                                   "text":  "You want a bought database or mass email blasts",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-times",
                                                                                                                                                                          "library":  "fa-solid"
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "41a640c",
-                                                                                                                                                   "text":  "You want a bought lead list or bulk email blasts",
+                                                                                                                                                   "_id":  "7c4cf56",
+                                                                                                                                                   "text":  "Your offer has no paying clients yet",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-times",
                                                                                                                                                                          "library":  "fa-solid"
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "64d1f1e",
-                                                                                                                                                   "text":  "There is no one to act on the insights",
+                                                                                                                                                   "_id":  "e7ed376",
+                                                                                                                                                   "text":  "No one is free to attend the meetings we book",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-times",
                                                                                                                                                                          "library":  "fa-solid"
@@ -584,19 +572,15 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "e9ba340",
+                        "id":  "9bb69c5",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec dp-dark",
-                                         "gap":  "default",
-                                         "content_width":  {
-                                                               "unit":  "px",
-                                                               "size":  1160
-                                                           }
+                                         "gap":  "default"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "7c51ff4",
+                                             "id":  "53f2d5d",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -605,7 +589,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "4f8ce43",
+                                                                  "id":  "8c32c12",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -618,7 +602,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "b23f9e0",
+                                                                  "id":  "f14d47d",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -631,11 +615,11 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "edabe23",
+                                                                  "id":  "ec29aa1",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "text-editor",
                                                                   "settings":  {
-                                                                                   "editor":  "\u003cp\u003eAsk me anyway. If your buyers are known and your team is selling, we can probably help.\u003c/p\u003e",
+                                                                                   "editor":  "\u003cp\u003eAsk us anyway. If your buyers are businesses and your offer works, we can probably help.\u003c/p\u003e",
                                                                                    "_css_classes":  "dp-lead dp-center"
                                                                                },
                                                                   "elements":  [
@@ -643,15 +627,15 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "8a7daaa",
+                                                                  "id":  "5a14efa",
                                                                   "elType":  "section",
                                                                   "settings":  {
-                                                                                   "css_classes":  "dp-inner",
+                                                                                   "css_classes":  "",
                                                                                    "gap":  "default"
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "16d2a37",
+                                                                                       "id":  "a7861af",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  100,
@@ -660,11 +644,11 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "bc13979",
+                                                                                                            "id":  "31be113",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "button",
                                                                                                             "settings":  {
-                                                                                                                             "text":  "Book a 15-min call",
+                                                                                                                             "text":  "Book a strategy call",
                                                                                                                              "link":  {
                                                                                                                                           "url":  "/contact/",
                                                                                                                                           "is_external":  "",
@@ -678,11 +662,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "84e672e",
+                                                                                                            "id":  "00e52e9",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "button",
                                                                                                             "settings":  {
-                                                                                                                             "text":  "WhatsApp me",
+                                                                                                                             "text":  "WhatsApp us",
                                                                                                                              "link":  {
                                                                                                                                           "url":  "https://wa.me/918799714396",
                                                                                                                                           "is_external":  "",

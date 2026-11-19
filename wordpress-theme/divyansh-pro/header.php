@@ -15,6 +15,14 @@
 <?php wp_body_open(); ?>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'divyansh-pro' ); ?></a>
 
+<?php if ( dp_opt( 'dp_blessing' ) ) : ?>
+	<div class="dp-blessing dp-blessing--top">
+		<span class="dp-blessing__orn" aria-hidden="true">&#10022;</span>
+		<span><?php echo esc_html( dp_opt( 'dp_blessing' ) ); ?></span>
+		<span class="dp-blessing__orn" aria-hidden="true">&#10022;</span>
+	</div>
+<?php endif; ?>
+
 <header class="dp-header" id="dp-header">
 	<div class="dp-container dp-header__row">
 		<?php if ( has_custom_logo() ) : ?>
@@ -22,7 +30,12 @@
 		<?php else : ?>
 			<a class="dp-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<span class="dp-brand__mark" aria-hidden="true"><?php echo esc_html( mb_substr( get_bloginfo( 'name' ), 0, 1 ) ); ?></span>
-				<span class="dp-brand__name"><?php bloginfo( 'name' ); ?></span>
+				<span class="dp-brand__text">
+					<span class="dp-brand__name"><?php bloginfo( 'name' ); ?></span>
+					<?php if ( get_bloginfo( 'description' ) ) : ?>
+						<span class="dp-brand__tag"><?php bloginfo( 'description' ); ?></span>
+					<?php endif; ?>
+				</span>
 			</a>
 		<?php endif; ?>
 
