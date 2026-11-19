@@ -88,7 +88,7 @@ Purani site par nayi theme upload karo (**Replace active with uploaded**), phir 
 
 **"Blessings always Guruji"** line har page ke header (sabse upar) aur footer (beech mein) aati hai. Text badalna ya hatana ho: **Appearance → Customize → Kadvia Settings → Blessing line**.
 
-## Logo aur browser icon (version 2.3: navy K-in-D logo)
+## Logo aur browser icon (version 2.4: navy K-in-D logo, Montserrat bold)
 `brand/` folder mein:
 | File | Kahan use karein |
 |---|---|
@@ -98,7 +98,6 @@ Purani site par nayi theme upload karo (**Replace active with uploaded**), phir 
 | `kadvia-icon-512.png` | WordPress Site Icon (browser tab) |
 | `kadvia-profile-1080.png` | WhatsApp / LinkedIn profile photo |
 | `kadvia-wordmark.png` | Website header |
-| `kadvia-mark.svg` / `kadvia-wordmark.svg` | Sharp vector (printing) |
 | `logo-studio.html` | Logo editor (browser mein kholo) |
 
 Theme 2.1 mein header aur browser tab mein Kadvia icon apne aap aata hai. Alag icon chahiye to: **Appearance → Customize → Site Identity → Site Icon**.

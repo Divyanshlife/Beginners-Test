@@ -29,7 +29,7 @@
 			<?php the_custom_logo(); ?>
 		<?php else : ?>
 			<a class="dp-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="dp-brand__wordmark" src="<?php echo esc_url( get_template_directory_uri() . '/assets/kadvia-wordmark.png' ); ?>" width="152" height="48" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+				<img class="dp-brand__wordmark" src="<?php echo esc_url( get_template_directory_uri() . '/assets/kadvia-wordmark.png' ); ?>" width="160" height="48" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 			</a>
 		<?php endif; ?>
 

@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DP_VERSION', '2.3.0' );
+define( 'DP_VERSION', '2.4.0' );
 
 /* ---------- Theme supports and menus ---------- */
 function dp_setup() {
