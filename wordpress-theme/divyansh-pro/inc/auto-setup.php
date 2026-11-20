@@ -496,3 +496,33 @@ function dp_upgrade_v4() {
 	set_transient( 'dp_upgrade_v2_log', $log, 120 );
 }
 add_action( 'admin_init', 'dp_upgrade_v4', 16 );
+
+/* =====================================================================
+   One-time update (v5): WhatsApp marketing added to the services.
+   Re-applies the 5 page designs.
+   ===================================================================== */
+function dp_upgrade_v5() {
+	if ( ! current_user_can( 'manage_options' ) || wp_doing_ajax() || get_option( 'dp_upgrade_v5' ) ) {
+		return;
+	}
+	if ( ! did_action( 'elementor/loaded' ) ) {
+		return; // Wait until Elementor is active.
+	}
+	$log = array();
+	foreach ( dp_setup_pages_list() as $slug => $page ) {
+		$file = get_template_directory() . '/elementor/' . $page['file'];
+		$tpl  = file_exists( $file ) ? json_decode( file_get_contents( $file ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		$p    = get_page_by_path( $slug, OBJECT, 'page' );
+		if ( empty( $tpl['content'] ) || ! $p ) {
+			continue;
+		}
+		dp_save_elementor_data( $p->ID, $tpl['content'] );
+		$log[] = $page['title'] . ' page updated (WhatsApp marketing added)';
+	}
+	if ( isset( \Elementor\Plugin::$instance->files_manager ) ) {
+		\Elementor\Plugin::$instance->files_manager->clear_cache();
+	}
+	update_option( 'dp_upgrade_v5', time() );
+	set_transient( 'dp_upgrade_v2_log', $log, 120 );
+}
+add_action( 'admin_init', 'dp_upgrade_v5', 17 );
