@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DP_VERSION', '2.7.0' );
+define( 'DP_VERSION', '2.8.0' );
 
 /* ---------- Theme supports and menus ---------- */
 function dp_setup() {
@@ -189,6 +189,7 @@ function dp_link( $url ) {
 /* ---------- One-click page setup (creates the Elementor pages and the blog) ---------- */
 require_once get_template_directory() . '/inc/starter-posts.php';
 require_once get_template_directory() . '/inc/auto-setup.php';
+require_once get_template_directory() . '/inc/contact-form.php';
 
 /* =====================================================================
    Blog helpers

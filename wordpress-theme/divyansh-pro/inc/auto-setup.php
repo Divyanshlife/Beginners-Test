@@ -28,6 +28,9 @@ function dp_save_elementor_data( $page_id, $content ) {
 	$json = wp_json_encode( $content );
 	$json = str_replace( '{{THEME}}', esc_url_raw( get_template_directory_uri() ), $json );
 	update_post_meta( $page_id, '_elementor_data', wp_slash( $json ) );
+	// Drop Elementor's cached HTML and CSS for this page so the new design shows at once.
+	delete_post_meta( $page_id, '_elementor_element_cache' );
+	delete_post_meta( $page_id, '_elementor_css' );
 }
 
 function dp_run_setup() {
@@ -526,3 +529,32 @@ function dp_upgrade_v5() {
 	set_transient( 'dp_upgrade_v2_log', $log, 120 );
 }
 add_action( 'admin_init', 'dp_upgrade_v5', 17 );
+
+/* ------------------------------------------------------------
+   One-time update (v6): Contact page gets the enquiry form.
+   Only the Contact page is replaced; other pages are not touched.
+------------------------------------------------------------ */
+function dp_upgrade_v6() {
+	if ( ! current_user_can( 'manage_options' ) || wp_doing_ajax() || get_option( 'dp_upgrade_v6' ) ) {
+		return;
+	}
+	if ( ! did_action( 'elementor/loaded' ) ) {
+		return; // Wait until Elementor is active.
+	}
+	$log  = array();
+	$file = get_template_directory() . '/elementor/contact.json';
+	$tpl  = file_exists( $file ) ? json_decode( file_get_contents( $file ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions
+	$p    = get_page_by_path( 'contact', OBJECT, 'page' );
+	if ( ! empty( $tpl['content'] ) && $p ) {
+		dp_save_elementor_data( $p->ID, $tpl['content'] );
+		$log[] = 'Contact page updated (enquiry form added)';
+		if ( isset( \Elementor\Plugin::$instance->files_manager ) ) {
+			\Elementor\Plugin::$instance->files_manager->clear_cache();
+		}
+	}
+	update_option( 'dp_upgrade_v6', time() );
+	if ( $log ) {
+		set_transient( 'dp_upgrade_v2_log', $log, 120 );
+	}
+}
+add_action( 'admin_init', 'dp_upgrade_v6', 18 );

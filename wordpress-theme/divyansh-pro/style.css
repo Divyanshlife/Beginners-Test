@@ -3,7 +3,7 @@ Theme Name: Kadvia
 Theme URI: https://github.com/Divyanshlife/Beginners-Test
 Author: Divyansh Arora
 Description: Kadvia theme for Elementor. Royal blue and pink, serif headings, pill buttons and card sections. Colors, header button, blessing line and contact details are in Appearance > Customize > Kadvia Settings.
-Version: 2.7.0
+Version: 2.8.0
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
@@ -552,3 +552,31 @@ body .elementor-section.dp-band { padding: 64px 0; }
 
 /* Long words (like email addresses) wrap inside cards */
 body .dp-card .elementor-heading-title { overflow-wrap: anywhere; }
+
+/* ---------- v2.8 Contact form ---------- */
+.dp-form-wrap { background: var(--dp-surface); border: 1px solid var(--dp-line); border-radius: 22px; padding: 34px 36px; box-shadow: 0 18px 50px -30px rgba(36, 71, 214, .35); }
+.dp-form { display: grid; gap: 16px; }
+.dp-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.dp-field { display: grid; gap: 6px; margin: 0; }
+.dp-field > span { font-size: 14px; font-weight: 700; color: var(--dp-ink); }
+.dp-form input[type=text], .dp-form input[type=email], .dp-form input[type=tel], .dp-form select, .dp-form textarea {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 15px; color: var(--dp-ink); background: var(--dp-bg);
+  border: 1px solid var(--dp-line); border-radius: 12px; padding: 12px 14px; transition: border-color .2s, box-shadow .2s, background .2s; }
+.dp-form textarea { resize: vertical; min-height: 120px; }
+.dp-form input:focus, .dp-form select:focus, .dp-form textarea:focus { outline: none; background: #fff; border-color: var(--dp-accent); box-shadow: 0 0 0 4px var(--dp-accent-soft); }
+.dp-check { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--dp-muted); cursor: pointer; }
+.dp-check input { margin-top: 3px; width: 17px; height: 17px; accent-color: var(--dp-accent); }
+.dp-form__submit { justify-self: start; border: 0; cursor: pointer; font: inherit; font-weight: 700; font-size: 16px; padding: 14px 30px; }
+.dp-form__note { margin: 0; font-size: 13px; color: var(--dp-muted); }
+.dp-form__hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.dp-form-error { margin: 0; padding: 12px 14px; border-radius: 12px; background: var(--dp-pink-soft); color: #9b1650; font-weight: 600; }
+.dp-form-done { text-align: center; padding: 30px 10px; }
+.dp-form-done__icon { display: inline-grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--dp-accent), var(--dp-pink)); color: #fff; font-size: 26px; font-weight: 700; }
+.dp-form-done h3 { font-family: var(--dp-display); font-size: 26px; margin: 16px 0 8px; color: var(--dp-ink); }
+.dp-form-done p { margin: 0; color: var(--dp-muted); }
+.dp-contact-side .dp-card { margin-bottom: 16px; }
+@media (max-width: 720px) {
+  .dp-form-wrap { padding: 24px 18px; border-radius: 18px; }
+  .dp-form__row { grid-template-columns: 1fr; }
+  .dp-form__submit { justify-self: stretch; text-align: center; }
+}

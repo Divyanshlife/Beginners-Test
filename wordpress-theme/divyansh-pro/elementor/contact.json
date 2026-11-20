@@ -8,7 +8,7 @@
                       },
     "content":  [
                     {
-                        "id":  "64d6e68",
+                        "id":  "e631393",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-hero",
@@ -16,7 +16,7 @@
                                      },
                         "elements":  [
                                          {
-                                             "id":  "9f9c1a8",
+                                             "id":  "8739665",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  50,
@@ -25,7 +25,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "f14e4c9",
+                                                                  "id":  "72fee18",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -38,7 +38,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "cf01f18",
+                                                                  "id":  "1c61839",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -51,7 +51,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "ac27647",
+                                                                  "id":  "4eaac23",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "text-editor",
                                                                   "settings":  {
@@ -61,12 +61,71 @@
                                                                   "elements":  [
 
                                                                                ]
+                                                              },
+                                                              {
+                                                                  "id":  "ae0bbcb",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "d5dd49d",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  100,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-btn-row"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "c987428",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "button",
+                                                                                                            "settings":  {
+                                                                                                                             "text":  "Send a message",
+                                                                                                                             "link":  {
+                                                                                                                                          "url":  "#contact-form",
+                                                                                                                                          "is_external":  "",
+                                                                                                                                          "nofollow":  ""
+                                                                                                                                      },
+                                                                                                                             "_css_classes":  "dp-btn",
+                                                                                                                             "_element_width":  "auto"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "a32f26b",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "button",
+                                                                                                            "settings":  {
+                                                                                                                             "text":  "WhatsApp us",
+                                                                                                                             "link":  {
+                                                                                                                                          "url":  "https://wa.me/918799714396",
+                                                                                                                                          "is_external":  "",
+                                                                                                                                          "nofollow":  ""
+                                                                                                                                      },
+                                                                                                                             "_css_classes":  "dp-btn-ghost",
+                                                                                                                             "_element_width":  "auto"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
                                                               }
                                                           ],
                                              "isInner":  false
                                          },
                                          {
-                                             "id":  "65a4fef",
+                                             "id":  "b1b836c",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  50,
@@ -75,7 +134,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "0ea0d7b",
+                                                                  "id":  "d0ed742",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "image",
                                                                   "settings":  {
@@ -97,24 +156,87 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "67b356c",
+                        "id":  "f2058bd",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec",
-                                         "gap":  "default"
+                                         "gap":  "default",
+                                         "_element_id":  "contact-form"
                                      },
                         "elements":  [
                                          {
-                                             "id":  "e363788",
+                                             "id":  "e2b8a90",
                                              "elType":  "column",
                                              "settings":  {
-                                                              "_column_size":  100,
+                                                              "_column_size":  60,
                                                               "_inline_size":  null,
                                                               "css_classes":  ""
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "3d44f0a",
+                                                                  "id":  "0df6c3a",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Send a message",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "ae6dd4e",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Tell us about \u003cem\u003eyour business.\u003c/em\u003e",
+                                                                                   "header_size":  "h2",
+                                                                                   "_css_classes":  "dp-h2"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "fe68c5b",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eFill in the form and we will come back within one working day with times for a free 20-minute call.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-lead"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "6ddf78d",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "shortcode",
+                                                                  "settings":  {
+                                                                                   "shortcode":  "[kadvia_contact_form]",
+                                                                                   "_css_classes":  "dp-form-wrap"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         },
+                                         {
+                                             "id":  "0821882",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  40,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  "dp-contact-side"
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "780dc13",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "",
@@ -122,17 +244,17 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "922467e",
+                                                                                       "id":  "81a185b",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
-                                                                                                        "_column_size":  33,
+                                                                                                        "_column_size":  100,
                                                                                                         "_inline_size":  null,
                                                                                                         "css_classes":  "dp-card",
                                                                                                         "animation":  "fadeInUp"
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "a19ce7d",
+                                                                                                            "id":  "5c4c6f3",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon",
                                                                                                             "settings":  {
@@ -148,7 +270,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "21f699a",
+                                                                                                            "id":  "21b0ab8",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -161,7 +283,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "068f3d2",
+                                                                                                            "id":  "6c2ccee",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -174,7 +296,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "c7c2673",
+                                                                                                            "id":  "f4ef90f",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
@@ -186,7 +308,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "b54f5b5",
+                                                                                                            "id":  "20284eb",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "button",
                                                                                                             "settings":  {
@@ -205,12 +327,23 @@
                                                                                                         }
                                                                                                     ],
                                                                                        "isInner":  true
-                                                                                   },
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              },
+                                                              {
+                                                                  "id":  "73122ad",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
                                                                                    {
-                                                                                       "id":  "6031d67",
+                                                                                       "id":  "b8e6685",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
-                                                                                                        "_column_size":  33,
+                                                                                                        "_column_size":  100,
                                                                                                         "_inline_size":  null,
                                                                                                         "css_classes":  "dp-card",
                                                                                                         "animation":  "fadeInUp",
@@ -218,7 +351,7 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "140c3f4",
+                                                                                                            "id":  "9425653",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon",
                                                                                                             "settings":  {
@@ -234,7 +367,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "3a2472d",
+                                                                                                            "id":  "90a17ce",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -247,7 +380,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "b76e6e0",
+                                                                                                            "id":  "203454f",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -260,7 +393,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "c2c2205",
+                                                                                                            "id":  "8ee254b",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
@@ -272,7 +405,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "42d762f",
+                                                                                                            "id":  "4e0ca3f",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "button",
                                                                                                             "settings":  {
@@ -291,12 +424,23 @@
                                                                                                         }
                                                                                                     ],
                                                                                        "isInner":  true
-                                                                                   },
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              },
+                                                              {
+                                                                  "id":  "bfa88ed",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
                                                                                    {
-                                                                                       "id":  "819b589",
+                                                                                       "id":  "77fa4bf",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
-                                                                                                        "_column_size":  33,
+                                                                                                        "_column_size":  100,
                                                                                                         "_inline_size":  null,
                                                                                                         "css_classes":  "dp-card",
                                                                                                         "animation":  "fadeInUp",
@@ -304,7 +448,7 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "a0a0a22",
+                                                                                                            "id":  "dfa05fb",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon",
                                                                                                             "settings":  {
@@ -320,7 +464,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "484a17d",
+                                                                                                            "id":  "829d872",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -333,7 +477,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "2a59d97",
+                                                                                                            "id":  "b25bb86",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -346,7 +490,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "7c2aa42",
+                                                                                                            "id":  "ed30250",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
@@ -370,7 +514,7 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "4aa57f4",
+                        "id":  "f12d130",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec dp-alt",
@@ -378,7 +522,7 @@
                                      },
                         "elements":  [
                                          {
-                                             "id":  "b657dda",
+                                             "id":  "3662b8b",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -387,7 +531,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "9721d74",
+                                                                  "id":  "cc5f28c",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -401,7 +545,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "1770822",
+                                                                  "id":  "ed1346c",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -416,7 +560,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "0ce76a7",
+                                                                  "id":  "075d311",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "dp-inner",
@@ -424,7 +568,7 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "d9deeaa",
+                                                                                       "id":  "fdc9715",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -434,7 +578,7 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "99c0189",
+                                                                                                            "id":  "85feb0d",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon",
                                                                                                             "settings":  {
@@ -450,7 +594,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "5a1f2bf",
+                                                                                                            "id":  "f5bd755",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -463,7 +607,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "65d0fb4",
+                                                                                                            "id":  "5545458",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -476,11 +620,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "21d7eae",
+                                                                                                            "id":  "4ef7f2e",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eEmail, call or WhatsApp. Tell us a little about your business.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eUse the form above, email, call or WhatsApp. Tell us a little about your business.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -491,7 +635,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "e3b85f5",
+                                                                                       "id":  "6f8a100",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -502,7 +646,7 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "fd459be",
+                                                                                                            "id":  "2b7c800",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon",
                                                                                                             "settings":  {
@@ -518,7 +662,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "3cbaf73",
+                                                                                                            "id":  "558d13e",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -531,7 +675,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "cc3f2f8",
+                                                                                                            "id":  "d6e65b1",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -544,7 +688,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "e6ac8f2",
+                                                                                                            "id":  "9abded2",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
@@ -559,7 +703,7 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "4ea1f7c",
+                                                                                       "id":  "e787df2",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
@@ -570,7 +714,7 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "6517c87",
+                                                                                                            "id":  "515f205",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon",
                                                                                                             "settings":  {
@@ -586,7 +730,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "289863c",
+                                                                                                            "id":  "a1b950f",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -599,7 +743,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "9b979b4",
+                                                                                                            "id":  "31925ac",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -612,7 +756,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "5aa0c52",
+                                                                                                            "id":  "68f0f1b",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
@@ -636,7 +780,7 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "73f84e9",
+                        "id":  "4845f77",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec",
@@ -644,7 +788,7 @@
                                      },
                         "elements":  [
                                          {
-                                             "id":  "89776a1",
+                                             "id":  "22f6556",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -653,7 +797,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "2f57a75",
+                                                                  "id":  "a82b777",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -667,7 +811,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "ab59561",
+                                                                  "id":  "a138bf1",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -682,23 +826,23 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "9c3b36e",
+                                                                  "id":  "8643840",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "accordion",
                                                                   "settings":  {
                                                                                    "tabs":  [
                                                                                                 {
-                                                                                                    "_id":  "bc534ac",
+                                                                                                    "_id":  "c54de3b",
                                                                                                     "tab_title":  "Is the strategy call free?",
                                                                                                     "tab_content":  "\u003cp\u003eYes. It is a 20-minute conversation with no obligation.\u003c/p\u003e"
                                                                                                 },
                                                                                                 {
-                                                                                                    "_id":  "016c333",
+                                                                                                    "_id":  "0001150",
                                                                                                     "tab_title":  "What should I prepare?",
                                                                                                     "tab_content":  "\u003cp\u003eA rough idea of your best clients and your usual deal size. Nothing else.\u003c/p\u003e"
                                                                                                 },
                                                                                                 {
-                                                                                                    "_id":  "44e9868",
+                                                                                                    "_id":  "d719d56",
                                                                                                     "tab_title":  "How soon can we start?",
                                                                                                     "tab_content":  "\u003cp\u003eUsually within a week of agreeing the plan.\u003c/p\u003e"
                                                                                                 }
