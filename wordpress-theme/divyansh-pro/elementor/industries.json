@@ -8,7 +8,7 @@
                       },
     "content":  [
                     {
-                        "id":  "291511c",
+                        "id":  "5e5c41e",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-hero",
@@ -16,16 +16,16 @@
                                      },
                         "elements":  [
                                          {
-                                             "id":  "10df0b2",
+                                             "id":  "8b084a0",
                                              "elType":  "column",
                                              "settings":  {
-                                                              "_column_size":  100,
+                                                              "_column_size":  50,
                                                               "_inline_size":  null,
                                                               "css_classes":  ""
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "3ffe4d5",
+                                                                  "id":  "a301aaf",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -38,7 +38,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "dff77c5",
+                                                                  "id":  "92eab30",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -51,12 +51,81 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "2770f52",
+                                                                  "id":  "cd469de",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "text-editor",
                                                                   "settings":  {
                                                                                    "editor":  "\u003cp\u003eIf your buyers are businesses and one good meeting can turn into a real deal, Kadvia can help you get more of them.\u003c/p\u003e",
                                                                                    "_css_classes":  "dp-lead"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "ce75104",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "806e55e",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  100,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-btn-row"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "6d7984f",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "button",
+                                                                                                            "settings":  {
+                                                                                                                             "text":  "Book a strategy call",
+                                                                                                                             "link":  {
+                                                                                                                                          "url":  "/contact/",
+                                                                                                                                          "is_external":  "",
+                                                                                                                                          "nofollow":  ""
+                                                                                                                                      },
+                                                                                                                             "_css_classes":  "dp-btn",
+                                                                                                                             "_element_width":  "auto"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         },
+                                         {
+                                             "id":  "e32ba29",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  50,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "9cdede2",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "image",
+                                                                  "settings":  {
+                                                                                   "image":  {
+                                                                                                 "url":  "{{THEME}}/assets/img/target.svg",
+                                                                                                 "id":  ""
+                                                                                             },
+                                                                                   "image_size":  "full",
+                                                                                   "_css_classes":  "dp-art"
                                                                                },
                                                                   "elements":  [
 
@@ -69,7 +138,7 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "daf3869",
+                        "id":  "3f22da4",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec",
@@ -77,7 +146,7 @@
                                      },
                         "elements":  [
                                          {
-                                             "id":  "71288ed",
+                                             "id":  "ef4dd7a",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -86,33 +155,36 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "9acb128",
+                                                                  "id":  "69e0a61",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
                                                                                    "title":  "Industries",
                                                                                    "header_size":  "div",
-                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                                   "_css_classes":  "dp-eyebrow",
+                                                                                   "_animation":  "fadeInUp"
                                                                                },
                                                                   "elements":  [
 
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "e211c84",
+                                                                  "id":  "7872444",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
                                                                                    "title":  "Where we work most.",
                                                                                    "header_size":  "h2",
-                                                                                   "_css_classes":  "dp-h2"
+                                                                                   "_css_classes":  "dp-h2",
+                                                                                   "_animation":  "fadeInUp",
+                                                                                   "_animation_delay":  80
                                                                                },
                                                                   "elements":  [
 
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "8a3ef2f",
+                                                                  "id":  "fe3ee8d",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "dp-inner",
@@ -120,19 +192,33 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "6fc0cdf",
+                                                                                       "id":  "57e5c6a",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
                                                                                                         "_inline_size":  null,
-                                                                                                        "css_classes":  "dp-card"
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp"
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
+                                                                                                            "id":  "adb71a8",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon",
+                                                                                                            "settings":  {
+                                                                                                                             "selected_icon":  {
+                                                                                                                                                   "value":  "fas fa-laptop-code",
+                                                                                                                                                   "library":  "fa-solid"
+                                                                                                                                               },
+                                                                                                                             "align":  "left",
+                                                                                                                             "_css_classes":  "dp-ico"
+                                                                                                                         },
+                                                                                                            "elements":  [
 
+                                                                                                                         ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "01d0434",
+                                                                                                            "id":  "4dfbdc9",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -145,11 +231,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "5569170",
+                                                                                                            "id":  "e593174",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eSoftware companies that need demos with the right buyers, not just more sign-ups.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eDemos with the right buyers, not just more sign-ups.\u003cbr\u003e\u003cstrong\u003eTypical buyers:\u003c/strong\u003e CTOs, product and operations heads.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -160,19 +246,34 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "ac69c2e",
+                                                                                       "id":  "6d37310",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
                                                                                                         "_inline_size":  null,
-                                                                                                        "css_classes":  "dp-card"
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp",
+                                                                                                        "animation_delay":  120
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
+                                                                                                            "id":  "3bb78f0",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon",
+                                                                                                            "settings":  {
+                                                                                                                             "selected_icon":  {
+                                                                                                                                                   "value":  "fas fa-server",
+                                                                                                                                                   "library":  "fa-solid"
+                                                                                                                                               },
+                                                                                                                             "align":  "left",
+                                                                                                                             "_css_classes":  "dp-ico"
+                                                                                                                         },
+                                                                                                            "elements":  [
 
+                                                                                                                         ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "190d241",
+                                                                                                            "id":  "8dba637",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -185,11 +286,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "64d2fae",
+                                                                                                            "id":  "bd32dee",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eDevelopment, cloud and support firms selling long-term contracts to growing companies.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eLong-term contracts with growing companies in India and abroad.\u003cbr\u003e\u003cstrong\u003eTypical buyers:\u003c/strong\u003e founders, CIOs, engineering heads.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -200,19 +301,34 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "d9bc12b",
+                                                                                       "id":  "d248073",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
                                                                                                         "_inline_size":  null,
-                                                                                                        "css_classes":  "dp-card"
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp",
+                                                                                                        "animation_delay":  240
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
+                                                                                                            "id":  "b0c0c34",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon",
+                                                                                                            "settings":  {
+                                                                                                                             "selected_icon":  {
+                                                                                                                                                   "value":  "fas fa-users",
+                                                                                                                                                   "library":  "fa-solid"
+                                                                                                                                               },
+                                                                                                                             "align":  "left",
+                                                                                                                             "_css_classes":  "dp-ico"
+                                                                                                                         },
+                                                                                                            "elements":  [
 
+                                                                                                                         ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "ca8b5f6",
+                                                                                                            "id":  "79d606c",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -225,11 +341,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "5c05b41",
+                                                                                                            "id":  "9d0864a",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eAgencies that want steady conversations with hiring managers and HR heads.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eSteady conversations with the people who sign hiring contracts.\u003cbr\u003e\u003cstrong\u003eTypical buyers:\u003c/strong\u003e HR heads, talent leaders.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -243,7 +359,7 @@
                                                                   "isInner":  true
                                                               },
                                                               {
-                                                                  "id":  "e8c7b67",
+                                                                  "id":  "ae03101",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "dp-inner",
@@ -251,19 +367,33 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "33f4b5d",
+                                                                                       "id":  "c65cfa3",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
                                                                                                         "_inline_size":  null,
-                                                                                                        "css_classes":  "dp-card"
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp"
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
+                                                                                                            "id":  "53d2f38",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon",
+                                                                                                            "settings":  {
+                                                                                                                             "selected_icon":  {
+                                                                                                                                                   "value":  "fas fa-briefcase",
+                                                                                                                                                   "library":  "fa-solid"
+                                                                                                                                               },
+                                                                                                                             "align":  "left",
+                                                                                                                             "_css_classes":  "dp-ico"
+                                                                                                                         },
+                                                                                                            "elements":  [
 
+                                                                                                                         ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "c10cc2b",
+                                                                                                            "id":  "0ab8b81",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -276,11 +406,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "24cd310",
+                                                                                                            "id":  "53145ab",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eMarketing, design and advisory firms whose best clients come from the first meeting.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eFirst meetings for firms whose best clients come from a conversation.\u003cbr\u003e\u003cstrong\u003eTypical buyers:\u003c/strong\u003e CMOs, founders, MDs.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -291,19 +421,34 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "1a00ee2",
+                                                                                       "id":  "77a4c61",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
                                                                                                         "_inline_size":  null,
-                                                                                                        "css_classes":  "dp-card"
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp",
+                                                                                                        "animation_delay":  120
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
+                                                                                                            "id":  "61ffaef",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon",
+                                                                                                            "settings":  {
+                                                                                                                             "selected_icon":  {
+                                                                                                                                                   "value":  "fas fa-industry",
+                                                                                                                                                   "library":  "fa-solid"
+                                                                                                                                               },
+                                                                                                                             "align":  "left",
+                                                                                                                             "_css_classes":  "dp-ico"
+                                                                                                                         },
+                                                                                                            "elements":  [
 
+                                                                                                                         ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "ca8fba7",
+                                                                                                            "id":  "584eb70",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -316,11 +461,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "13995b0",
+                                                                                                            "id":  "4715dc4",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eMakers and exporters looking for distributors, dealers and bulk buyers.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eDistributors, dealers and bulk buyers for makers and exporters.\u003cbr\u003e\u003cstrong\u003eTypical buyers:\u003c/strong\u003e procurement and purchase heads.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -331,19 +476,34 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "12d2583",
+                                                                                       "id":  "bcfdd89",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  33,
                                                                                                         "_inline_size":  null,
-                                                                                                        "css_classes":  "dp-card"
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp",
+                                                                                                        "animation_delay":  240
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
+                                                                                                            "id":  "039a29a",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon",
+                                                                                                            "settings":  {
+                                                                                                                             "selected_icon":  {
+                                                                                                                                                   "value":  "fas fa-landmark",
+                                                                                                                                                   "library":  "fa-solid"
+                                                                                                                                               },
+                                                                                                                             "align":  "left",
+                                                                                                                             "_css_classes":  "dp-ico"
+                                                                                                                         },
+                                                                                                            "elements":  [
 
+                                                                                                                         ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "760eb36",
+                                                                                                            "id":  "a3d1550",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -356,11 +516,11 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "1935824",
+                                                                                                            "id":  "bff20cf",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "text-editor",
                                                                                                             "settings":  {
-                                                                                                                             "editor":  "\u003cp\u003eCA firms, insurance, legal and finance teams selling to business owners.\u003c/p\u003e",
+                                                                                                                             "editor":  "\u003cp\u003eCA firms, insurance, legal and finance teams selling to businesses.\u003cbr\u003e\u003cstrong\u003eTypical buyers:\u003c/strong\u003e owners, CFOs, finance heads.\u003c/p\u003e",
                                                                                                                              "_css_classes":  "dp-text"
                                                                                                                          },
                                                                                                             "elements":  [
@@ -380,7 +540,7 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "c275c3d",
+                        "id":  "3232a73",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec dp-alt",
@@ -388,7 +548,7 @@
                                      },
                         "elements":  [
                                          {
-                                             "id":  "ee97a39",
+                                             "id":  "70b74ac",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -397,33 +557,50 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "2b37903",
+                                                                  "id":  "c0928b1",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "Fit check",
+                                                                                   "title":  "Buying signals",
                                                                                    "header_size":  "div",
-                                                                                   "_css_classes":  "dp-eyebrow"
+                                                                                   "_css_classes":  "dp-eyebrow",
+                                                                                   "_animation":  "fadeInUp"
                                                                                },
                                                                   "elements":  [
 
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "7ee6570",
+                                                                  "id":  "5dc0bdf",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
-                                                                                   "title":  "Good fit, or not yet?",
+                                                                                   "title":  "We reach out \u003cem\u003eat the right moment.\u003c/em\u003e",
                                                                                    "header_size":  "h2",
-                                                                                   "_css_classes":  "dp-h2"
+                                                                                   "_css_classes":  "dp-h2",
+                                                                                   "_animation":  "fadeInUp",
+                                                                                   "_animation_delay":  80
                                                                                },
                                                                   "elements":  [
 
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "37e23bd",
+                                                                  "id":  "ccfb85b",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "text-editor",
+                                                                  "settings":  {
+                                                                                   "editor":  "\u003cp\u003eTiming matters as much as the right person. These are signals we watch for.\u003c/p\u003e",
+                                                                                   "_css_classes":  "dp-lead",
+                                                                                   "_animation":  "fadeInUp",
+                                                                                   "_animation_delay":  160
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "6a26dc3",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "dp-inner",
@@ -431,16 +608,244 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "1b36bcf",
+                                                                                       "id":  "60bc54e",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp"
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "b512980",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon",
+                                                                                                            "settings":  {
+                                                                                                                             "selected_icon":  {
+                                                                                                                                                   "value":  "fas fa-user-plus",
+                                                                                                                                                   "library":  "fa-solid"
+                                                                                                                                               },
+                                                                                                                             "align":  "left",
+                                                                                                                             "_css_classes":  "dp-ico"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "11fd448",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "New leader joins",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "3f8856d",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eA new head of sales, IT or operations often reviews vendors in the first months.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "3c7d60e",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp",
+                                                                                                        "animation_delay":  120
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "4bc17a9",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon",
+                                                                                                            "settings":  {
+                                                                                                                             "selected_icon":  {
+                                                                                                                                                   "value":  "fas fa-building",
+                                                                                                                                                   "library":  "fa-solid"
+                                                                                                                                               },
+                                                                                                                             "align":  "left",
+                                                                                                                             "_css_classes":  "dp-ico"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "e8eccb6",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Expansion",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "dfcdd46",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eA new office, plant or market usually means new needs and new budgets.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   },
+                                                                                   {
+                                                                                       "id":  "b865032",
+                                                                                       "elType":  "column",
+                                                                                       "settings":  {
+                                                                                                        "_column_size":  33,
+                                                                                                        "_inline_size":  null,
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp",
+                                                                                                        "animation_delay":  240
+                                                                                                    },
+                                                                                       "elements":  [
+                                                                                                        {
+                                                                                                            "id":  "7dae83c",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "icon",
+                                                                                                            "settings":  {
+                                                                                                                             "selected_icon":  {
+                                                                                                                                                   "value":  "fas fa-bullhorn",
+                                                                                                                                                   "library":  "fa-solid"
+                                                                                                                                               },
+                                                                                                                             "align":  "left",
+                                                                                                                             "_css_classes":  "dp-ico dp-ico-pink"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "e7c4589",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "heading",
+                                                                                                            "settings":  {
+                                                                                                                             "title":  "Hiring and launches",
+                                                                                                                             "header_size":  "h3",
+                                                                                                                             "_css_classes":  "dp-h3"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "id":  "0b0f5e4",
+                                                                                                            "elType":  "widget",
+                                                                                                            "widgetType":  "text-editor",
+                                                                                                            "settings":  {
+                                                                                                                             "editor":  "\u003cp\u003eHiring for key roles or launching a product shows where a company is investing.\u003c/p\u003e",
+                                                                                                                             "_css_classes":  "dp-text"
+                                                                                                                         },
+                                                                                                            "elements":  [
+
+                                                                                                                         ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "isInner":  true
+                                                                                   }
+                                                                               ],
+                                                                  "isInner":  true
+                                                              }
+                                                          ],
+                                             "isInner":  false
+                                         }
+                                     ],
+                        "isInner":  false
+                    },
+                    {
+                        "id":  "95eeb69",
+                        "elType":  "section",
+                        "settings":  {
+                                         "css_classes":  "dp-sec",
+                                         "gap":  "default"
+                                     },
+                        "elements":  [
+                                         {
+                                             "id":  "75f7e16",
+                                             "elType":  "column",
+                                             "settings":  {
+                                                              "_column_size":  100,
+                                                              "_inline_size":  null,
+                                                              "css_classes":  ""
+                                                          },
+                                             "elements":  [
+                                                              {
+                                                                  "id":  "d05cc53",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Fit check",
+                                                                                   "header_size":  "div",
+                                                                                   "_css_classes":  "dp-eyebrow",
+                                                                                   "_animation":  "fadeInUp"
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "c424e14",
+                                                                  "elType":  "widget",
+                                                                  "widgetType":  "heading",
+                                                                  "settings":  {
+                                                                                   "title":  "Good fit, or not yet?",
+                                                                                   "header_size":  "h2",
+                                                                                   "_css_classes":  "dp-h2",
+                                                                                   "_animation":  "fadeInUp",
+                                                                                   "_animation_delay":  80
+                                                                               },
+                                                                  "elements":  [
+
+                                                                               ]
+                                                              },
+                                                              {
+                                                                  "id":  "54cb07d",
+                                                                  "elType":  "section",
+                                                                  "settings":  {
+                                                                                   "css_classes":  "dp-inner",
+                                                                                   "gap":  "default"
+                                                                               },
+                                                                  "elements":  [
+                                                                                   {
+                                                                                       "id":  "24bb74b",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  50,
                                                                                                         "_inline_size":  null,
-                                                                                                        "css_classes":  "dp-card"
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp"
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "0923321",
+                                                                                                            "id":  "f327b0e",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -453,13 +858,13 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "8f84cb7",
+                                                                                                            "id":  "443a0d5",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon-list",
                                                                                                             "settings":  {
                                                                                                                              "icon_list":  [
                                                                                                                                                {
-                                                                                                                                                   "_id":  "89cb9e6",
+                                                                                                                                                   "_id":  "a03e561",
                                                                                                                                                    "text":  "You sell to businesses, and a deal is worth a meeting",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
@@ -467,7 +872,7 @@
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "c83f6b9",
+                                                                                                                                                   "_id":  "52dfc0a",
                                                                                                                                                    "text":  "You know your ideal buyer, or want help defining one",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
@@ -475,7 +880,7 @@
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "c64c0cd",
+                                                                                                                                                   "_id":  "3b339ce",
                                                                                                                                                    "text":  "Someone on your team can take calls and close",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
@@ -483,7 +888,7 @@
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "7e61bc0",
+                                                                                                                                                   "_id":  "5051481",
                                                                                                                                                    "text":  "You want a steady flow of meetings, not a one-time spike",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-check",
@@ -501,16 +906,18 @@
                                                                                        "isInner":  true
                                                                                    },
                                                                                    {
-                                                                                       "id":  "78762cb",
+                                                                                       "id":  "b41c08f",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  50,
                                                                                                         "_inline_size":  null,
-                                                                                                        "css_classes":  "dp-card"
+                                                                                                        "css_classes":  "dp-card",
+                                                                                                        "animation":  "fadeInUp",
+                                                                                                        "animation_delay":  120
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "fe18350",
+                                                                                                            "id":  "9ce8290",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "heading",
                                                                                                             "settings":  {
@@ -523,13 +930,13 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "9eecab7",
+                                                                                                            "id":  "6ef5c52",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "icon-list",
                                                                                                             "settings":  {
                                                                                                                              "icon_list":  [
                                                                                                                                                {
-                                                                                                                                                   "_id":  "677ae96",
+                                                                                                                                                   "_id":  "6ec47f4",
                                                                                                                                                    "text":  "You want a bought database or mass email blasts",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-times",
@@ -537,7 +944,7 @@
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "7c4cf56",
+                                                                                                                                                   "_id":  "692fd70",
                                                                                                                                                    "text":  "Your offer has no paying clients yet",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-times",
@@ -545,7 +952,7 @@
                                                                                                                                                                      }
                                                                                                                                                },
                                                                                                                                                {
-                                                                                                                                                   "_id":  "e7ed376",
+                                                                                                                                                   "_id":  "e289fde",
                                                                                                                                                    "text":  "No one is free to attend the meetings we book",
                                                                                                                                                    "selected_icon":  {
                                                                                                                                                                          "value":  "fas fa-times",
@@ -572,7 +979,7 @@
                         "isInner":  false
                     },
                     {
-                        "id":  "9bb69c5",
+                        "id":  "3e33a74",
                         "elType":  "section",
                         "settings":  {
                                          "css_classes":  "dp-sec dp-dark",
@@ -580,7 +987,7 @@
                                      },
                         "elements":  [
                                          {
-                                             "id":  "53f2d5d",
+                                             "id":  "ed9a604",
                                              "elType":  "column",
                                              "settings":  {
                                                               "_column_size":  100,
@@ -589,7 +996,7 @@
                                                           },
                                              "elements":  [
                                                               {
-                                                                  "id":  "8c32c12",
+                                                                  "id":  "d28f051",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
@@ -602,20 +1009,21 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "f14d47d",
+                                                                  "id":  "2cc96d2",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "heading",
                                                                   "settings":  {
                                                                                    "title":  "Do not see your industry?",
                                                                                    "header_size":  "h2",
-                                                                                   "_css_classes":  "dp-h2 dp-center"
+                                                                                   "_css_classes":  "dp-h2 dp-center",
+                                                                                   "_animation":  "fadeInUp"
                                                                                },
                                                                   "elements":  [
 
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "ec29aa1",
+                                                                  "id":  "b079441",
                                                                   "elType":  "widget",
                                                                   "widgetType":  "text-editor",
                                                                   "settings":  {
@@ -627,7 +1035,7 @@
                                                                                ]
                                                               },
                                                               {
-                                                                  "id":  "5a14efa",
+                                                                  "id":  "15bbb8c",
                                                                   "elType":  "section",
                                                                   "settings":  {
                                                                                    "css_classes":  "",
@@ -635,7 +1043,7 @@
                                                                                },
                                                                   "elements":  [
                                                                                    {
-                                                                                       "id":  "a7861af",
+                                                                                       "id":  "436bb29",
                                                                                        "elType":  "column",
                                                                                        "settings":  {
                                                                                                         "_column_size":  100,
@@ -644,7 +1052,7 @@
                                                                                                     },
                                                                                        "elements":  [
                                                                                                         {
-                                                                                                            "id":  "31be113",
+                                                                                                            "id":  "8b738cf",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "button",
                                                                                                             "settings":  {
@@ -662,7 +1070,7 @@
                                                                                                                          ]
                                                                                                         },
                                                                                                         {
-                                                                                                            "id":  "00e52e9",
+                                                                                                            "id":  "ff8e19d",
                                                                                                             "elType":  "widget",
                                                                                                             "widgetType":  "button",
                                                                                                             "settings":  {

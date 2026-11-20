@@ -23,6 +23,13 @@ function dp_setup_pages_list() {
 	);
 }
 
+/* Saves an Elementor design; {{THEME}} in the design becomes this theme's URL (for the illustrations) */
+function dp_save_elementor_data( $page_id, $content ) {
+	$json = wp_json_encode( $content );
+	$json = str_replace( '{{THEME}}', esc_url_raw( get_template_directory_uri() ), $json );
+	update_post_meta( $page_id, '_elementor_data', wp_slash( $json ) );
+}
+
 function dp_run_setup() {
 	$done = array();
 
@@ -68,7 +75,7 @@ function dp_run_setup() {
 		if ( defined( 'ELEMENTOR_VERSION' ) ) {
 			update_post_meta( $page_id, '_elementor_version', ELEMENTOR_VERSION );
 		}
-		update_post_meta( $page_id, '_elementor_data', wp_slash( wp_json_encode( $tpl['content'] ) ) );
+		dp_save_elementor_data( $page_id, $tpl['content'] );
 
 		$done[ $slug ] = $page_id;
 	}
@@ -78,6 +85,9 @@ function dp_run_setup() {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $done['home'] );
 	}
+
+	// Blog page and starter articles.
+	dp_create_blog();
 
 	// Pretty links like /about/ so the buttons work.
 	if ( '' === get_option( 'permalink_structure' ) ) {
@@ -308,7 +318,7 @@ function dp_upgrade_v3() {
 		if ( defined( 'ELEMENTOR_VERSION' ) ) {
 			update_post_meta( $page_id, '_elementor_version', ELEMENTOR_VERSION );
 		}
-		update_post_meta( $page_id, '_elementor_data', wp_slash( wp_json_encode( $tpl['content'] ) ) );
+		dp_save_elementor_data( $page_id, $tpl['content'] );
 		$log[] = $page['title'] . ' page updated with the Kadvia design';
 
 		if ( 'home' === $slug ) {
@@ -326,3 +336,163 @@ function dp_upgrade_v3() {
 	set_transient( 'dp_upgrade_v2_log', $log, 120 );
 }
 add_action( 'admin_init', 'dp_upgrade_v3', 15 );
+
+/* =====================================================================
+   Blog: Blog page, categories, 6 starter articles with cover images.
+   Safe to run again: anything that already exists is left alone.
+   ===================================================================== */
+
+/* Copies a theme image into the Media Library once and returns its ID */
+function dp_theme_image_attachment( $file, $parent_id = 0 ) {
+	$existing = get_posts( array( 'post_type' => 'attachment', 'post_status' => 'inherit', 'meta_key' => '_dp_src', 'meta_value' => $file, 'numberposts' => 1, 'fields' => 'ids' ) );
+	if ( $existing ) {
+		return (int) $existing[0];
+	}
+	$path = get_template_directory() . '/assets/blog/' . $file;
+	if ( ! file_exists( $path ) ) {
+		return 0;
+	}
+	$upload = wp_upload_bits( $file, null, file_get_contents( $path ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	if ( ! empty( $upload['error'] ) ) {
+		return 0;
+	}
+	$type = wp_check_filetype( $upload['file'] );
+	$id   = wp_insert_attachment(
+		array(
+			'post_mime_type' => $type['type'],
+			'post_title'     => preg_replace( '/\.[^.]+$/', '', $file ),
+			'post_status'    => 'inherit',
+		),
+		$upload['file'],
+		$parent_id
+	);
+	if ( ! $id || is_wp_error( $id ) ) {
+		return 0;
+	}
+	require_once ABSPATH . 'wp-admin/includes/image.php';
+	wp_update_attachment_metadata( $id, wp_generate_attachment_metadata( $id, $upload['file'] ) );
+	update_post_meta( $id, '_dp_src', $file );
+	return (int) $id;
+}
+
+function dp_create_blog() {
+	$log = array();
+
+	// 1. Blog page, used as the Posts page.
+	$blog = get_page_by_path( 'blog', OBJECT, 'page' );
+	if ( $blog ) {
+		$blog_id = $blog->ID;
+		if ( 'publish' !== $blog->post_status ) {
+			wp_update_post( array( 'ID' => $blog_id, 'post_status' => 'publish' ) );
+		}
+	} else {
+		$blog_id = wp_insert_post( array( 'post_title' => 'Blog', 'post_name' => 'blog', 'post_status' => 'publish', 'post_type' => 'page' ) );
+		$log[]   = 'Blog page created';
+	}
+	if ( $blog_id && ! is_wp_error( $blog_id ) ) {
+		update_option( 'page_for_posts', $blog_id );
+		if ( 'page' !== get_option( 'show_on_front' ) ) {
+			$home = get_page_by_path( 'home', OBJECT, 'page' );
+			if ( $home ) {
+				update_option( 'show_on_front', 'page' );
+				update_option( 'page_on_front', $home->ID );
+			}
+		}
+	}
+
+	// 2. Starter articles.
+	$i     = 0;
+	$added = 0;
+	foreach ( dp_starter_posts() as $p ) {
+		$i++;
+		if ( get_page_by_path( $p['slug'], OBJECT, 'post' ) ) {
+			continue;
+		}
+		$term = term_exists( $p['cat'], 'category' );
+		if ( ! $term ) {
+			$term = wp_insert_term( $p['cat'], 'category' );
+		}
+		$cat_id = is_array( $term ) ? (int) $term['term_id'] : (int) $term;
+
+		$post_id = wp_insert_post(
+			array(
+				'post_title'    => $p['title'],
+				'post_name'     => $p['slug'],
+				'post_content'  => $p['content'],
+				'post_excerpt'  => $p['excerpt'],
+				'post_status'   => 'publish',
+				'post_type'     => 'post',
+				'post_author'   => get_current_user_id() ? get_current_user_id() : 1,
+				'post_category' => $cat_id ? array( $cat_id ) : array(),
+				// Newest first in the order listed above.
+				'post_date'     => gmdate( 'Y-m-d H:i:s', current_time( 'timestamp' ) - ( $i * 3 * DAY_IN_SECONDS ) ), // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp
+			)
+		);
+		if ( ! $post_id || is_wp_error( $post_id ) ) {
+			continue;
+		}
+		$img = dp_theme_image_attachment( $p['image'], $post_id );
+		if ( $img ) {
+			set_post_thumbnail( $post_id, $img );
+		}
+		$added++;
+	}
+	if ( $added ) {
+		$log[] = $added . ' starter blog articles added';
+	}
+
+	// 3. Add Blog to the header menu, if a custom menu is in use.
+	$locations = get_nav_menu_locations();
+	if ( ! empty( $locations['primary'] ) && $blog_id && ! is_wp_error( $blog_id ) ) {
+		$items = wp_get_nav_menu_items( $locations['primary'] );
+		$has   = false;
+		foreach ( (array) $items as $item ) {
+			if ( (int) $item->object_id === (int) $blog_id ) {
+				$has = true;
+			}
+		}
+		if ( ! $has ) {
+			wp_update_nav_menu_item( $locations['primary'], 0, array( 'menu-item-title' => 'Blog', 'menu-item-object' => 'page', 'menu-item-object-id' => $blog_id, 'menu-item-type' => 'post_type', 'menu-item-status' => 'publish' ) );
+			$log[] = 'Blog added to the header menu';
+		}
+	}
+	return $log;
+}
+
+/* =====================================================================
+   One-time update (v4): richer page designs with illustrations and
+   animations, plus the new Blog. Replaces the content of the 5 pages.
+   ===================================================================== */
+function dp_upgrade_v4() {
+	if ( ! current_user_can( 'manage_options' ) || wp_doing_ajax() || get_option( 'dp_upgrade_v4' ) ) {
+		return;
+	}
+	if ( ! did_action( 'elementor/loaded' ) ) {
+		return; // Wait until Elementor is active.
+	}
+	$log = array();
+	foreach ( dp_setup_pages_list() as $slug => $page ) {
+		$file = get_template_directory() . '/elementor/' . $page['file'];
+		$tpl  = file_exists( $file ) ? json_decode( file_get_contents( $file ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		$p    = get_page_by_path( $slug, OBJECT, 'page' );
+		if ( empty( $tpl['content'] ) || ! $p ) {
+			continue;
+		}
+		dp_save_elementor_data( $p->ID, $tpl['content'] );
+		if ( defined( 'ELEMENTOR_VERSION' ) ) {
+			update_post_meta( $p->ID, '_elementor_version', ELEMENTOR_VERSION );
+		}
+		$log[] = $page['title'] . ' page updated with the new design';
+	}
+	$log = array_merge( $log, dp_create_blog() );
+
+	flush_rewrite_rules();
+	if ( isset( \Elementor\Plugin::$instance->files_manager ) ) {
+		\Elementor\Plugin::$instance->files_manager->clear_cache();
+	}
+	update_option( 'dp_upgrade_v4', time() );
+	update_option( 'dp_upgrade_v3', time() );
+	update_option( 'dp_upgrade_v2', time() );
+	set_transient( 'dp_upgrade_v2_log', $log, 120 );
+}
+add_action( 'admin_init', 'dp_upgrade_v4', 16 );
