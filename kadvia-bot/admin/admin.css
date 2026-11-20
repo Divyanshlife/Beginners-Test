@@ -1,0 +1,74 @@
+/* Kadvia Bot admin. Brand: royal blue #2447d6, pink #e5307f. */
+.kb-wrap { max-width: 1180px; }
+.kb-title { display: flex; align-items: center; gap: 10px; }
+.kb-logo { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, #2447d6, #e5307f); color: #fff; font-weight: 700; font-size: 18px; }
+.kb-lead { font-size: 14px; color: #3c434a; max-width: 760px; }
+.kb-muted { color: #646970; }
+.kb-small { font-size: 12px; }
+.kb-err, .kb-err td { color: #b32d2e; }
+.kb-danger { color: #b32d2e !important; }
+
+.kb-banner { border-radius: 8px; padding: 12px 16px; margin: 14px 0; border: 1px solid; }
+.kb-banner ul { margin: 6px 0 0 18px; list-style: disc; }
+.kb-banner--test { background: #fff4f8; border-color: #f3b4cf; }
+.kb-banner--warn { background: #fff8e5; border-color: #f0c33c; }
+
+.kb-panel { background: #fff; border: 1px solid #dcdcde; border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+.kb-panel h2 { margin-top: 0; }
+.kb-panel--safety { border-color: #2447d6; }
+.kb-empty { color: #50575e; }
+.kb-steps ol { margin-left: 20px; }
+.kb-steps li { margin-bottom: 6px; }
+
+.kb-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 18px 0; }
+.kb-card { display: flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid #dcdcde; border-radius: 10px; padding: 14px 16px; text-decoration: none; color: #1d2327; }
+a.kb-card:hover { border-color: #2447d6; }
+.kb-card__n { font-size: 26px; font-weight: 700; color: #2447d6; }
+.kb-card__l { color: #50575e; }
+.kb-card--hot .kb-card__n { color: #e5307f; }
+
+.kb-run { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.kb-table td, .kb-table th { vertical-align: top; }
+
+.kb-badge { display: inline-block; font-size: 11px; line-height: 1; padding: 4px 7px; border-radius: 20px; background: #f0f0f1; color: #3c434a; white-space: nowrap; }
+.kb-badge--active, .kb-badge--approved { background: #e8edff; color: #2447d6; }
+.kb-badge--interested, .kb-badge--meeting_request, .kb-badge--meeting, .kb-badge--sent { background: #dff5e3; color: #116329; }
+.kb-badge--simulated { background: #fff4f8; color: #a3155a; }
+.kb-badge--replied, .kb-badge--question, .kb-badge--not_now, .kb-badge--wrong_person { background: #fff8e5; color: #7a5b00; }
+.kb-badge--not_interested, .kb-badge--unsubscribed, .kb-badge--unsubscribe, .kb-badge--bounced, .kb-badge--failed, .kb-badge--cancelled { background: #fbeaea; color: #8a2424; }
+.kb-badge--risky { background: #fff8e5; color: #7a5b00; }
+
+.kb-msg { background: #fff; border: 1px solid #dcdcde; border-left: 4px solid #2447d6; border-radius: 10px; padding: 14px 18px; margin: 14px 0; }
+.kb-msg--reply, .kb-msg--in { border-left-color: #e5307f; }
+.kb-msg--whatsapp { border-left-color: #25d366; }
+.kb-msg--linkedin { border-left-color: #0a66c2; }
+.kb-msg--call { border-left-color: #7a5b00; }
+.kb-msg__head { margin-bottom: 10px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.kb-pill { background: #1d2327; color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 20px; }
+.kb-msg textarea, .kb-form textarea { width: 100%; font-family: inherit; font-size: 14px; line-height: 1.5; }
+.kb-subject { width: 100%; font-weight: 600; margin-bottom: 8px; }
+.kb-quote { background: #f6f7f7; border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; font-size: 13px; line-height: 1.55; }
+.kb-quote__h { margin-bottom: 6px; }
+.kb-pre { white-space: pre-wrap; background: #f6f7f7; border-radius: 8px; padding: 12px 14px; font-family: inherit; font-size: 13px; line-height: 1.55; margin: 0 0 10px; }
+.kb-report { font-family: Consolas, Monaco, monospace; }
+.kb-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+.kb-actions--sub { margin-top: 6px; }
+.kb-bulk { margin: 10px 0; }
+
+.kb-form label, .kb-panel label { display: block; margin-bottom: 12px; font-weight: 600; }
+.kb-form input[type=text], .kb-form input[type=email], .kb-form input[type=url], .kb-form input[type=password], .kb-form input[type=number], .kb-form select,
+.kb-panel input[type=text], .kb-panel select { display: block; width: 100%; max-width: 100%; margin-top: 4px; font-weight: 400; }
+.kb-form small, .kb-panel small { display: block; font-weight: 400; color: #646970; margin-top: 3px; }
+.kb-form textarea, .kb-panel textarea { margin-top: 4px; font-weight: 400; }
+label.kb-check { display: flex; gap: 8px; align-items: center; font-weight: 400; }
+label.kb-check input { margin: 0; }
+.kb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 18px; }
+.kb-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 0 16px; }
+.kb-two details summary { cursor: pointer; }
+.kb-filterbar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 10px 0; }
+.kb-filters a.current { font-weight: 700; color: #1d2327; }
+.kb-kv th { text-align: left; padding: 3px 18px 3px 0; color: #646970; font-weight: 400; vertical-align: top; }
+.kb-check-valid { color: #116329; }
+.kb-check-invalid { color: #b32d2e; }
+.kb-check-risky { color: #a36b00; font-weight: 700; }
+.kb-pages a, .kb-pages strong { display: inline-block; padding: 2px 6px; }
