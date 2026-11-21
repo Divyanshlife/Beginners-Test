@@ -50,6 +50,14 @@ Yeh sab andaaza hai. Asli price har service ki website par check kar lena.
 
 ## 4. Setup step by step
 
+### Free test (bina API key): Demo mode
+Key kharidne se pehle pura system free mein dekhna ho to:
+1. Kadvia Bot → **Settings → 1. Claude → Model** mein **"Demo mode"** chuno. API key khaali chhod do → **Save settings**.
+2. Ab bot emails ko templates se banata hai (lead ka naam aur company bhar kar), aur replies ko keywords se sort karta hai: "stop" → unsubscribe, "call / Thursday" → meeting, "not interested" → not interested.
+3. Baaki sab steps (campaign, leads, approve, bhejna, reply, report) waise hi kaam karte hain.
+
+Demo ke emails AI jitne personal nahi hote. Asli clients ke liye Claude model chuno aur key lagao.
+
 ### Step 1: Claude API key
 1. **platform.claude.com** par account banao.
 2. **Billing** mein thoda credit daalo. Payment aap khud karna.

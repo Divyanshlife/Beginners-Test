@@ -34,6 +34,7 @@ require_once KB_DIR . 'includes/class-kb-settings.php';
 require_once KB_DIR . 'includes/class-kb-db.php';
 require_once KB_DIR . 'includes/class-kb-log.php';
 require_once KB_DIR . 'includes/class-kb-transport.php';
+require_once KB_DIR . 'includes/class-kb-demo.php';
 require_once KB_DIR . 'includes/class-kb-ai.php';
 require_once KB_DIR . 'includes/class-kb-leads.php';
 require_once KB_DIR . 'includes/class-kb-mailer.php';

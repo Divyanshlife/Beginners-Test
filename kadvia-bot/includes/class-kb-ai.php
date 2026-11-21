@@ -36,6 +36,11 @@ class KB_AI {
 
 	private static $client = null;
 
+	/** Demo mode: templates and keyword rules instead of Claude (free, no API key). */
+	public static function is_demo() {
+		return 'demo' === KB_Settings::get( 'model' );
+	}
+
 	private static function client() {
 		if ( null === self::$client ) {
 			$key = KB_Settings::get( 'api_key' );
@@ -176,6 +181,9 @@ class KB_AI {
 	 * @return array{subject:string, body:string}
 	 */
 	public static function write_email( $campaign, $lead, $step, $total ) {
+		if ( self::is_demo() ) {
+			return KB_Demo::write_email( $campaign, $lead, $step, $total );
+		}
 		if ( 1 === $step ) {
 			$brief = 'Write the FIRST cold email (60-110 words). Open with one line that is specific to this lead, based only on the lead data. '
 				. 'Then say in one or two sentences what the client helps companies like theirs do. '
@@ -216,6 +224,9 @@ class KB_AI {
 	 * LinkedIn connection note and follow-up message, for a human to send.
 	 */
 	public static function write_linkedin( $campaign, $lead ) {
+		if ( self::is_demo() ) {
+			return KB_Demo::write_linkedin( $campaign, $lead );
+		}
 		$prompt = self::campaign_block( $campaign ) . "\n" . self::lead_block( $lead ) . "\n\n"
 			. 'Write two LinkedIn messages that a person will send by hand. '
 			. '1) connection_note: under 280 characters, no pitch, a genuine reason to connect based on the lead data. '
@@ -239,6 +250,9 @@ class KB_AI {
 	 * A short call script for a human caller.
 	 */
 	public static function write_call_script( $campaign, $lead ) {
+		if ( self::is_demo() ) {
+			return KB_Demo::write_call_script( $campaign, $lead );
+		}
 		$prompt = self::campaign_block( $campaign ) . "\n" . self::lead_block( $lead ) . "\n" . self::history_block( $lead->id ) . "\n\n"
 			. 'Write a short phone script for a person calling this lead. Keep each part to one to three sentences a person can say out loud. '
 			. 'Parts: opener (who is calling and why, asking for 30 seconds), reason (why this lead, from the lead data), '
@@ -290,6 +304,9 @@ class KB_AI {
 	 * @return array{category:string, summary:string, reply_needed:bool, reply_body:string}
 	 */
 	public static function read_reply( $campaign, $lead, $subject, $reply_text ) {
+		if ( self::is_demo() ) {
+			return KB_Demo::read_reply( $campaign, $lead, $subject, $reply_text );
+		}
 		$prompt = self::campaign_block( $campaign ) . "\n" . self::lead_block( $lead ) . "\n" . self::history_block( $lead->id ) . "\n"
 			. "<reply>\nSubject: " . $subject . "\n" . mb_substr( $reply_text, 0, 6000 ) . "\n</reply>\n\n"
 			. 'The lead sent the reply above. 1) Pick the category that fits best. 2) Write a one-line summary for the account manager. '

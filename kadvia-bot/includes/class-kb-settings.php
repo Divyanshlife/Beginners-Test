@@ -25,6 +25,7 @@ class KB_Settings {
 		'claude-opus-5-5'   => 'Claude Opus 5.5 (best writing, default)',
 		'claude-sonnet-5-5' => 'Claude Sonnet 5.5 (cheaper)',
 		'claude-haiku-5-5'  => 'Claude Haiku 5.5 (cheapest)',
+		'demo'              => 'Demo mode: free, no API key (fixed templates, not AI)',
 	);
 
 	public static function defaults() {
@@ -122,8 +123,8 @@ class KB_Settings {
 	public static function problems() {
 		$s   = self::all();
 		$out = array();
-		if ( ! $s['api_key'] ) {
-			$out[] = 'Claude API key missing (Settings → Claude).';
+		if ( ! $s['api_key'] && 'demo' !== $s['model'] ) {
+			$out[] = 'Claude API key missing (Settings → Claude). To test for free, choose "Demo mode" as the model.';
 		}
 		if ( ! $s['sender_name'] || ! is_email( $s['sender_email'] ) ) {
 			$out[] = 'Sender name / email missing (Settings → Email sending).';

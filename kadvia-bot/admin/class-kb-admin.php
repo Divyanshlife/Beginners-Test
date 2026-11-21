@@ -75,6 +75,9 @@ class KB_Admin {
 	private static function header( $title ) {
 		echo '<div class="wrap kb-wrap"><h1 class="kb-title"><span class="kb-logo">K</span> ' . esc_html( $title ) . '</h1>';
 		self::show_notice();
+		if ( KB_AI::is_demo() ) {
+			echo '<div class="kb-banner kb-banner--warn"><strong>Demo mode is ON (free, no AI).</strong> Messages come from fixed templates and replies are sorted by simple keyword rules. Good for testing the flow; for real clients choose a Claude model in <a href="' . esc_url( self::url( 'kb-settings' ) ) . '">Settings</a>.</div>';
+		}
 		if ( KB_Settings::get( 'dry_run' ) ) {
 			echo '<div class="kb-banner kb-banner--test"><strong>Test mode (dry run) is ON.</strong> The bot writes and "sends" messages only inside this dashboard. Nothing reaches real people. Turn it off in <a href="' . esc_url( self::url( 'kb-settings' ) ) . '">Settings</a> when you are ready.</div>';
 		}
@@ -614,7 +617,7 @@ class KB_Admin {
 		foreach ( KB_Settings::MODELS as $k => $v ) {
 			echo '<option value="' . esc_attr( $k ) . '"' . selected( $s['model'], $k, false ) . '>' . esc_html( $v ) . '</option>';
 		}
-		echo '</select></label></div></div>';
+		echo '</select><small>No API key yet? Choose <strong>Demo mode</strong> to test everything for free with ready-made templates.</small></label></div></div>';
 
 		echo '<div class="kb-panel"><h2>2. Email sending</h2><div class="kb-grid">';
 		$text( 'sender_name', 'Sender name', 'The person the email comes from, e.g. "Divyansh from Kadvia".' );
@@ -941,7 +944,7 @@ class KB_Admin {
 						'notes'      => '',
 					);
 					$mail = KB_AI::write_email( $c, $lead, 1, 3 );
-					self::notice( 'success', "Claude works. Sample email:\n\nSubject: " . $mail['subject'] . "\n\n" . $mail['body'] );
+					self::notice( 'success', ( KB_AI::is_demo() ? "Demo mode works (template, not AI). Sample email:\n\nSubject: " : "Claude works. Sample email:\n\nSubject: " ) . $mail['subject'] . "\n\n" . $mail['body'] );
 				} catch ( Throwable $e ) {
 					self::notice( 'error', $e->getMessage() );
 				}

@@ -150,7 +150,7 @@ class KB_Engine {
 		$s      = KB_Settings::all();
 		$budget = (int) $s['ai_per_run'];
 		$made   = 0;
-		if ( ! $s['api_key'] ) {
+		if ( ! $s['api_key'] && ! KB_AI::is_demo() ) {
 			return 0;
 		}
 		$initial = $s['require_approval'] ? 'draft' : 'approved';
